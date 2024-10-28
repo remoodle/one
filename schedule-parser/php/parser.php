@@ -141,6 +141,9 @@ for($I = 0; $I < count($lines); $I++) {
                 $localI++;
                 continue;
             }
+            if($localLine[0] === '*'){
+                break;
+            }
             $localLine = preg_replace('/[ ]{2,}|[\t]/', ' ', trim($localLine));
 
             if($localLine === LESSON_TYPE_LECTURE || $localLine === LESSON_TYPE_PRACTICE) {
