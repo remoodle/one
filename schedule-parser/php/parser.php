@@ -6,7 +6,7 @@ use Smalot\PdfParser\Parser;
 require_once __DIR__ . '/vendor/autoload.php';
 
 if(!isset($argv[1])) {
-    echo "\n".'source file is not provided!' . "\n";
+    echo "\n".'source dir is not provided!' . "\n";
     die;
 }
 
@@ -28,8 +28,16 @@ const LESSON_TYPE_PRACTICE = 'practice';
 const LESSON_TYPE_LECTURE = 'lecture';
 
 $parser = new Parser();
-$pdf = $parser->parseFile(__DIR__ . '/' . $argv[1]);
-$text = $pdf->getText();
+echo $argv[1];
+$files = glob(__DIR__ . '/' . $argv[1] . '/*.pdf');
+
+$combinedText = '';
+foreach ($files as $file) {
+    $pdf = $parser->parseFile($file);
+    $combinedText .= $pdf->getText() . "\n";
+}
+$text = $combinedText;
+// $text = $pdf->getText();
 // var_dump($pdf->extractXMPMetadata());
 $lines = explode("\n", $text);
 $groups = [];
@@ -228,6 +236,7 @@ foreach($groups as $group => $weekRasp) {
             if(is_object($value)) {
                 $value = (array)$value;
                 $res[$group][] = [
+                    'id' => uniqid(),
                     'start' => "$weekDay " . $times[0],
                     'end' => "$weekDay " . $times[1],
                     'courseName' => $value['courseName'],
@@ -243,6 +252,7 @@ foreach($groups as $group => $weekRasp) {
                 foreach($value as $v) {
                     $v = (array)$v;
                     $res[$group][] = [
+                        'id' => uniqid(),
                         'start' => "$weekDay " . $times[0],
                         'end' => "$weekDay " . $times[1],
                         'courseName' => $v['courseName'],
