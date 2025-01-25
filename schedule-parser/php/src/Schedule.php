@@ -233,7 +233,20 @@ final class Schedule
                 continue;
             }
 
-            if (($dataStr[0] === 'C' && $dataStr[1] === '1' && $dataStr[2] === '.') || ($dataStr === 'gym') || ($dataStr === 'online') || (str_contains($dataStr, 'IEC-'))) {
+            if (
+                ($dataStr === 'gym') ||
+                ($dataStr === 'online') ||
+                (str_contains($dataStr, 'IEC-')) ||
+                (str_contains($dataStr, 'C1.1.')) ||
+                (str_contains($dataStr, 'C1.2.')) ||
+                (str_contains($dataStr, 'C1.3.')) ||
+                (str_contains($dataStr, 'C2.1.')) ||
+                (str_contains($dataStr, 'C2.2.')) ||
+                (str_contains($dataStr, 'C2.3.')) ||
+                ((strtolower($dataStr) === '1c') && (isset($dataArr[$key + 1]) && str_contains(strtolower($dataArr[$key + 1]), 'c1.')) ||
+                ((strtolower($dataStr) === 'assembly') && (isset($dataArr[$key + 1]) && strtolower($dataArr[$key + 1]) === 'hall')) ||
+                ((strtolower($dataStr) === 'hall') && (isset($dataArr[$key - 1]) && strtolower($dataArr[$key - 1]) === 'assembly')))
+            ) {
                 if ($dataStr === 'online') {
                     $isOnline = true;
                 }
