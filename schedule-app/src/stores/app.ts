@@ -1,7 +1,8 @@
 import { computed } from "vue";
 import { defineStore } from "pinia";
-import { useColorMode } from "@vueuse/core";
+import { useColorMode, useLocalStorage } from "@vueuse/core";
 import { getStorageKey } from "@/lib/helpers";
+import type { ScheduleFilter } from "@/lib/types";
 
 export const useAppStore = defineStore("app", () => {
   const { store: storedTheme, system: systemTheme } = useColorMode({
@@ -24,8 +25,17 @@ export const useAppStore = defineStore("app", () => {
     return storedTheme.value;
   });
 
+  const group = useLocalStorage(getStorageKey("group"), "SE-2203");
+
+  const filters = useLocalStorage<Record<string, ScheduleFilter>>(
+    getStorageKey("scheduleFilters"),
+    {},
+  );
+
   return {
     theme,
     toggleTheme,
+    filters,
+    group,
   };
 });
