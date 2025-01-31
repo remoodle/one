@@ -10,7 +10,6 @@ export type ScheduleEventFormats = {
 };
 
 export type ScheduleFilter = {
-  selectedGroup: string;
   eventTypes: ScheduleEventTypes;
   eventFormats: ScheduleEventFormats;
   excludedCourses: string[];

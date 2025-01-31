@@ -1,4 +1,4 @@
-import { computed } from "vue";
+import { computed, watchEffect } from "vue";
 import { defineStore } from "pinia";
 import { useColorMode, useLocalStorage } from "@vueuse/core";
 import { getStorageKey } from "@/lib/helpers";
@@ -31,6 +31,23 @@ export const useAppStore = defineStore("app", () => {
     getStorageKey("scheduleFilters"),
     {},
   );
+
+  watchEffect(() => {
+    if (group.value && !filters.value[group.value]) {
+      filters.value[group.value] = {
+        eventTypes: {
+          lecture: true,
+          practice: true,
+          learn: true,
+        },
+        eventFormats: {
+          online: true,
+          offline: true,
+        },
+        excludedCourses: [],
+      };
+    }
+  });
 
   return {
     theme,

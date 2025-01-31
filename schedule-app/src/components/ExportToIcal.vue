@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import type { ScheduleFilter } from "@/lib/types";
-import { dayjs } from "@/lib/dayjs";
+import { dayjs, type Dayjs } from "@/lib/dayjs";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 
 const props = defineProps<{
@@ -27,7 +27,7 @@ const props = defineProps<{
 
 const value = ref(today(getLocalTimeZone())) as Ref<DateValue>;
 
-let open = ref<boolean>(false);
+const open = ref<boolean>(false);
 
 const df = new DateFormatter("en-US", {
   dateStyle: "long",
@@ -48,7 +48,7 @@ const parseDate = (dateString: string) => {
   return new Date(year, month - 1, day, hour, minute);
 };
 
-const formatDate = (date: any): string => {
+const formatDate = (date: Dayjs): string => {
   return date.format("YYYYMMDD[T]HHmmss").replace(/[-:]/g, "");
 };
 

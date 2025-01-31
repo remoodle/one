@@ -33,7 +33,7 @@ const { groupSchedule, allGroups, groupCourses } = useSchedule(
           />
         </template>
       </div>
-      <template v-if="group">
+      <template v-if="group && filters[group]">
         <ExportToIcal :events="groupSchedule" :group :filters="filters[group]" />
       </template>
     </div>
