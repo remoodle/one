@@ -1,3 +1,6 @@
+> [!NOTE]  
+> Copy from https://github.com/Yuujiso/aitumap
+
 ## Installation
 
 ```bash
