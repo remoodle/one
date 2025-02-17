@@ -34,7 +34,6 @@ final class Schedule
         $prevSeq = false;
 
         for ($I = 0; $I < count($lines); $I++) {
-
             $line = $lines[$I];
             if (strlen(trim($line)) < 1) {
                 continue;
@@ -98,6 +97,7 @@ final class Schedule
                     $localI++;
                 }
 
+                $localI = $localI - 1;
                 if ($cc === 0) {
                     $groups[$currentGroup][$currentWeekDay][$prevIndex] = trim(implode(" ", $elemsL['items']));
                 } else {
