@@ -1,4 +1,14 @@
 <script lang="ts" setup>
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 import { storeToRefs } from "pinia";
 import { useSchedule } from "@/composables/use-schedule";
 import { useAppStore } from "@/stores/app";
@@ -20,26 +30,41 @@ const { groupSchedule, allGroups, groupCourses } = useSchedule(
 </script>
 
 <template>
-  <div class="flex items-center p-4 flex-wrap space-x-3 space-y-4">
-    <div class="flex flex-col gap-x-2 gap-y-8 p-5">
-      <div class="flex flex-col gap-y-4">
+  <div class="flex justify-center">
+    <div class="flex flex-col p-4">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-4">
         <GroupSelect v-model="group" :all-groups />
-        <template v-if="group">
-          <ScheduleSettings
-            class="max-w-xs"
-            v-model="filters[group]"
-            :group="group"
-            :courses="groupCourses"
-          />
-        </template>
+        <div class="flex gap-2">
+          <Dialog>
+            <DialogTrigger>
+              <Button variant="default" class="cursor-pointer">Filters</Button>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Change filters for group {{ group }}</DialogTitle>
+                <DialogDescription>
+                  You can make changes to your schedule here. Click on any option to change its
+                  value.
+                </DialogDescription>
+              </DialogHeader>
+              <template v-if="group">
+                <ScheduleSettings
+                  class="max-w-xs"
+                  v-model="filters[group]"
+                  :group="group"
+                  :courses="groupCourses"
+                />
+              </template>
+            </DialogContent>
+          </Dialog>
+          <template v-if="group && filters[group]">
+            <ExportToIcal :events="groupSchedule" :group :filters="filters[group]" />
+          </template>
+        </div>
       </div>
-      <template v-if="group && filters[group]">
-        <ExportToIcal :events="groupSchedule" :group :filters="filters[group]" />
-      </template>
-    </div>
-    <div class="flex items-center justify-between gap-2 mx-auto">
+
       <Calendar
-        class="max-h-[90vh] h-[800px] w-[1000px] max-w-[100vw]"
+        class="max-h-[90vh] h-[800px] w-[98vw] xl:w-[95vw]"
         :events="groupSchedule"
         :theme="appStore.theme"
       />

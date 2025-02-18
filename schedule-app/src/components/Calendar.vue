@@ -91,6 +91,7 @@ const calendarApp = createCalendar({
   locale: "en-GB",
   minDate: minDate,
   maxDate: maxDate,
+  isResponsive: true,
   dayBoundaries: {
     start: "08:00",
     end: "22:00",
