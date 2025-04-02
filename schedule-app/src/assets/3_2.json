@@ -1,2124 +1,2125 @@
 {
-    "EE-2401": [
-        {
-            "id": "67ed94813698b",
-            "start": "Monday 09:00",
-            "end": "Monday 09:50",
-            "courseName": "Ordinary Differential Equations",
-            "location": "C1.3.264L",
-            "isOnline": false,
-            "teacher": "Mukanova Balgaisha",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94813698d",
-            "start": "Monday 10:00",
-            "end": "Monday 10:50",
-            "courseName": "Calculus 3",
-            "location": "C1.3.264L",
-            "isOnline": false,
-            "teacher": "Nurlybekuly T.",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94813698e",
-            "start": "Monday 11:00",
-            "end": "Monday 11:50",
-            "courseName": "Calculus 3",
-            "location": "C1.3.264L",
-            "isOnline": false,
-            "teacher": "Nurlybekuly T.",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94813698f",
-            "start": "Monday 12:00",
-            "end": "Monday 12:50",
-            "courseName": "Photo Journalism and Basics of Design",
-            "location": "C1.1.221P",
-            "isOnline": false,
-            "teacher": "Assemgul Sarsembayeva",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948136990",
-            "start": "Monday 13:05",
-            "end": "Monday 13:55",
-            "courseName": "Photo Journalism and Basics of Design",
-            "location": "C1.1.221P",
-            "isOnline": false,
-            "teacher": "Assemgul Sarsembayeva",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948136991",
-            "start": "Monday 08:00",
-            "end": "Monday 08:50",
-            "courseName": "Ordinary Differential Equations",
-            "location": "C1.3.264L",
-            "isOnline": false,
-            "teacher": "Mukanova Balgaisha",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948136992",
-            "start": "Monday 18:00",
-            "end": "Monday 18:50",
-            "courseName": "Psychology",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948136993",
-            "start": "Monday 19:00",
-            "end": "Monday 19:50",
-            "courseName": "Cultural Studies",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948136994",
-            "start": "Monday 20:00",
-            "end": "Monday 20:50",
-            "courseName": "Discrete Mathematics",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948136995",
-            "start": "Monday 14:00",
-            "end": "Monday 14:50",
-            "courseName": "Electronics",
-            "location": "C1.2.223K",
-            "isOnline": false,
-            "teacher": "khatova Zhannur",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948136996",
-            "start": "Tuesday 12:00",
-            "end": "Tuesday 12:50",
-            "courseName": "Photo Journalism and Basics of Design",
-            "location": "C1.1.221P",
-            "isOnline": false,
-            "teacher": "Assemgul Sarsembayeva",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948136997",
-            "start": "Tuesday 13:05",
-            "end": "Tuesday 13:55",
-            "courseName": "Photo Journalism and Basics of Design",
-            "location": "C1.1.221P",
-            "isOnline": false,
-            "teacher": "Assemgul Sarsembayeva",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948136998",
-            "start": "Tuesday 18:00",
-            "end": "Tuesday 18:50",
-            "courseName": "Calculus 2",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948136999",
-            "start": "Tuesday 19:00",
-            "end": "Tuesday 19:50",
-            "courseName": "Political Science",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94813699a",
-            "start": "Tuesday 10:00",
-            "end": "Tuesday 10:50",
-            "courseName": "Verbal Communication Skills",
-            "location": "C1.1.221P",
-            "isOnline": false,
-            "teacher": "Assemgul Sarsembayeva",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94813699b",
-            "start": "Tuesday 11:00",
-            "end": "Tuesday 11:50",
-            "courseName": "Verbal Communication Skills",
-            "location": "C1.1.221P",
-            "isOnline": false,
-            "teacher": "Assemgul Sarsembayeva",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94813699c",
-            "start": "Tuesday 08:00",
-            "end": "Tuesday 08:50",
-            "courseName": "History of Kazakhstan",
-            "location": "C1.1.228P",
-            "isOnline": false,
-            "teacher": "Auzhanova Assel",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94813699d",
-            "start": "Tuesday 09:00",
-            "end": "Tuesday 09:50",
-            "courseName": "History of Kazakhstan",
-            "location": "C1.1.228P",
-            "isOnline": false,
-            "teacher": "Auzhanova Assel",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94813699e",
-            "start": "Tuesday 14:00",
-            "end": "Tuesday 14:50",
-            "courseName": "Electronics",
-            "location": "C1.2.223K",
-            "isOnline": false,
-            "teacher": "khatova Zhannur",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94813699f",
-            "start": "Wednesday 08:00",
-            "end": "Wednesday 08:50",
-            "courseName": "Verbal Communication Skills",
-            "location": "C1.1.221P",
-            "isOnline": false,
-            "teacher": "Assemgul Sarsembayeva",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369a0",
-            "start": "Wednesday 09:00",
-            "end": "Wednesday 09:50",
-            "courseName": "Verbal Communication Skills",
-            "location": "C1.1.221P",
-            "isOnline": false,
-            "teacher": "Assemgul Sarsembayeva",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369a1",
-            "start": "Wednesday 10:00",
-            "end": "Wednesday 10:50",
-            "courseName": "Calculus 3",
-            "location": "C1.1.355P",
-            "isOnline": false,
-            "teacher": "Nurlybekuly T.",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369a2",
-            "start": "Wednesday 19:00",
-            "end": "Wednesday 19:50",
-            "courseName": "Linear Algebra",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369a3",
-            "start": "Wednesday 12:00",
-            "end": "Wednesday 12:50",
-            "courseName": "Verbal Communication Skills",
-            "location": "C1.1.221P",
-            "isOnline": false,
-            "teacher": "Assemgul Sarsembayeva",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369a4",
-            "start": "Wednesday 13:05",
-            "end": "Wednesday 13:55",
-            "courseName": "Verbal Communication Skills",
-            "location": "C1.1.221P",
-            "isOnline": false,
-            "teacher": "Assemgul Sarsembayeva",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369a5",
-            "start": "Wednesday 11:00",
-            "end": "Wednesday 11:50",
-            "courseName": "Calculus 3",
-            "location": "C1.1.355P",
-            "isOnline": false,
-            "teacher": "Nurlybekuly T.",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369a6",
-            "start": "Wednesday 17:00",
-            "end": "Wednesday 17:50",
-            "courseName": "Mathematical Methods for Engineers",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Shazada Umair Khan",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369a7",
-            "start": "Wednesday 18:00",
-            "end": "Wednesday 18:50",
-            "courseName": "History of Kazakhstan",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Jampeissova Zhanar",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369a8",
-            "start": "Wednesday 14:00",
-            "end": "Wednesday 14:50",
-            "courseName": "Electronics",
-            "location": "C1.2.223K",
-            "isOnline": false,
-            "teacher": "khatova Zhannur",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369a9",
-            "start": "Thursday 08:00",
-            "end": "Thursday 08:50",
-            "courseName": "Ordinary Differential Equations",
-            "location": "C1.3.264L",
-            "isOnline": false,
-            "teacher": "Mukanova Balgaisha",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369aa",
-            "start": "Thursday 09:00",
-            "end": "Thursday 09:50",
-            "courseName": "Algorithms and Data Structures",
-            "location": "C1.1.348K",
-            "isOnline": false,
-            "teacher": "Kharmyssov Chingis",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369ab",
-            "start": "Thursday 11:00",
-            "end": "Thursday 11:50",
-            "courseName": "Introduction to Leadership",
-            "location": "C1.1.334L",
-            "isOnline": false,
-            "teacher": "Mergen Duisenov",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369ac",
-            "start": "Thursday 12:00",
-            "end": "Thursday 12:50",
-            "courseName": "History of Kazakhstan",
-            "location": "C1.1.228P",
-            "isOnline": false,
-            "teacher": "Auzhanova Assel",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369ad",
-            "start": "Thursday 13:05",
-            "end": "Thursday 13:55",
-            "courseName": "History of Kazakhstan",
-            "location": "C1.1.228P",
-            "isOnline": false,
-            "teacher": "Auzhanova Assel",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369ae",
-            "start": "Thursday 10:00",
-            "end": "Thursday 10:50",
-            "courseName": "Calculus 3",
-            "location": "C1.3.264L",
-            "isOnline": false,
-            "teacher": "Nurlybekuly T.",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369af",
-            "start": "Thursday 16:00",
-            "end": "Thursday 16:50",
-            "courseName": "Mathematical Methods for Engineers",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Shazada Umair Khan",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369b0",
-            "start": "Thursday 17:00",
-            "end": "Thursday 17:50",
-            "courseName": "Mathematical Methods for Engineers",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Shazada Umair Khan",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369b1",
-            "start": "Thursday 18:00",
-            "end": "Thursday 18:50",
-            "courseName": "Database Management Systems",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369b2",
-            "start": "Thursday 19:00",
-            "end": "Thursday 19:50",
-            "courseName": "Database Management Systems",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369b3",
-            "start": "Thursday 20:00",
-            "end": "Thursday 20:50",
-            "courseName": "Cultural Studies",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369b4",
-            "start": "Thursday 14:00",
-            "end": "Thursday 14:50",
-            "courseName": "Electronics",
-            "location": "C1.2.223K",
-            "isOnline": false,
-            "teacher": "khatova Zhannur",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369b5",
-            "start": "Friday 08:00",
-            "end": "Friday 08:50",
-            "courseName": "Political Science",
-            "location": "C1.1.261",
-            "isOnline": false,
-            "teacher": "Yenglik Dossymkhan",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369b6",
-            "start": "Friday 09:00",
-            "end": "Friday 09:50",
-            "courseName": "Psychology",
-            "location": "C1.1.225P",
-            "isOnline": false,
-            "teacher": "Nursulu Belessova",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369b7",
-            "start": "Friday 10:00",
-            "end": "Friday 10:50",
-            "courseName": "Ordinary Differential Equations",
-            "location": "C1.1.355P",
-            "isOnline": false,
-            "teacher": "Mukanova Balgaisha",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369b8",
-            "start": "Friday 11:00",
-            "end": "Friday 11:50",
-            "courseName": "Ordinary Differential Equations",
-            "location": "C1.1.355P",
-            "isOnline": false,
-            "teacher": "Mukanova Balgaisha",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369b9",
-            "start": "Friday 12:00",
-            "end": "Friday 12:50",
-            "courseName": "Introduction to Leadership",
-            "location": "C1.3.223P",
-            "isOnline": false,
-            "teacher": "Mergen Duisenov",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369ba",
-            "start": "Friday 13:05",
-            "end": "Friday 13:55",
-            "courseName": "Introduction to Leadership",
-            "location": "C1.3.223P",
-            "isOnline": false,
-            "teacher": "Mergen Duisenov",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369bb",
-            "start": "Friday 17:00",
-            "end": "Friday 17:50",
-            "courseName": "Mathematical Methods for Engineers",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Shazada Umair Khan",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369bc",
-            "start": "Friday 18:00",
-            "end": "Friday 18:50",
-            "courseName": "Algorithms and Data Structures",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369bd",
-            "start": "Friday 19:00",
-            "end": "Friday 19:50",
-            "courseName": "Algorithms and Data Structures",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369be",
-            "start": "Friday 14:00",
-            "end": "Friday 14:50",
-            "courseName": "Electronics",
-            "location": "C1.2.223K",
-            "isOnline": false,
-            "teacher": "khatova Zhannur",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369bf",
-            "start": "Saturday 08:00",
-            "end": "Saturday 08:50",
-            "courseName": "Hacking Lab",
-            "location": "C1.1.334L",
-            "isOnline": false,
-            "teacher": "Aliya Abdiraman",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369c0",
-            "start": "Saturday 09:00",
-            "end": "Saturday 09:50",
-            "courseName": "Hacking Lab",
-            "location": "C1.1.334L",
-            "isOnline": false,
-            "teacher": "Aliya Abdiraman",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369c1",
-            "start": "Saturday 18:00",
-            "end": "Saturday 18:50",
-            "courseName": "History of Kazakhstan",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369c2",
-            "start": "Saturday 19:00",
-            "end": "Saturday 19:50",
-            "courseName": "History of Kazakhstan",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/ \"Approved by\" Vice-Rector of Academic Affairs of \"Astana IT University\" LLP ______________G. S. Akybayeva \"__\"__________________2025. Group MCS-2401",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481369c3",
-            "start": "Saturday 10:00",
-            "end": "Saturday 10:50",
-            "courseName": "Algorithms and Data Structures",
-            "location": "C1.1.245K",
-            "isOnline": false,
-            "teacher": "Kharmyssov Chingis",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369c4",
-            "start": "Saturday 11:00",
-            "end": "Saturday 11:50",
-            "courseName": "Algorithms and Data Structures",
-            "location": "C1.1.245K",
-            "isOnline": false,
-            "teacher": "Kharmyssov Chingis",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369c5",
-            "start": "Saturday 12:00",
-            "end": "Saturday 12:50",
-            "courseName": "Calculus 2",
-            "location": "C1.2.251L",
-            "isOnline": false,
-            "teacher": "Serik Kudaibergenov",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369c6",
-            "start": "Saturday 13:05",
-            "end": "Saturday 13:55",
-            "courseName": "Calculus 2",
-            "location": "C1.2.251L",
-            "isOnline": false,
-            "teacher": "Serik Kudaibergenov \"Approved by\" Vice-Rector of Academic Affairs of \"Astana IT University\" LLP ______________G. S. Akybayeva \"__\"__________________2025. Group DJ-2401",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369c7",
-            "start": "Saturday 14:00",
-            "end": "Saturday 14:50",
-            "courseName": "Linear Algebra",
-            "location": "C1.1.324L",
-            "isOnline": false,
-            "teacher": "Bilimzhanuly Maksat",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369c8",
-            "start": "Saturday 15:00",
-            "end": "Saturday 15:50",
-            "courseName": "Linear Algebra",
-            "location": "C1.1.324L",
-            "isOnline": false,
-            "teacher": "Bilimzhanuly Maksat \"Approved by\" Vice-Rector of Academic Affairs of \"Astana IT University\" LLP ______________G. S. Akybayeva \"__\"__________________2025. Group CS-2439",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369c9",
-            "start": "Saturday 16:00",
-            "end": "Saturday 16:50",
-            "courseName": "Linear Algebra",
-            "location": "C1.1.365P",
-            "isOnline": false,
-            "teacher": "Zhandesh Altyngul",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481369ca",
-            "start": "Saturday 17:00",
-            "end": "Saturday 17:50",
-            "courseName": "Linear Algebra",
-            "location": "C1.1.365P",
-            "isOnline": false,
-            "teacher": "Zhandesh Altyngul \"Approved by\" Vice-Rector of Academic Affairs of \"Astana IT University\" LLP ______________G. S. Akybayeva \"__\"__________________2025. Group CS-2433",
-            "type": "practice"
-        }
-    ],
-    "CSE-2307M": [
-        {
-            "id": "67ed948137231",
-            "start": "Tuesday 18:00",
-            "end": "Tuesday 18:50",
-            "courseName": "Big Data Methods and Tools",
-            "location": "C1.1.366P",
-            "isOnline": false,
-            "teacher": "Bolatzhan Kumalakov",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948137232",
-            "start": "Tuesday 19:00",
-            "end": "Tuesday 19:50",
-            "courseName": "Big Data Methods and Tools",
-            "location": "C1.1.366P",
-            "isOnline": false,
-            "teacher": "Bolatzhan Kumalakov",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948137233",
-            "start": "Wednesday 19:00",
-            "end": "Wednesday 19:50",
-            "courseName": "IT Project Management",
-            "location": "C1.3.233L",
-            "isOnline": false,
-            "teacher": "Gaini Mukhanova",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948137234",
-            "start": "Wednesday 20:00",
-            "end": "Wednesday 20:50",
-            "courseName": "IT Project Management",
-            "location": "C1.3.233L",
-            "isOnline": false,
-            "teacher": "Gaini Mukhanova",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948137235",
-            "start": "Friday 18:00",
-            "end": "Friday 18:50",
-            "courseName": "Service model in project management",
-            "location": "C1.3.318",
-            "isOnline": false,
-            "teacher": "Bibigul Aidarkhanova",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948137236",
-            "start": "Friday 19:00",
-            "end": "Friday 19:50",
-            "courseName": "Service model in project management",
-            "location": "C1.3.318",
-            "isOnline": false,
-            "teacher": "Bibigul Aidarkhanova",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948137237",
-            "start": "Friday 20:00",
-            "end": "Friday 20:50",
-            "courseName": "IT Project Management",
-            "location": "C1.3.233L",
-            "isOnline": false,
-            "teacher": "Gaini Mukhanova",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948137238",
-            "start": "Friday 21:00",
-            "end": "Friday 21:50",
-            "courseName": "IT Project Management",
-            "location": "C1.3.233L",
-            "isOnline": false,
-            "teacher": "Gaini Mukhanova",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948137239",
-            "start": "Thursday 18:00",
-            "end": "Thursday 18:50",
-            "courseName": "Service model in project management",
-            "location": "C1.3.318",
-            "isOnline": false,
-            "teacher": "Bibigul Aidarkhanova",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94813723a",
-            "start": "Thursday 19:00",
-            "end": "Thursday 19:50",
-            "courseName": "Service model in project management",
-            "location": "C1.3.318",
-            "isOnline": false,
-            "teacher": "Bibigul Aidarkhanova",
-            "type": "lecture"
-        }
-    ],
-    "CSE-2401M": [
-        {
-            "id": "67ed948142765",
-            "start": "Monday 18:00",
-            "end": "Monday 18:50",
-            "courseName": "Secure computer network architecture",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Vacancy 1-DISS",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142766",
-            "start": "Monday 18:00",
-            "end": "Monday 18:50",
-            "courseName": "Product Management",
-            "location": "C1.2.246",
-            "isOnline": false,
-            "teacher": "Samalgul Nassanbekova",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142767",
-            "start": "Monday 18:00",
-            "end": "Monday 18:50",
-            "courseName": "Behavioral competencies for project management",
-            "location": "C1.3.233L",
-            "isOnline": false,
-            "teacher": "Anara Yesengeldina",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142768",
-            "start": "Monday 18:00",
-            "end": "Monday 18:50",
-            "courseName": "Agile Project Management",
-            "location": "C1.3.264L",
-            "isOnline": false,
-            "teacher": "Vacancy 3 - SCI",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142769",
-            "start": "Monday 18:00",
-            "end": "Monday 18:50",
-            "courseName": "Investigation of software source code for vulnerabilities",
-            "location": "C1.2.251L",
-            "isOnline": false,
-            "teacher": "Glazyrina Natalya",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94814276a",
-            "start": "Monday 19:00",
-            "end": "Monday 19:50",
-            "courseName": "Secure computer network architecture",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Vacancy 1-DISS",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94814276b",
-            "start": "Monday 19:00",
-            "end": "Monday 19:50",
-            "courseName": "Product Management",
-            "location": "C1.2.246",
-            "isOnline": false,
-            "teacher": "Samalgul Nassanbekova",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94814276c",
-            "start": "Monday 19:00",
-            "end": "Monday 19:50",
-            "courseName": "Behavioral competencies for project management",
-            "location": "C1.3.233L",
-            "isOnline": false,
-            "teacher": "Anara Yesengeldina",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94814276d",
-            "start": "Monday 19:00",
-            "end": "Monday 19:50",
-            "courseName": "Agile Project Management",
-            "location": "C1.3.264L",
-            "isOnline": false,
-            "teacher": "Vacancy 3 - SCI",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94814276e",
-            "start": "Monday 19:00",
-            "end": "Monday 19:50",
-            "courseName": "Investigation of software source code for vulnerabilities",
-            "location": "C1.2.251L",
-            "isOnline": false,
-            "teacher": "Glazyrina Natalya",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94814276f",
-            "start": "Monday 20:00",
-            "end": "Monday 20:50",
-            "courseName": "Software Development Case Study",
-            "location": "C1.3.361",
-            "isOnline": false,
-            "teacher": "Aubakirov Sanzhar",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142770",
-            "start": "Monday 21:00",
-            "end": "Monday 21:50",
-            "courseName": "Software Development Case Study",
-            "location": "C1.3.361",
-            "isOnline": false,
-            "teacher": "Aubakirov Sanzhar",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142771",
-            "start": "Wednesday 18:00",
-            "end": "Wednesday 18:50",
-            "courseName": "Markov chains and decision-making processes",
-            "location": "C1.1.328L",
-            "isOnline": false,
-            "teacher": "Minsoo Han",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142772",
-            "start": "Wednesday 18:00",
-            "end": "Wednesday 18:50",
-            "courseName": "High-performance computing",
-            "location": "C1.2.237L",
-            "isOnline": false,
-            "teacher": "Adai Shomanov",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142773",
-            "start": "Wednesday 19:00",
-            "end": "Wednesday 19:50",
-            "courseName": "Markov chains and decision-making processes",
-            "location": "C1.1.328L",
-            "isOnline": false,
-            "teacher": "Minsoo Han",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142774",
-            "start": "Wednesday 19:00",
-            "end": "Wednesday 19:50",
-            "courseName": "High-performance computing",
-            "location": "C1.2.237L",
-            "isOnline": false,
-            "teacher": "Adai Shomanov",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142775",
-            "start": "Wednesday 20:00",
-            "end": "Wednesday 20:50",
-            "courseName": "Teaching methods and strategies",
-            "location": "C1.2.139",
-            "isOnline": false,
-            "teacher": "Aidos Mukhatayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142776",
-            "start": "Wednesday 21:00",
-            "end": "Wednesday 21:50",
-            "courseName": "Teaching methods and strategies",
-            "location": "C1.2.139",
-            "isOnline": false,
-            "teacher": "Aidos Mukhatayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142777",
-            "start": "Thursday 18:00",
-            "end": "Thursday 18:50",
-            "courseName": "Teaching methods and strategies",
-            "location": "C1.2.139",
-            "isOnline": false,
-            "teacher": "Aidos Mukhatayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142778",
-            "start": "Thursday 19:00",
-            "end": "Thursday 19:50",
-            "courseName": "Teaching methods and strategies",
-            "location": "C1.2.139",
-            "isOnline": false,
-            "teacher": "Aidos Mukhatayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142779",
-            "start": "Thursday 20:00",
-            "end": "Thursday 20:50",
-            "courseName": "Game design theory",
-            "location": "C1.3.323K",
-            "isOnline": false,
-            "teacher": "Shakhmetova Gulmira",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94814277a",
-            "start": "Thursday 21:00",
-            "end": "Thursday 21:50",
-            "courseName": "Game design theory",
-            "location": "C1.3.323K",
-            "isOnline": false,
-            "teacher": "Shakhmetova Gulmira",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94814277b",
-            "start": "Friday 20:00",
-            "end": "Friday 20:50",
-            "courseName": "IT Audit and Control",
-            "location": "C1.2.227P",
-            "isOnline": false,
-            "teacher": "Abitova Gulnara",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94814277c",
-            "start": "Friday 21:00",
-            "end": "Friday 21:50",
-            "courseName": "IT Audit and Control",
-            "location": "C1.2.227P",
-            "isOnline": false,
-            "teacher": "Abitova Gulnara",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94814277d",
-            "start": "Friday 18:00",
-            "end": "Friday 18:50",
-            "courseName": "Product Management",
-            "location": "C1.3.244",
-            "isOnline": false,
-            "teacher": "Samalgul Nassanbekova",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94814277e",
-            "start": "Friday 18:00",
-            "end": "Friday 18:50",
-            "courseName": "Audit of processes in information security",
-            "location": "C1.2.232P",
-            "isOnline": false,
-            "teacher": "Abitova Gulnara",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94814277f",
-            "start": "Friday 18:00",
-            "end": "Friday 18:50",
-            "courseName": "Business analytics",
-            "location": "C1.3.321",
-            "isOnline": false,
-            "teacher": "Raskaliyev Timur",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142780",
-            "start": "Friday 19:00",
-            "end": "Friday 19:50",
-            "courseName": "Product Management",
-            "location": "C1.3.244",
-            "isOnline": false,
-            "teacher": "Samalgul Nassanbekova",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142781",
-            "start": "Friday 19:00",
-            "end": "Friday 19:50",
-            "courseName": "Audit of processes in information security",
-            "location": "C1.2.232P",
-            "isOnline": false,
-            "teacher": "Abitova Gulnara",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142782",
-            "start": "Friday 19:00",
-            "end": "Friday 19:50",
-            "courseName": "Business analytics",
-            "location": "C1.3.321",
-            "isOnline": false,
-            "teacher": "Raskaliyev Timur",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142783",
-            "start": "Friday 08:00",
-            "end": "Friday 08:50",
-            "courseName": "Teaching methods and strategies",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142784",
-            "start": "Friday 09:00",
-            "end": "Friday 09:50",
-            "courseName": "Production processes and production of audiovisual media content",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142785",
-            "start": "Friday 09:00",
-            "end": "Friday 09:50",
-            "courseName": "Game design theory",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142786",
-            "start": "Friday 12:00",
-            "end": "Friday 12:50",
-            "courseName": "Marketing in the public sector",
-            "location": "C1.3.322",
-            "isOnline": false,
-            "teacher": "Mergen Duisenov",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142787",
-            "start": "Friday 13:05",
-            "end": "Friday 13:55",
-            "courseName": "Teaching methods and strategies",
-            "location": "C1.2.139",
-            "isOnline": false,
-            "teacher": "Aidos Mukhatayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142788",
-            "start": "Friday 14:00",
-            "end": "Friday 14:50",
-            "courseName": "Teaching methods and strategies",
-            "location": "C1.2.139",
-            "isOnline": false,
-            "teacher": "Aidos Mukhatayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142789",
-            "start": "Friday 11:00",
-            "end": "Friday 11:50",
-            "courseName": "Marketing in the public sector",
-            "location": "C1.3.322",
-            "isOnline": false,
-            "teacher": "Mergen Duisenov",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94814278a",
-            "start": "Saturday 11:00",
-            "end": "Saturday 11:50",
-            "courseName": "Data-driven decision-making",
-            "location": "C1.1.221P",
-            "isOnline": false,
-            "teacher": "Akbergenov Yerkin",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94814278b",
-            "start": "Saturday 11:00",
-            "end": "Saturday 11:50",
-            "courseName": "Neural Networks",
-            "location": "C1.1.327",
-            "isOnline": false,
-            "teacher": "Niyazova R.S.",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94814278c",
-            "start": "Saturday 12:00",
-            "end": "Saturday 12:50",
-            "courseName": "High-performance computing",
-            "location": "C1.2.237L",
-            "isOnline": false,
-            "teacher": "Adai Shomanov",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94814278d",
-            "start": "Saturday 12:00",
-            "end": "Saturday 12:50",
-            "courseName": "Markov chains and decision-making processes",
-            "location": "C1.1.328L",
-            "isOnline": false,
-            "teacher": "Minsoo Han",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94814278e",
-            "start": "Saturday 13:05",
-            "end": "Saturday 13:55",
-            "courseName": "Teaching methods and strategies",
-            "location": "C1.2.139",
-            "isOnline": false,
-            "teacher": "Aidos Mukhatayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94814278f",
-            "start": "Saturday 14:00",
-            "end": "Saturday 14:50",
-            "courseName": "Teaching methods and strategies",
-            "location": "C1.2.139",
-            "isOnline": false,
-            "teacher": "Aidos Mukhatayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142790",
-            "start": "Saturday 15:00",
-            "end": "Saturday 15:50",
-            "courseName": "Machine learning and artificial intelligence",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Mohammadzadeh Ardashir",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142791",
-            "start": "Saturday 16:00",
-            "end": "Saturday 16:50",
-            "courseName": "Advanced Binary Analysis Techniques",
-            "location": "C1.2.222P",
-            "isOnline": false,
-            "teacher": "Glazyrina Natalya",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142792",
-            "start": "Saturday 17:00",
-            "end": "Saturday 17:50",
-            "courseName": "Advanced Binary Analysis Techniques",
-            "location": "C1.2.222P",
-            "isOnline": false,
-            "teacher": "Glazyrina Natalya",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142793",
-            "start": "Saturday 18:00",
-            "end": "Saturday 18:50",
-            "courseName": "Marketing in the public sector",
-            "location": "C1.3.322",
-            "isOnline": false,
-            "teacher": "Mergen Duisenov",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142794",
-            "start": "Saturday 19:00",
-            "end": "Saturday 19:50",
-            "courseName": "Marketing in the public sector",
-            "location": "C1.3.322",
-            "isOnline": false,
-            "teacher": "Mergen Duisenov",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142795",
-            "start": "Saturday 20:00",
-            "end": "Saturday 20:50",
-            "courseName": "Teaching methods and strategies",
-            "location": "C1.2.139",
-            "isOnline": false,
-            "teacher": "Aidos Mukhatayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142796",
-            "start": "Saturday 21:00",
-            "end": "Saturday 21:50",
-            "courseName": "Teaching methods and strategies",
-            "location": "C1.2.139",
-            "isOnline": false,
-            "teacher": "Aidos Mukhatayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948142797",
-            "start": "Saturday 08:00",
-            "end": "Saturday 08:50",
-            "courseName": "Teaching methods and strategies",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142798",
-            "start": "Saturday 09:00",
-            "end": "Saturday 09:50",
-            "courseName": "Production processes and production of audiovisual media content",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948142799",
-            "start": "Saturday 09:00",
-            "end": "Saturday 09:50",
-            "courseName": "Game design theory",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94814279a",
-            "start": "Saturday 10:00",
-            "end": "Saturday 10:50",
-            "courseName": "Machine learning and artificial intelligence",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Mohammadzadeh Ardashir",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94814279b",
-            "start": "Tuesday 18:00",
-            "end": "Tuesday 18:50",
-            "courseName": "Teaching methods and strategies",
-            "location": "C1.2.139",
-            "isOnline": false,
-            "teacher": "Aidos Mukhatayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94814279c",
-            "start": "Tuesday 19:00",
-            "end": "Tuesday 19:50",
-            "courseName": "Teaching methods and strategies",
-            "location": "C1.2.139",
-            "isOnline": false,
-            "teacher": "Aidos Mukhatayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed94814279d",
-            "start": "Tuesday 20:00",
-            "end": "Tuesday 20:50",
-            "courseName": "Product Management",
-            "location": "C1.3.233L",
-            "isOnline": false,
-            "teacher": "Samalgul Nassanbekova",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94814279e",
-            "start": "Tuesday 20:00",
-            "end": "Tuesday 20:50",
-            "courseName": "Business analytics",
-            "location": "C1.1.221P",
-            "isOnline": false,
-            "teacher": "Raskaliyev Timur",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed94814279f",
-            "start": "Tuesday 20:00",
-            "end": "Tuesday 20:50",
-            "courseName": "Audit of processes in information security",
-            "location": "C1.2.222P",
-            "isOnline": false,
-            "teacher": "Abitova Gulnara",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481427a0",
-            "start": "Tuesday 21:00",
-            "end": "Tuesday 21:50",
-            "courseName": "Product Management",
-            "location": "C1.3.233L",
-            "isOnline": false,
-            "teacher": "Samalgul Nassanbekova",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481427a1",
-            "start": "Tuesday 21:00",
-            "end": "Tuesday 21:50",
-            "courseName": "Business analytics",
-            "location": "C1.1.221P",
-            "isOnline": false,
-            "teacher": "Raskaliyev Timur",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481427a2",
-            "start": "Tuesday 21:00",
-            "end": "Tuesday 21:50",
-            "courseName": "Audit of processes in information security",
-            "location": "C1.2.222P",
-            "isOnline": false,
-            "teacher": "Abitova Gulnara",
-            "type": "lecture"
-        }
-    ],
-    "PM-2401D": [
-        {
-            "id": "67ed9481431f5",
-            "start": "Monday 19:00",
-            "end": "Monday 19:50",
-            "courseName": "Methods of sustainable project management",
-            "location": "C1.3.244",
-            "isOnline": false,
-            "teacher": "Tursynzada Kuangaliyeva",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481431f6",
-            "start": "Monday 20:00",
-            "end": "Monday 20:50",
-            "courseName": "Methods of sustainable project management",
-            "location": "C1.3.244",
-            "isOnline": false,
-            "teacher": "Tursynzada Kuangaliyeva",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481431f7",
-            "start": "Monday 21:00",
-            "end": "Monday 21:50",
-            "courseName": "Methods of sustainable project management",
-            "location": "C1.3.244",
-            "isOnline": false,
-            "teacher": "Tursynzada Kuangaliyeva",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481431f8",
-            "start": "Wednesday 19:00",
-            "end": "Wednesday 19:50",
-            "courseName": "Organisation transformation based on project management",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Bushuyev Denys",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481431f9",
-            "start": "Wednesday 20:00",
-            "end": "Wednesday 20:50",
-            "courseName": "Organisation transformation based on project management",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Bushuyev Denys",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481431fa",
-            "start": "Thursday 19:00",
-            "end": "Thursday 19:50",
-            "courseName": "Methods of sustainable project management",
-            "location": "C1.3.244",
-            "isOnline": false,
-            "teacher": "Tursynzada Kuangaliyeva",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481431fb",
-            "start": "Thursday 20:00",
-            "end": "Thursday 20:50",
-            "courseName": "Methods of sustainable project management",
-            "location": "C1.3.244",
-            "isOnline": false,
-            "teacher": "Tursynzada Kuangaliyeva",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481431fc",
-            "start": "Saturday 15:00",
-            "end": "Saturday 15:50",
-            "courseName": "Organisation transformation based on project management",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Bushuyev Denys",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed9481431fd",
-            "start": "Saturday 16:00",
-            "end": "Saturday 16:50",
-            "courseName": "Organisation transformation based on project management",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Bushuyev Denys",
-            "type": "practice"
-        },
-        {
-            "id": "67ed9481431fe",
-            "start": "Saturday 17:00",
-            "end": "Saturday 17:50",
-            "courseName": "Organisation transformation based on project management",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Bushuyev Denys",
-            "type": "practice"
-        }
-    ],
-    "IT-2401D": [
-        {
-            "id": "67ed9481431ff",
-            "start": "Thursday 19:00",
-            "end": "Thursday 19:50",
-            "courseName": "Model verification",
-            "location": "C1.3.331P",
-            "isOnline": false,
-            "teacher": "Kantureeva Mansia",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948143200",
-            "start": "Thursday 20:00",
-            "end": "Thursday 20:50",
-            "courseName": "Model verification",
-            "location": "C1.3.331P",
-            "isOnline": false,
-            "teacher": "Kantureeva Mansia",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948143201",
-            "start": "Thursday 21:00",
-            "end": "Thursday 21:50",
-            "courseName": "Model verification",
-            "location": "C1.3.331P",
-            "isOnline": false,
-            "teacher": "Kantureeva Mansia",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948143202",
-            "start": "Friday 19:00",
-            "end": "Friday 19:50",
-            "courseName": "Data Science and Machine Learning",
-            "location": "C1.3.331P",
-            "isOnline": false,
-            "teacher": "Amirgaliyev Beibut",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948143203",
-            "start": "Friday 20:00",
-            "end": "Friday 20:50",
-            "courseName": "Data Science and Machine Learning",
-            "location": "C1.3.331P",
-            "isOnline": false,
-            "teacher": "Amirgaliyev Beibut",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948143204",
-            "start": "Friday 21:00",
-            "end": "Friday 21:50",
-            "courseName": "Data Science and Machine Learning",
-            "location": "C1.3.331P",
-            "isOnline": false,
-            "teacher": "Amirgaliyev Beibut",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948143205",
-            "start": "Saturday 15:00",
-            "end": "Saturday 15:50",
-            "courseName": "Data Science and Machine Learning",
-            "location": "C1.3.331P",
-            "isOnline": false,
-            "teacher": "Amirgaliyev Beibut",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948143206",
-            "start": "Saturday 16:00",
-            "end": "Saturday 16:50",
-            "courseName": "Data Science and Machine Learning",
-            "location": "C1.3.331P",
-            "isOnline": false,
-            "teacher": "Amirgaliyev Beibut",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948143207",
-            "start": "Saturday 17:00",
-            "end": "Saturday 17:50",
-            "courseName": "Model verification",
-            "location": "C1.3.331P",
-            "isOnline": false,
-            "teacher": "Kantureeva Mansia",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948143208",
-            "start": "Saturday 18:00",
-            "end": "Saturday 18:50",
-            "courseName": "Model verification",
-            "location": "C1.3.331P",
-            "isOnline": false,
-            "teacher": "Kantureeva Mansia",
-            "type": "practice"
-        }
-    ],
-    "EE-2301": [
-        {
-            "id": "67ed948180daa",
-            "start": "Monday 12:00",
-            "end": "Monday 12:50",
-            "courseName": "Embedded Systems Design",
-            "location": "C1.3.124 (Control Engineering Lab\/Electronics Hardware Lab) laboratoryAlibek Murat",
-            "isOnline": false,
-            "teacher": "",
-            "type": null
-        },
-        {
-            "id": "67ed948180dab",
-            "start": "Monday 13:05",
-            "end": "Monday 13:55",
-            "courseName": "Electrical Machines",
-            "location": "C1.3.235L",
-            "isOnline": false,
-            "teacher": "Bayandy Sarsembayev",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180dac",
-            "start": "Monday 14:00",
-            "end": "Monday 14:50",
-            "courseName": "Computer Architecture",
-            "location": "C1.3.365L",
-            "isOnline": false,
-            "teacher": "Baitulakov Anuar",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180dad",
-            "start": "Monday 15:00",
-            "end": "Monday 15:50",
-            "courseName": "Electrical Machines",
-            "location": "C1.3.122 (Embedded systems and IoT lab)",
-            "isOnline": false,
-            "teacher": "Bayandy Sarsembayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dae",
-            "start": "Monday 17:00",
-            "end": "Monday 17:50",
-            "courseName": "Embedded Systems Design",
-            "location": "C1.3.124 (Control Engineering Lab\/Electronics Hardware Lab) laboratoryAlibek Murat",
-            "isOnline": false,
-            "teacher": "",
-            "type": null
-        },
-        {
-            "id": "67ed948180daf",
-            "start": "Monday 18:00",
-            "end": "Monday 18:50",
-            "courseName": "Computer Architecture",
-            "location": "IEC-308",
-            "isOnline": false,
-            "teacher": "Konakbayev Olzhas",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180db0",
-            "start": "Monday 16:00",
-            "end": "Monday 16:50",
-            "courseName": "Electrical Machines",
-            "location": "C1.3.122 (Embedded systems and IoT lab)",
-            "isOnline": false,
-            "teacher": "Bayandy Sarsembayev",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180db1",
-            "start": "Wednesday 14:00",
-            "end": "Wednesday 14:50",
-            "courseName": "Philosophy",
-            "location": "C1.1.253P",
-            "isOnline": false,
-            "teacher": "Bozzhigitova Mariyash",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180db2",
-            "start": "Wednesday 15:00",
-            "end": "Wednesday 15:50",
-            "courseName": "Philosophy",
-            "location": "C1.1.253P",
-            "isOnline": false,
-            "teacher": "Bozzhigitova Mariyash",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180db3",
-            "start": "Wednesday 17:00",
-            "end": "Wednesday 17:50",
-            "courseName": "Media Law and Ethics",
-            "location": "C1.3.235L",
-            "isOnline": false,
-            "teacher": "Vacancy 2 - SCI",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180db4",
-            "start": "Wednesday 18:00",
-            "end": "Wednesday 18:50",
-            "courseName": "Media Law and Ethics",
-            "location": "C1.3.235L",
-            "isOnline": false,
-            "teacher": "Vacancy 2 - SCI",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180db5",
-            "start": "Wednesday 13:05",
-            "end": "Wednesday 13:55",
-            "courseName": "Computer Architecture",
-            "location": "C1.3.370",
-            "isOnline": false,
-            "teacher": "Baitulakov Anuar",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180db6",
-            "start": "Wednesday 16:00",
-            "end": "Wednesday 16:50",
-            "courseName": "Academic Writing",
-            "location": "C1.1.235P",
-            "isOnline": false,
-            "teacher": "Zhumagaliyeva Guldana",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180db7",
-            "start": "Wednesday 08:00",
-            "end": "Wednesday 08:50",
-            "courseName": "Mobile Journalism",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180db8",
-            "start": "Wednesday 19:00",
-            "end": "Wednesday 19:50",
-            "courseName": "Introduction to SOC Analytics",
-            "location": "C1.1.327",
-            "isOnline": false,
-            "teacher": "Sailaukhanov Eldos",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180db9",
-            "start": "Wednesday 12:00",
-            "end": "Wednesday 12:50",
-            "courseName": "Machine Learning Algorithms",
-            "location": "IEC-308",
-            "isOnline": false,
-            "teacher": "Kalzhan Bakhtiyar",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dba",
-            "start": "Wednesday 09:00",
-            "end": "Wednesday 09:50",
-            "courseName": "Mobile Journalism",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180dbb",
-            "start": "Wednesday 11:00",
-            "end": "Wednesday 11:50",
-            "courseName": "Machine Learning Algorithms",
-            "location": "IEC-308",
-            "isOnline": false,
-            "teacher": "Kalzhan Bakhtiyar",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dbc",
-            "start": "Wednesday 10:00",
-            "end": "Wednesday 10:50",
-            "courseName": "Computer Networks Security",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Ibraheem Shayea",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180dbd",
-            "start": "Thursday 14:00",
-            "end": "Thursday 14:50",
-            "courseName": "Computer Architecture",
-            "location": "C1.2.221K",
-            "isOnline": false,
-            "teacher": "Baitulakov Anuar",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dbe",
-            "start": "Thursday 15:00",
-            "end": "Thursday 15:50",
-            "courseName": "Computer Networks Security",
-            "location": "IEC-306",
-            "isOnline": false,
-            "teacher": "Zhetkerbay Askhat",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dbf",
-            "start": "Thursday 17:00",
-            "end": "Thursday 17:50",
-            "courseName": "Machine Learning Algorithms",
-            "location": "IEC-304",
-            "isOnline": false,
-            "teacher": "Kalzhan Bakhtiyar",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dc0",
-            "start": "Thursday 18:00",
-            "end": "Thursday 18:50",
-            "courseName": "Computer Networks Security",
-            "location": "C1.2.231K",
-            "isOnline": false,
-            "teacher": "Nurmukhanbetova Albina",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dc1",
-            "start": "Thursday 11:00",
-            "end": "Thursday 11:50",
-            "courseName": "Computer Networks Security",
-            "location": "IEC-305",
-            "isOnline": false,
-            "teacher": "Tolegen Dana",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dc2",
-            "start": "Thursday 12:00",
-            "end": "Thursday 12:50",
-            "courseName": "Windows System Administration",
-            "location": "C1.2.243K",
-            "isOnline": false,
-            "teacher": "Azibek Balzhan",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dc3",
-            "start": "Thursday 16:00",
-            "end": "Thursday 16:50",
-            "courseName": "Machine Learning Algorithms",
-            "location": "IEC-304",
-            "isOnline": false,
-            "teacher": "Kalzhan Bakhtiyar",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dc4",
-            "start": "Thursday 13:05",
-            "end": "Thursday 13:55",
-            "courseName": "Computer Architecture",
-            "location": "C1.2.221K",
-            "isOnline": false,
-            "teacher": "Baitulakov Anuar",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dc5",
-            "start": "Thursday 08:00",
-            "end": "Thursday 08:50",
-            "courseName": "Philosophy",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180dc6",
-            "start": "Thursday 09:00",
-            "end": "Thursday 09:50",
-            "courseName": "Philosophy",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180dc7",
-            "start": "Thursday 19:00",
-            "end": "Thursday 19:50",
-            "courseName": "Computer Networks Security",
-            "location": "C1.2.231K",
-            "isOnline": false,
-            "teacher": "Nurmukhanbetova Albina",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dc8",
-            "start": "Thursday 10:00",
-            "end": "Thursday 10:50",
-            "courseName": "Computer Networks Security",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Ibraheem Shayea",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180dc9",
-            "start": "Friday 12:00",
-            "end": "Friday 12:50",
-            "courseName": "Computer Architecture",
-            "location": "IEC-302",
-            "isOnline": false,
-            "teacher": "Yarulin Didar",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dca",
-            "start": "Friday 13:05",
-            "end": "Friday 13:55",
-            "courseName": "Computer Architecture",
-            "location": "IEC-302",
-            "isOnline": false,
-            "teacher": "Yarulin Didar",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dcb",
-            "start": "Friday 14:00",
-            "end": "Friday 14:50",
-            "courseName": "Academic Writing",
-            "location": "C1.1.235P",
-            "isOnline": false,
-            "teacher": "Zhumagaliyeva Guldana",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dcc",
-            "start": "Friday 15:00",
-            "end": "Friday 15:50",
-            "courseName": "Data Journalism",
-            "location": "C1.3.223P",
-            "isOnline": false,
-            "teacher": "Vacancy 4 - SCI",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dcd",
-            "start": "Friday 16:00",
-            "end": "Friday 16:50",
-            "courseName": "Data Journalism",
-            "location": "C1.3.223P",
-            "isOnline": false,
-            "teacher": "Vacancy 4 - SCI",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dce",
-            "start": "Friday 17:00",
-            "end": "Friday 17:50",
-            "courseName": "Media Law and Ethics",
-            "location": "C1.3.248",
-            "isOnline": false,
-            "teacher": "Vacancy 2 - SCI",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dcf",
-            "start": "Friday 18:00",
-            "end": "Friday 18:50",
-            "courseName": "Media Law and Ethics",
-            "location": "C1.3.248",
-            "isOnline": false,
-            "teacher": "Vacancy 2 - SCI",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dd0",
-            "start": "Friday 08:00",
-            "end": "Friday 08:50",
-            "courseName": "Philosophy",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180dd1",
-            "start": "Friday 09:00",
-            "end": "Friday 09:50",
-            "courseName": "Windows System Administration",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180dd2",
-            "start": "Friday 11:00",
-            "end": "Friday 11:50",
-            "courseName": "Computer Architecture",
-            "location": "IEC-302",
-            "isOnline": false,
-            "teacher": "Yarulin Didar",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dd3",
-            "start": "Friday 10:00",
-            "end": "Friday 10:50",
-            "courseName": "Computer Networks Security",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Ibraheem Shayea",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180dd4",
-            "start": "Friday 19:00",
-            "end": "Friday 19:50",
-            "courseName": "Media Law and Ethics",
-            "location": "C1.3.248",
-            "isOnline": false,
-            "teacher": "Vacancy 2 - SCI",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dd5",
-            "start": "Friday 20:00",
-            "end": "Friday 20:50",
-            "courseName": "Motion Picture Design",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/ \"Approved by\" Vice-Rector of Academic Affairs of \"Astana IT University\" LLP ______________G. S. Akybayeva \"__\"__________________2025. Group SE-2301 Director Of Academic Affairs Department ___________ Day of the weekTime Discipline Classroom Type Lecturer Monday",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180dd6",
-            "start": "Tuesday 13:05",
-            "end": "Tuesday 13:55",
-            "courseName": "Data Journalism",
-            "location": "C1.3.232P",
-            "isOnline": false,
-            "teacher": "Vacancy 4 - SCI",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dd7",
-            "start": "Tuesday 14:00",
-            "end": "Tuesday 14:50",
-            "courseName": "Academic Writing",
-            "location": "C1.1.142",
-            "isOnline": false,
-            "teacher": "Seidin Ariya",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180dd8",
-            "start": "Tuesday 16:00",
-            "end": "Tuesday 16:50",
-            "courseName": "Machine Learning Algorithms",
-            "location": "IEC-304",
-            "isOnline": false,
-            "teacher": "Kalzhan Bakhtiyar",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dd9",
-            "start": "Tuesday 17:00",
-            "end": "Tuesday 17:50",
-            "courseName": "Machine Learning Algorithms",
-            "location": "IEC-304",
-            "isOnline": false,
-            "teacher": "Kalzhan Bakhtiyar",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180dda",
-            "start": "Tuesday 18:00",
-            "end": "Tuesday 18:50",
-            "courseName": "Introduction to SOC Analytics",
-            "location": "C1.2.240K",
-            "isOnline": false,
-            "teacher": "Sailaukhanov Eldos",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180ddb",
-            "start": "Tuesday 15:00",
-            "end": "Tuesday 15:50",
-            "courseName": "Academic Writing",
-            "location": "C1.1.142",
-            "isOnline": false,
-            "teacher": "Seidin Ariya",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180ddc",
-            "start": "Tuesday 12:00",
-            "end": "Tuesday 12:50",
-            "courseName": "Mobile Journalism",
-            "location": "C1.3.321",
-            "isOnline": false,
-            "teacher": "Anastasia Yemtsova",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180ddd",
-            "start": "Tuesday 08:00",
-            "end": "Tuesday 08:50",
-            "courseName": "Machine Learning Algorithms",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "https:\/\/learn.astanait.edu.kz\/",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180dde",
-            "start": "Tuesday 09:00",
-            "end": "Tuesday 09:50",
-            "courseName": "Computer Networks Security",
-            "location": "online",
-            "isOnline": true,
-            "teacher": "Ibraheem Shayea",
-            "type": "lecture"
-        },
-        {
-            "id": "67ed948180ddf",
-            "start": "Tuesday 10:00",
-            "end": "Tuesday 10:50",
-            "courseName": "Mobile Journalism",
-            "location": "C1.3.321",
-            "isOnline": false,
-            "teacher": "Anastasia Yemtsova",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180de0",
-            "start": "Tuesday 11:00",
-            "end": "Tuesday 11:50",
-            "courseName": "Mobile Journalism",
-            "location": "C1.3.321",
-            "isOnline": false,
-            "teacher": "Anastasia Yemtsova",
-            "type": "practice"
-        },
-        {
-            "id": "67ed948180de1",
-            "start": "Tuesday 19:00",
-            "end": "Tuesday 19:50",
-            "courseName": "Introduction to SOC Analytics",
-            "location": "C1.2.240K",
-            "isOnline": false,
-            "teacher": "Sailaukhanov Eldos",
-            "type": "practice"
-        }
-    ]
+  "SE-2203": [],
+  "EE-2401": [
+    {
+      "id": "67ed94813698b",
+      "start": "Monday 09:00",
+      "end": "Monday 09:50",
+      "courseName": "Ordinary Differential Equations",
+      "location": "C1.3.264L",
+      "isOnline": false,
+      "teacher": "Mukanova Balgaisha",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94813698d",
+      "start": "Monday 10:00",
+      "end": "Monday 10:50",
+      "courseName": "Calculus 3",
+      "location": "C1.3.264L",
+      "isOnline": false,
+      "teacher": "Nurlybekuly T.",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94813698e",
+      "start": "Monday 11:00",
+      "end": "Monday 11:50",
+      "courseName": "Calculus 3",
+      "location": "C1.3.264L",
+      "isOnline": false,
+      "teacher": "Nurlybekuly T.",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94813698f",
+      "start": "Monday 12:00",
+      "end": "Monday 12:50",
+      "courseName": "Photo Journalism and Basics of Design",
+      "location": "C1.1.221P",
+      "isOnline": false,
+      "teacher": "Assemgul Sarsembayeva",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948136990",
+      "start": "Monday 13:05",
+      "end": "Monday 13:55",
+      "courseName": "Photo Journalism and Basics of Design",
+      "location": "C1.1.221P",
+      "isOnline": false,
+      "teacher": "Assemgul Sarsembayeva",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948136991",
+      "start": "Monday 08:00",
+      "end": "Monday 08:50",
+      "courseName": "Ordinary Differential Equations",
+      "location": "C1.3.264L",
+      "isOnline": false,
+      "teacher": "Mukanova Balgaisha",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948136992",
+      "start": "Monday 18:00",
+      "end": "Monday 18:50",
+      "courseName": "Psychology",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948136993",
+      "start": "Monday 19:00",
+      "end": "Monday 19:50",
+      "courseName": "Cultural Studies",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948136994",
+      "start": "Monday 20:00",
+      "end": "Monday 20:50",
+      "courseName": "Discrete Mathematics",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948136995",
+      "start": "Monday 14:00",
+      "end": "Monday 14:50",
+      "courseName": "Electronics",
+      "location": "C1.2.223K",
+      "isOnline": false,
+      "teacher": "khatova Zhannur",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948136996",
+      "start": "Tuesday 12:00",
+      "end": "Tuesday 12:50",
+      "courseName": "Photo Journalism and Basics of Design",
+      "location": "C1.1.221P",
+      "isOnline": false,
+      "teacher": "Assemgul Sarsembayeva",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948136997",
+      "start": "Tuesday 13:05",
+      "end": "Tuesday 13:55",
+      "courseName": "Photo Journalism and Basics of Design",
+      "location": "C1.1.221P",
+      "isOnline": false,
+      "teacher": "Assemgul Sarsembayeva",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948136998",
+      "start": "Tuesday 18:00",
+      "end": "Tuesday 18:50",
+      "courseName": "Calculus 2",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948136999",
+      "start": "Tuesday 19:00",
+      "end": "Tuesday 19:50",
+      "courseName": "Political Science",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94813699a",
+      "start": "Tuesday 10:00",
+      "end": "Tuesday 10:50",
+      "courseName": "Verbal Communication Skills",
+      "location": "C1.1.221P",
+      "isOnline": false,
+      "teacher": "Assemgul Sarsembayeva",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94813699b",
+      "start": "Tuesday 11:00",
+      "end": "Tuesday 11:50",
+      "courseName": "Verbal Communication Skills",
+      "location": "C1.1.221P",
+      "isOnline": false,
+      "teacher": "Assemgul Sarsembayeva",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94813699c",
+      "start": "Tuesday 08:00",
+      "end": "Tuesday 08:50",
+      "courseName": "History of Kazakhstan",
+      "location": "C1.1.228P",
+      "isOnline": false,
+      "teacher": "Auzhanova Assel",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94813699d",
+      "start": "Tuesday 09:00",
+      "end": "Tuesday 09:50",
+      "courseName": "History of Kazakhstan",
+      "location": "C1.1.228P",
+      "isOnline": false,
+      "teacher": "Auzhanova Assel",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94813699e",
+      "start": "Tuesday 14:00",
+      "end": "Tuesday 14:50",
+      "courseName": "Electronics",
+      "location": "C1.2.223K",
+      "isOnline": false,
+      "teacher": "khatova Zhannur",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94813699f",
+      "start": "Wednesday 08:00",
+      "end": "Wednesday 08:50",
+      "courseName": "Verbal Communication Skills",
+      "location": "C1.1.221P",
+      "isOnline": false,
+      "teacher": "Assemgul Sarsembayeva",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369a0",
+      "start": "Wednesday 09:00",
+      "end": "Wednesday 09:50",
+      "courseName": "Verbal Communication Skills",
+      "location": "C1.1.221P",
+      "isOnline": false,
+      "teacher": "Assemgul Sarsembayeva",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369a1",
+      "start": "Wednesday 10:00",
+      "end": "Wednesday 10:50",
+      "courseName": "Calculus 3",
+      "location": "C1.1.355P",
+      "isOnline": false,
+      "teacher": "Nurlybekuly T.",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369a2",
+      "start": "Wednesday 19:00",
+      "end": "Wednesday 19:50",
+      "courseName": "Linear Algebra",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369a3",
+      "start": "Wednesday 12:00",
+      "end": "Wednesday 12:50",
+      "courseName": "Verbal Communication Skills",
+      "location": "C1.1.221P",
+      "isOnline": false,
+      "teacher": "Assemgul Sarsembayeva",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369a4",
+      "start": "Wednesday 13:05",
+      "end": "Wednesday 13:55",
+      "courseName": "Verbal Communication Skills",
+      "location": "C1.1.221P",
+      "isOnline": false,
+      "teacher": "Assemgul Sarsembayeva",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369a5",
+      "start": "Wednesday 11:00",
+      "end": "Wednesday 11:50",
+      "courseName": "Calculus 3",
+      "location": "C1.1.355P",
+      "isOnline": false,
+      "teacher": "Nurlybekuly T.",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369a6",
+      "start": "Wednesday 17:00",
+      "end": "Wednesday 17:50",
+      "courseName": "Mathematical Methods for Engineers",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Shazada Umair Khan",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369a7",
+      "start": "Wednesday 18:00",
+      "end": "Wednesday 18:50",
+      "courseName": "History of Kazakhstan",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Jampeissova Zhanar",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369a8",
+      "start": "Wednesday 14:00",
+      "end": "Wednesday 14:50",
+      "courseName": "Electronics",
+      "location": "C1.2.223K",
+      "isOnline": false,
+      "teacher": "khatova Zhannur",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369a9",
+      "start": "Thursday 08:00",
+      "end": "Thursday 08:50",
+      "courseName": "Ordinary Differential Equations",
+      "location": "C1.3.264L",
+      "isOnline": false,
+      "teacher": "Mukanova Balgaisha",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369aa",
+      "start": "Thursday 09:00",
+      "end": "Thursday 09:50",
+      "courseName": "Algorithms and Data Structures",
+      "location": "C1.1.348K",
+      "isOnline": false,
+      "teacher": "Kharmyssov Chingis",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369ab",
+      "start": "Thursday 11:00",
+      "end": "Thursday 11:50",
+      "courseName": "Introduction to Leadership",
+      "location": "C1.1.334L",
+      "isOnline": false,
+      "teacher": "Mergen Duisenov",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369ac",
+      "start": "Thursday 12:00",
+      "end": "Thursday 12:50",
+      "courseName": "History of Kazakhstan",
+      "location": "C1.1.228P",
+      "isOnline": false,
+      "teacher": "Auzhanova Assel",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369ad",
+      "start": "Thursday 13:05",
+      "end": "Thursday 13:55",
+      "courseName": "History of Kazakhstan",
+      "location": "C1.1.228P",
+      "isOnline": false,
+      "teacher": "Auzhanova Assel",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369ae",
+      "start": "Thursday 10:00",
+      "end": "Thursday 10:50",
+      "courseName": "Calculus 3",
+      "location": "C1.3.264L",
+      "isOnline": false,
+      "teacher": "Nurlybekuly T.",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369af",
+      "start": "Thursday 16:00",
+      "end": "Thursday 16:50",
+      "courseName": "Mathematical Methods for Engineers",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Shazada Umair Khan",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369b0",
+      "start": "Thursday 17:00",
+      "end": "Thursday 17:50",
+      "courseName": "Mathematical Methods for Engineers",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Shazada Umair Khan",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369b1",
+      "start": "Thursday 18:00",
+      "end": "Thursday 18:50",
+      "courseName": "Database Management Systems",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369b2",
+      "start": "Thursday 19:00",
+      "end": "Thursday 19:50",
+      "courseName": "Database Management Systems",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369b3",
+      "start": "Thursday 20:00",
+      "end": "Thursday 20:50",
+      "courseName": "Cultural Studies",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369b4",
+      "start": "Thursday 14:00",
+      "end": "Thursday 14:50",
+      "courseName": "Electronics",
+      "location": "C1.2.223K",
+      "isOnline": false,
+      "teacher": "khatova Zhannur",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369b5",
+      "start": "Friday 08:00",
+      "end": "Friday 08:50",
+      "courseName": "Political Science",
+      "location": "C1.1.261",
+      "isOnline": false,
+      "teacher": "Yenglik Dossymkhan",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369b6",
+      "start": "Friday 09:00",
+      "end": "Friday 09:50",
+      "courseName": "Psychology",
+      "location": "C1.1.225P",
+      "isOnline": false,
+      "teacher": "Nursulu Belessova",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369b7",
+      "start": "Friday 10:00",
+      "end": "Friday 10:50",
+      "courseName": "Ordinary Differential Equations",
+      "location": "C1.1.355P",
+      "isOnline": false,
+      "teacher": "Mukanova Balgaisha",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369b8",
+      "start": "Friday 11:00",
+      "end": "Friday 11:50",
+      "courseName": "Ordinary Differential Equations",
+      "location": "C1.1.355P",
+      "isOnline": false,
+      "teacher": "Mukanova Balgaisha",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369b9",
+      "start": "Friday 12:00",
+      "end": "Friday 12:50",
+      "courseName": "Introduction to Leadership",
+      "location": "C1.3.223P",
+      "isOnline": false,
+      "teacher": "Mergen Duisenov",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369ba",
+      "start": "Friday 13:05",
+      "end": "Friday 13:55",
+      "courseName": "Introduction to Leadership",
+      "location": "C1.3.223P",
+      "isOnline": false,
+      "teacher": "Mergen Duisenov",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369bb",
+      "start": "Friday 17:00",
+      "end": "Friday 17:50",
+      "courseName": "Mathematical Methods for Engineers",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Shazada Umair Khan",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369bc",
+      "start": "Friday 18:00",
+      "end": "Friday 18:50",
+      "courseName": "Algorithms and Data Structures",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369bd",
+      "start": "Friday 19:00",
+      "end": "Friday 19:50",
+      "courseName": "Algorithms and Data Structures",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369be",
+      "start": "Friday 14:00",
+      "end": "Friday 14:50",
+      "courseName": "Electronics",
+      "location": "C1.2.223K",
+      "isOnline": false,
+      "teacher": "khatova Zhannur",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369bf",
+      "start": "Saturday 08:00",
+      "end": "Saturday 08:50",
+      "courseName": "Hacking Lab",
+      "location": "C1.1.334L",
+      "isOnline": false,
+      "teacher": "Aliya Abdiraman",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369c0",
+      "start": "Saturday 09:00",
+      "end": "Saturday 09:50",
+      "courseName": "Hacking Lab",
+      "location": "C1.1.334L",
+      "isOnline": false,
+      "teacher": "Aliya Abdiraman",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369c1",
+      "start": "Saturday 18:00",
+      "end": "Saturday 18:50",
+      "courseName": "History of Kazakhstan",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369c2",
+      "start": "Saturday 19:00",
+      "end": "Saturday 19:50",
+      "courseName": "History of Kazakhstan",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/ \"Approved by\" Vice-Rector of Academic Affairs of \"Astana IT University\" LLP ______________G. S. Akybayeva \"__\"__________________2025. Group MCS-2401",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481369c3",
+      "start": "Saturday 10:00",
+      "end": "Saturday 10:50",
+      "courseName": "Algorithms and Data Structures",
+      "location": "C1.1.245K",
+      "isOnline": false,
+      "teacher": "Kharmyssov Chingis",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369c4",
+      "start": "Saturday 11:00",
+      "end": "Saturday 11:50",
+      "courseName": "Algorithms and Data Structures",
+      "location": "C1.1.245K",
+      "isOnline": false,
+      "teacher": "Kharmyssov Chingis",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369c5",
+      "start": "Saturday 12:00",
+      "end": "Saturday 12:50",
+      "courseName": "Calculus 2",
+      "location": "C1.2.251L",
+      "isOnline": false,
+      "teacher": "Serik Kudaibergenov",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369c6",
+      "start": "Saturday 13:05",
+      "end": "Saturday 13:55",
+      "courseName": "Calculus 2",
+      "location": "C1.2.251L",
+      "isOnline": false,
+      "teacher": "Serik Kudaibergenov \"Approved by\" Vice-Rector of Academic Affairs of \"Astana IT University\" LLP ______________G. S. Akybayeva \"__\"__________________2025. Group DJ-2401",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369c7",
+      "start": "Saturday 14:00",
+      "end": "Saturday 14:50",
+      "courseName": "Linear Algebra",
+      "location": "C1.1.324L",
+      "isOnline": false,
+      "teacher": "Bilimzhanuly Maksat",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369c8",
+      "start": "Saturday 15:00",
+      "end": "Saturday 15:50",
+      "courseName": "Linear Algebra",
+      "location": "C1.1.324L",
+      "isOnline": false,
+      "teacher": "Bilimzhanuly Maksat \"Approved by\" Vice-Rector of Academic Affairs of \"Astana IT University\" LLP ______________G. S. Akybayeva \"__\"__________________2025. Group CS-2439",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369c9",
+      "start": "Saturday 16:00",
+      "end": "Saturday 16:50",
+      "courseName": "Linear Algebra",
+      "location": "C1.1.365P",
+      "isOnline": false,
+      "teacher": "Zhandesh Altyngul",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481369ca",
+      "start": "Saturday 17:00",
+      "end": "Saturday 17:50",
+      "courseName": "Linear Algebra",
+      "location": "C1.1.365P",
+      "isOnline": false,
+      "teacher": "Zhandesh Altyngul \"Approved by\" Vice-Rector of Academic Affairs of \"Astana IT University\" LLP ______________G. S. Akybayeva \"__\"__________________2025. Group CS-2433",
+      "type": "practice"
+    }
+  ],
+  "CSE-2307M": [
+    {
+      "id": "67ed948137231",
+      "start": "Tuesday 18:00",
+      "end": "Tuesday 18:50",
+      "courseName": "Big Data Methods and Tools",
+      "location": "C1.1.366P",
+      "isOnline": false,
+      "teacher": "Bolatzhan Kumalakov",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948137232",
+      "start": "Tuesday 19:00",
+      "end": "Tuesday 19:50",
+      "courseName": "Big Data Methods and Tools",
+      "location": "C1.1.366P",
+      "isOnline": false,
+      "teacher": "Bolatzhan Kumalakov",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948137233",
+      "start": "Wednesday 19:00",
+      "end": "Wednesday 19:50",
+      "courseName": "IT Project Management",
+      "location": "C1.3.233L",
+      "isOnline": false,
+      "teacher": "Gaini Mukhanova",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948137234",
+      "start": "Wednesday 20:00",
+      "end": "Wednesday 20:50",
+      "courseName": "IT Project Management",
+      "location": "C1.3.233L",
+      "isOnline": false,
+      "teacher": "Gaini Mukhanova",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948137235",
+      "start": "Friday 18:00",
+      "end": "Friday 18:50",
+      "courseName": "Service model in project management",
+      "location": "C1.3.318",
+      "isOnline": false,
+      "teacher": "Bibigul Aidarkhanova",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948137236",
+      "start": "Friday 19:00",
+      "end": "Friday 19:50",
+      "courseName": "Service model in project management",
+      "location": "C1.3.318",
+      "isOnline": false,
+      "teacher": "Bibigul Aidarkhanova",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948137237",
+      "start": "Friday 20:00",
+      "end": "Friday 20:50",
+      "courseName": "IT Project Management",
+      "location": "C1.3.233L",
+      "isOnline": false,
+      "teacher": "Gaini Mukhanova",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948137238",
+      "start": "Friday 21:00",
+      "end": "Friday 21:50",
+      "courseName": "IT Project Management",
+      "location": "C1.3.233L",
+      "isOnline": false,
+      "teacher": "Gaini Mukhanova",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948137239",
+      "start": "Thursday 18:00",
+      "end": "Thursday 18:50",
+      "courseName": "Service model in project management",
+      "location": "C1.3.318",
+      "isOnline": false,
+      "teacher": "Bibigul Aidarkhanova",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94813723a",
+      "start": "Thursday 19:00",
+      "end": "Thursday 19:50",
+      "courseName": "Service model in project management",
+      "location": "C1.3.318",
+      "isOnline": false,
+      "teacher": "Bibigul Aidarkhanova",
+      "type": "lecture"
+    }
+  ],
+  "CSE-2401M": [
+    {
+      "id": "67ed948142765",
+      "start": "Monday 18:00",
+      "end": "Monday 18:50",
+      "courseName": "Secure computer network architecture",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Vacancy 1-DISS",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142766",
+      "start": "Monday 18:00",
+      "end": "Monday 18:50",
+      "courseName": "Product Management",
+      "location": "C1.2.246",
+      "isOnline": false,
+      "teacher": "Samalgul Nassanbekova",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142767",
+      "start": "Monday 18:00",
+      "end": "Monday 18:50",
+      "courseName": "Behavioral competencies for project management",
+      "location": "C1.3.233L",
+      "isOnline": false,
+      "teacher": "Anara Yesengeldina",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142768",
+      "start": "Monday 18:00",
+      "end": "Monday 18:50",
+      "courseName": "Agile Project Management",
+      "location": "C1.3.264L",
+      "isOnline": false,
+      "teacher": "Vacancy 3 - SCI",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142769",
+      "start": "Monday 18:00",
+      "end": "Monday 18:50",
+      "courseName": "Investigation of software source code for vulnerabilities",
+      "location": "C1.2.251L",
+      "isOnline": false,
+      "teacher": "Glazyrina Natalya",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94814276a",
+      "start": "Monday 19:00",
+      "end": "Monday 19:50",
+      "courseName": "Secure computer network architecture",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Vacancy 1-DISS",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94814276b",
+      "start": "Monday 19:00",
+      "end": "Monday 19:50",
+      "courseName": "Product Management",
+      "location": "C1.2.246",
+      "isOnline": false,
+      "teacher": "Samalgul Nassanbekova",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94814276c",
+      "start": "Monday 19:00",
+      "end": "Monday 19:50",
+      "courseName": "Behavioral competencies for project management",
+      "location": "C1.3.233L",
+      "isOnline": false,
+      "teacher": "Anara Yesengeldina",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94814276d",
+      "start": "Monday 19:00",
+      "end": "Monday 19:50",
+      "courseName": "Agile Project Management",
+      "location": "C1.3.264L",
+      "isOnline": false,
+      "teacher": "Vacancy 3 - SCI",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94814276e",
+      "start": "Monday 19:00",
+      "end": "Monday 19:50",
+      "courseName": "Investigation of software source code for vulnerabilities",
+      "location": "C1.2.251L",
+      "isOnline": false,
+      "teacher": "Glazyrina Natalya",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94814276f",
+      "start": "Monday 20:00",
+      "end": "Monday 20:50",
+      "courseName": "Software Development Case Study",
+      "location": "C1.3.361",
+      "isOnline": false,
+      "teacher": "Aubakirov Sanzhar",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142770",
+      "start": "Monday 21:00",
+      "end": "Monday 21:50",
+      "courseName": "Software Development Case Study",
+      "location": "C1.3.361",
+      "isOnline": false,
+      "teacher": "Aubakirov Sanzhar",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142771",
+      "start": "Wednesday 18:00",
+      "end": "Wednesday 18:50",
+      "courseName": "Markov chains and decision-making processes",
+      "location": "C1.1.328L",
+      "isOnline": false,
+      "teacher": "Minsoo Han",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142772",
+      "start": "Wednesday 18:00",
+      "end": "Wednesday 18:50",
+      "courseName": "High-performance computing",
+      "location": "C1.2.237L",
+      "isOnline": false,
+      "teacher": "Adai Shomanov",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142773",
+      "start": "Wednesday 19:00",
+      "end": "Wednesday 19:50",
+      "courseName": "Markov chains and decision-making processes",
+      "location": "C1.1.328L",
+      "isOnline": false,
+      "teacher": "Minsoo Han",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142774",
+      "start": "Wednesday 19:00",
+      "end": "Wednesday 19:50",
+      "courseName": "High-performance computing",
+      "location": "C1.2.237L",
+      "isOnline": false,
+      "teacher": "Adai Shomanov",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142775",
+      "start": "Wednesday 20:00",
+      "end": "Wednesday 20:50",
+      "courseName": "Teaching methods and strategies",
+      "location": "C1.2.139",
+      "isOnline": false,
+      "teacher": "Aidos Mukhatayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142776",
+      "start": "Wednesday 21:00",
+      "end": "Wednesday 21:50",
+      "courseName": "Teaching methods and strategies",
+      "location": "C1.2.139",
+      "isOnline": false,
+      "teacher": "Aidos Mukhatayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142777",
+      "start": "Thursday 18:00",
+      "end": "Thursday 18:50",
+      "courseName": "Teaching methods and strategies",
+      "location": "C1.2.139",
+      "isOnline": false,
+      "teacher": "Aidos Mukhatayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142778",
+      "start": "Thursday 19:00",
+      "end": "Thursday 19:50",
+      "courseName": "Teaching methods and strategies",
+      "location": "C1.2.139",
+      "isOnline": false,
+      "teacher": "Aidos Mukhatayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142779",
+      "start": "Thursday 20:00",
+      "end": "Thursday 20:50",
+      "courseName": "Game design theory",
+      "location": "C1.3.323K",
+      "isOnline": false,
+      "teacher": "Shakhmetova Gulmira",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94814277a",
+      "start": "Thursday 21:00",
+      "end": "Thursday 21:50",
+      "courseName": "Game design theory",
+      "location": "C1.3.323K",
+      "isOnline": false,
+      "teacher": "Shakhmetova Gulmira",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94814277b",
+      "start": "Friday 20:00",
+      "end": "Friday 20:50",
+      "courseName": "IT Audit and Control",
+      "location": "C1.2.227P",
+      "isOnline": false,
+      "teacher": "Abitova Gulnara",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94814277c",
+      "start": "Friday 21:00",
+      "end": "Friday 21:50",
+      "courseName": "IT Audit and Control",
+      "location": "C1.2.227P",
+      "isOnline": false,
+      "teacher": "Abitova Gulnara",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94814277d",
+      "start": "Friday 18:00",
+      "end": "Friday 18:50",
+      "courseName": "Product Management",
+      "location": "C1.3.244",
+      "isOnline": false,
+      "teacher": "Samalgul Nassanbekova",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94814277e",
+      "start": "Friday 18:00",
+      "end": "Friday 18:50",
+      "courseName": "Audit of processes in information security",
+      "location": "C1.2.232P",
+      "isOnline": false,
+      "teacher": "Abitova Gulnara",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94814277f",
+      "start": "Friday 18:00",
+      "end": "Friday 18:50",
+      "courseName": "Business analytics",
+      "location": "C1.3.321",
+      "isOnline": false,
+      "teacher": "Raskaliyev Timur",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142780",
+      "start": "Friday 19:00",
+      "end": "Friday 19:50",
+      "courseName": "Product Management",
+      "location": "C1.3.244",
+      "isOnline": false,
+      "teacher": "Samalgul Nassanbekova",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142781",
+      "start": "Friday 19:00",
+      "end": "Friday 19:50",
+      "courseName": "Audit of processes in information security",
+      "location": "C1.2.232P",
+      "isOnline": false,
+      "teacher": "Abitova Gulnara",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142782",
+      "start": "Friday 19:00",
+      "end": "Friday 19:50",
+      "courseName": "Business analytics",
+      "location": "C1.3.321",
+      "isOnline": false,
+      "teacher": "Raskaliyev Timur",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142783",
+      "start": "Friday 08:00",
+      "end": "Friday 08:50",
+      "courseName": "Teaching methods and strategies",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142784",
+      "start": "Friday 09:00",
+      "end": "Friday 09:50",
+      "courseName": "Production processes and production of audiovisual media content",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142785",
+      "start": "Friday 09:00",
+      "end": "Friday 09:50",
+      "courseName": "Game design theory",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142786",
+      "start": "Friday 12:00",
+      "end": "Friday 12:50",
+      "courseName": "Marketing in the public sector",
+      "location": "C1.3.322",
+      "isOnline": false,
+      "teacher": "Mergen Duisenov",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142787",
+      "start": "Friday 13:05",
+      "end": "Friday 13:55",
+      "courseName": "Teaching methods and strategies",
+      "location": "C1.2.139",
+      "isOnline": false,
+      "teacher": "Aidos Mukhatayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142788",
+      "start": "Friday 14:00",
+      "end": "Friday 14:50",
+      "courseName": "Teaching methods and strategies",
+      "location": "C1.2.139",
+      "isOnline": false,
+      "teacher": "Aidos Mukhatayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142789",
+      "start": "Friday 11:00",
+      "end": "Friday 11:50",
+      "courseName": "Marketing in the public sector",
+      "location": "C1.3.322",
+      "isOnline": false,
+      "teacher": "Mergen Duisenov",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94814278a",
+      "start": "Saturday 11:00",
+      "end": "Saturday 11:50",
+      "courseName": "Data-driven decision-making",
+      "location": "C1.1.221P",
+      "isOnline": false,
+      "teacher": "Akbergenov Yerkin",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94814278b",
+      "start": "Saturday 11:00",
+      "end": "Saturday 11:50",
+      "courseName": "Neural Networks",
+      "location": "C1.1.327",
+      "isOnline": false,
+      "teacher": "Niyazova R.S.",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94814278c",
+      "start": "Saturday 12:00",
+      "end": "Saturday 12:50",
+      "courseName": "High-performance computing",
+      "location": "C1.2.237L",
+      "isOnline": false,
+      "teacher": "Adai Shomanov",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94814278d",
+      "start": "Saturday 12:00",
+      "end": "Saturday 12:50",
+      "courseName": "Markov chains and decision-making processes",
+      "location": "C1.1.328L",
+      "isOnline": false,
+      "teacher": "Minsoo Han",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94814278e",
+      "start": "Saturday 13:05",
+      "end": "Saturday 13:55",
+      "courseName": "Teaching methods and strategies",
+      "location": "C1.2.139",
+      "isOnline": false,
+      "teacher": "Aidos Mukhatayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94814278f",
+      "start": "Saturday 14:00",
+      "end": "Saturday 14:50",
+      "courseName": "Teaching methods and strategies",
+      "location": "C1.2.139",
+      "isOnline": false,
+      "teacher": "Aidos Mukhatayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142790",
+      "start": "Saturday 15:00",
+      "end": "Saturday 15:50",
+      "courseName": "Machine learning and artificial intelligence",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Mohammadzadeh Ardashir",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142791",
+      "start": "Saturday 16:00",
+      "end": "Saturday 16:50",
+      "courseName": "Advanced Binary Analysis Techniques",
+      "location": "C1.2.222P",
+      "isOnline": false,
+      "teacher": "Glazyrina Natalya",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142792",
+      "start": "Saturday 17:00",
+      "end": "Saturday 17:50",
+      "courseName": "Advanced Binary Analysis Techniques",
+      "location": "C1.2.222P",
+      "isOnline": false,
+      "teacher": "Glazyrina Natalya",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142793",
+      "start": "Saturday 18:00",
+      "end": "Saturday 18:50",
+      "courseName": "Marketing in the public sector",
+      "location": "C1.3.322",
+      "isOnline": false,
+      "teacher": "Mergen Duisenov",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142794",
+      "start": "Saturday 19:00",
+      "end": "Saturday 19:50",
+      "courseName": "Marketing in the public sector",
+      "location": "C1.3.322",
+      "isOnline": false,
+      "teacher": "Mergen Duisenov",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142795",
+      "start": "Saturday 20:00",
+      "end": "Saturday 20:50",
+      "courseName": "Teaching methods and strategies",
+      "location": "C1.2.139",
+      "isOnline": false,
+      "teacher": "Aidos Mukhatayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142796",
+      "start": "Saturday 21:00",
+      "end": "Saturday 21:50",
+      "courseName": "Teaching methods and strategies",
+      "location": "C1.2.139",
+      "isOnline": false,
+      "teacher": "Aidos Mukhatayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948142797",
+      "start": "Saturday 08:00",
+      "end": "Saturday 08:50",
+      "courseName": "Teaching methods and strategies",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142798",
+      "start": "Saturday 09:00",
+      "end": "Saturday 09:50",
+      "courseName": "Production processes and production of audiovisual media content",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948142799",
+      "start": "Saturday 09:00",
+      "end": "Saturday 09:50",
+      "courseName": "Game design theory",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94814279a",
+      "start": "Saturday 10:00",
+      "end": "Saturday 10:50",
+      "courseName": "Machine learning and artificial intelligence",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Mohammadzadeh Ardashir",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94814279b",
+      "start": "Tuesday 18:00",
+      "end": "Tuesday 18:50",
+      "courseName": "Teaching methods and strategies",
+      "location": "C1.2.139",
+      "isOnline": false,
+      "teacher": "Aidos Mukhatayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94814279c",
+      "start": "Tuesday 19:00",
+      "end": "Tuesday 19:50",
+      "courseName": "Teaching methods and strategies",
+      "location": "C1.2.139",
+      "isOnline": false,
+      "teacher": "Aidos Mukhatayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed94814279d",
+      "start": "Tuesday 20:00",
+      "end": "Tuesday 20:50",
+      "courseName": "Product Management",
+      "location": "C1.3.233L",
+      "isOnline": false,
+      "teacher": "Samalgul Nassanbekova",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94814279e",
+      "start": "Tuesday 20:00",
+      "end": "Tuesday 20:50",
+      "courseName": "Business analytics",
+      "location": "C1.1.221P",
+      "isOnline": false,
+      "teacher": "Raskaliyev Timur",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed94814279f",
+      "start": "Tuesday 20:00",
+      "end": "Tuesday 20:50",
+      "courseName": "Audit of processes in information security",
+      "location": "C1.2.222P",
+      "isOnline": false,
+      "teacher": "Abitova Gulnara",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481427a0",
+      "start": "Tuesday 21:00",
+      "end": "Tuesday 21:50",
+      "courseName": "Product Management",
+      "location": "C1.3.233L",
+      "isOnline": false,
+      "teacher": "Samalgul Nassanbekova",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481427a1",
+      "start": "Tuesday 21:00",
+      "end": "Tuesday 21:50",
+      "courseName": "Business analytics",
+      "location": "C1.1.221P",
+      "isOnline": false,
+      "teacher": "Raskaliyev Timur",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481427a2",
+      "start": "Tuesday 21:00",
+      "end": "Tuesday 21:50",
+      "courseName": "Audit of processes in information security",
+      "location": "C1.2.222P",
+      "isOnline": false,
+      "teacher": "Abitova Gulnara",
+      "type": "lecture"
+    }
+  ],
+  "PM-2401D": [
+    {
+      "id": "67ed9481431f5",
+      "start": "Monday 19:00",
+      "end": "Monday 19:50",
+      "courseName": "Methods of sustainable project management",
+      "location": "C1.3.244",
+      "isOnline": false,
+      "teacher": "Tursynzada Kuangaliyeva",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481431f6",
+      "start": "Monday 20:00",
+      "end": "Monday 20:50",
+      "courseName": "Methods of sustainable project management",
+      "location": "C1.3.244",
+      "isOnline": false,
+      "teacher": "Tursynzada Kuangaliyeva",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481431f7",
+      "start": "Monday 21:00",
+      "end": "Monday 21:50",
+      "courseName": "Methods of sustainable project management",
+      "location": "C1.3.244",
+      "isOnline": false,
+      "teacher": "Tursynzada Kuangaliyeva",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481431f8",
+      "start": "Wednesday 19:00",
+      "end": "Wednesday 19:50",
+      "courseName": "Organisation transformation based on project management",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Bushuyev Denys",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481431f9",
+      "start": "Wednesday 20:00",
+      "end": "Wednesday 20:50",
+      "courseName": "Organisation transformation based on project management",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Bushuyev Denys",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481431fa",
+      "start": "Thursday 19:00",
+      "end": "Thursday 19:50",
+      "courseName": "Methods of sustainable project management",
+      "location": "C1.3.244",
+      "isOnline": false,
+      "teacher": "Tursynzada Kuangaliyeva",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481431fb",
+      "start": "Thursday 20:00",
+      "end": "Thursday 20:50",
+      "courseName": "Methods of sustainable project management",
+      "location": "C1.3.244",
+      "isOnline": false,
+      "teacher": "Tursynzada Kuangaliyeva",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481431fc",
+      "start": "Saturday 15:00",
+      "end": "Saturday 15:50",
+      "courseName": "Organisation transformation based on project management",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Bushuyev Denys",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed9481431fd",
+      "start": "Saturday 16:00",
+      "end": "Saturday 16:50",
+      "courseName": "Organisation transformation based on project management",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Bushuyev Denys",
+      "type": "practice"
+    },
+    {
+      "id": "67ed9481431fe",
+      "start": "Saturday 17:00",
+      "end": "Saturday 17:50",
+      "courseName": "Organisation transformation based on project management",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Bushuyev Denys",
+      "type": "practice"
+    }
+  ],
+  "IT-2401D": [
+    {
+      "id": "67ed9481431ff",
+      "start": "Thursday 19:00",
+      "end": "Thursday 19:50",
+      "courseName": "Model verification",
+      "location": "C1.3.331P",
+      "isOnline": false,
+      "teacher": "Kantureeva Mansia",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948143200",
+      "start": "Thursday 20:00",
+      "end": "Thursday 20:50",
+      "courseName": "Model verification",
+      "location": "C1.3.331P",
+      "isOnline": false,
+      "teacher": "Kantureeva Mansia",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948143201",
+      "start": "Thursday 21:00",
+      "end": "Thursday 21:50",
+      "courseName": "Model verification",
+      "location": "C1.3.331P",
+      "isOnline": false,
+      "teacher": "Kantureeva Mansia",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948143202",
+      "start": "Friday 19:00",
+      "end": "Friday 19:50",
+      "courseName": "Data Science and Machine Learning",
+      "location": "C1.3.331P",
+      "isOnline": false,
+      "teacher": "Amirgaliyev Beibut",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948143203",
+      "start": "Friday 20:00",
+      "end": "Friday 20:50",
+      "courseName": "Data Science and Machine Learning",
+      "location": "C1.3.331P",
+      "isOnline": false,
+      "teacher": "Amirgaliyev Beibut",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948143204",
+      "start": "Friday 21:00",
+      "end": "Friday 21:50",
+      "courseName": "Data Science and Machine Learning",
+      "location": "C1.3.331P",
+      "isOnline": false,
+      "teacher": "Amirgaliyev Beibut",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948143205",
+      "start": "Saturday 15:00",
+      "end": "Saturday 15:50",
+      "courseName": "Data Science and Machine Learning",
+      "location": "C1.3.331P",
+      "isOnline": false,
+      "teacher": "Amirgaliyev Beibut",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948143206",
+      "start": "Saturday 16:00",
+      "end": "Saturday 16:50",
+      "courseName": "Data Science and Machine Learning",
+      "location": "C1.3.331P",
+      "isOnline": false,
+      "teacher": "Amirgaliyev Beibut",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948143207",
+      "start": "Saturday 17:00",
+      "end": "Saturday 17:50",
+      "courseName": "Model verification",
+      "location": "C1.3.331P",
+      "isOnline": false,
+      "teacher": "Kantureeva Mansia",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948143208",
+      "start": "Saturday 18:00",
+      "end": "Saturday 18:50",
+      "courseName": "Model verification",
+      "location": "C1.3.331P",
+      "isOnline": false,
+      "teacher": "Kantureeva Mansia",
+      "type": "practice"
+    }
+  ],
+  "EE-2301": [
+    {
+      "id": "67ed948180daa",
+      "start": "Monday 12:00",
+      "end": "Monday 12:50",
+      "courseName": "Embedded Systems Design",
+      "location": "C1.3.124 (Control Engineering Lab\/Electronics Hardware Lab) laboratoryAlibek Murat",
+      "isOnline": false,
+      "teacher": "",
+      "type": null
+    },
+    {
+      "id": "67ed948180dab",
+      "start": "Monday 13:05",
+      "end": "Monday 13:55",
+      "courseName": "Electrical Machines",
+      "location": "C1.3.235L",
+      "isOnline": false,
+      "teacher": "Bayandy Sarsembayev",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180dac",
+      "start": "Monday 14:00",
+      "end": "Monday 14:50",
+      "courseName": "Computer Architecture",
+      "location": "C1.3.365L",
+      "isOnline": false,
+      "teacher": "Baitulakov Anuar",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180dad",
+      "start": "Monday 15:00",
+      "end": "Monday 15:50",
+      "courseName": "Electrical Machines",
+      "location": "C1.3.122 (Embedded systems and IoT lab)",
+      "isOnline": false,
+      "teacher": "Bayandy Sarsembayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dae",
+      "start": "Monday 17:00",
+      "end": "Monday 17:50",
+      "courseName": "Embedded Systems Design",
+      "location": "C1.3.124 (Control Engineering Lab\/Electronics Hardware Lab) laboratoryAlibek Murat",
+      "isOnline": false,
+      "teacher": "",
+      "type": null
+    },
+    {
+      "id": "67ed948180daf",
+      "start": "Monday 18:00",
+      "end": "Monday 18:50",
+      "courseName": "Computer Architecture",
+      "location": "IEC-308",
+      "isOnline": false,
+      "teacher": "Konakbayev Olzhas",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180db0",
+      "start": "Monday 16:00",
+      "end": "Monday 16:50",
+      "courseName": "Electrical Machines",
+      "location": "C1.3.122 (Embedded systems and IoT lab)",
+      "isOnline": false,
+      "teacher": "Bayandy Sarsembayev",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180db1",
+      "start": "Wednesday 14:00",
+      "end": "Wednesday 14:50",
+      "courseName": "Philosophy",
+      "location": "C1.1.253P",
+      "isOnline": false,
+      "teacher": "Bozzhigitova Mariyash",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180db2",
+      "start": "Wednesday 15:00",
+      "end": "Wednesday 15:50",
+      "courseName": "Philosophy",
+      "location": "C1.1.253P",
+      "isOnline": false,
+      "teacher": "Bozzhigitova Mariyash",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180db3",
+      "start": "Wednesday 17:00",
+      "end": "Wednesday 17:50",
+      "courseName": "Media Law and Ethics",
+      "location": "C1.3.235L",
+      "isOnline": false,
+      "teacher": "Vacancy 2 - SCI",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180db4",
+      "start": "Wednesday 18:00",
+      "end": "Wednesday 18:50",
+      "courseName": "Media Law and Ethics",
+      "location": "C1.3.235L",
+      "isOnline": false,
+      "teacher": "Vacancy 2 - SCI",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180db5",
+      "start": "Wednesday 13:05",
+      "end": "Wednesday 13:55",
+      "courseName": "Computer Architecture",
+      "location": "C1.3.370",
+      "isOnline": false,
+      "teacher": "Baitulakov Anuar",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180db6",
+      "start": "Wednesday 16:00",
+      "end": "Wednesday 16:50",
+      "courseName": "Academic Writing",
+      "location": "C1.1.235P",
+      "isOnline": false,
+      "teacher": "Zhumagaliyeva Guldana",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180db7",
+      "start": "Wednesday 08:00",
+      "end": "Wednesday 08:50",
+      "courseName": "Mobile Journalism",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180db8",
+      "start": "Wednesday 19:00",
+      "end": "Wednesday 19:50",
+      "courseName": "Introduction to SOC Analytics",
+      "location": "C1.1.327",
+      "isOnline": false,
+      "teacher": "Sailaukhanov Eldos",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180db9",
+      "start": "Wednesday 12:00",
+      "end": "Wednesday 12:50",
+      "courseName": "Machine Learning Algorithms",
+      "location": "IEC-308",
+      "isOnline": false,
+      "teacher": "Kalzhan Bakhtiyar",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dba",
+      "start": "Wednesday 09:00",
+      "end": "Wednesday 09:50",
+      "courseName": "Mobile Journalism",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180dbb",
+      "start": "Wednesday 11:00",
+      "end": "Wednesday 11:50",
+      "courseName": "Machine Learning Algorithms",
+      "location": "IEC-308",
+      "isOnline": false,
+      "teacher": "Kalzhan Bakhtiyar",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dbc",
+      "start": "Wednesday 10:00",
+      "end": "Wednesday 10:50",
+      "courseName": "Computer Networks Security",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Ibraheem Shayea",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180dbd",
+      "start": "Thursday 14:00",
+      "end": "Thursday 14:50",
+      "courseName": "Computer Architecture",
+      "location": "C1.2.221K",
+      "isOnline": false,
+      "teacher": "Baitulakov Anuar",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dbe",
+      "start": "Thursday 15:00",
+      "end": "Thursday 15:50",
+      "courseName": "Computer Networks Security",
+      "location": "IEC-306",
+      "isOnline": false,
+      "teacher": "Zhetkerbay Askhat",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dbf",
+      "start": "Thursday 17:00",
+      "end": "Thursday 17:50",
+      "courseName": "Machine Learning Algorithms",
+      "location": "IEC-304",
+      "isOnline": false,
+      "teacher": "Kalzhan Bakhtiyar",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dc0",
+      "start": "Thursday 18:00",
+      "end": "Thursday 18:50",
+      "courseName": "Computer Networks Security",
+      "location": "C1.2.231K",
+      "isOnline": false,
+      "teacher": "Nurmukhanbetova Albina",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dc1",
+      "start": "Thursday 11:00",
+      "end": "Thursday 11:50",
+      "courseName": "Computer Networks Security",
+      "location": "IEC-305",
+      "isOnline": false,
+      "teacher": "Tolegen Dana",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dc2",
+      "start": "Thursday 12:00",
+      "end": "Thursday 12:50",
+      "courseName": "Windows System Administration",
+      "location": "C1.2.243K",
+      "isOnline": false,
+      "teacher": "Azibek Balzhan",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dc3",
+      "start": "Thursday 16:00",
+      "end": "Thursday 16:50",
+      "courseName": "Machine Learning Algorithms",
+      "location": "IEC-304",
+      "isOnline": false,
+      "teacher": "Kalzhan Bakhtiyar",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dc4",
+      "start": "Thursday 13:05",
+      "end": "Thursday 13:55",
+      "courseName": "Computer Architecture",
+      "location": "C1.2.221K",
+      "isOnline": false,
+      "teacher": "Baitulakov Anuar",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dc5",
+      "start": "Thursday 08:00",
+      "end": "Thursday 08:50",
+      "courseName": "Philosophy",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180dc6",
+      "start": "Thursday 09:00",
+      "end": "Thursday 09:50",
+      "courseName": "Philosophy",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180dc7",
+      "start": "Thursday 19:00",
+      "end": "Thursday 19:50",
+      "courseName": "Computer Networks Security",
+      "location": "C1.2.231K",
+      "isOnline": false,
+      "teacher": "Nurmukhanbetova Albina",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dc8",
+      "start": "Thursday 10:00",
+      "end": "Thursday 10:50",
+      "courseName": "Computer Networks Security",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Ibraheem Shayea",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180dc9",
+      "start": "Friday 12:00",
+      "end": "Friday 12:50",
+      "courseName": "Computer Architecture",
+      "location": "IEC-302",
+      "isOnline": false,
+      "teacher": "Yarulin Didar",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dca",
+      "start": "Friday 13:05",
+      "end": "Friday 13:55",
+      "courseName": "Computer Architecture",
+      "location": "IEC-302",
+      "isOnline": false,
+      "teacher": "Yarulin Didar",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dcb",
+      "start": "Friday 14:00",
+      "end": "Friday 14:50",
+      "courseName": "Academic Writing",
+      "location": "C1.1.235P",
+      "isOnline": false,
+      "teacher": "Zhumagaliyeva Guldana",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dcc",
+      "start": "Friday 15:00",
+      "end": "Friday 15:50",
+      "courseName": "Data Journalism",
+      "location": "C1.3.223P",
+      "isOnline": false,
+      "teacher": "Vacancy 4 - SCI",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dcd",
+      "start": "Friday 16:00",
+      "end": "Friday 16:50",
+      "courseName": "Data Journalism",
+      "location": "C1.3.223P",
+      "isOnline": false,
+      "teacher": "Vacancy 4 - SCI",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dce",
+      "start": "Friday 17:00",
+      "end": "Friday 17:50",
+      "courseName": "Media Law and Ethics",
+      "location": "C1.3.248",
+      "isOnline": false,
+      "teacher": "Vacancy 2 - SCI",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dcf",
+      "start": "Friday 18:00",
+      "end": "Friday 18:50",
+      "courseName": "Media Law and Ethics",
+      "location": "C1.3.248",
+      "isOnline": false,
+      "teacher": "Vacancy 2 - SCI",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dd0",
+      "start": "Friday 08:00",
+      "end": "Friday 08:50",
+      "courseName": "Philosophy",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180dd1",
+      "start": "Friday 09:00",
+      "end": "Friday 09:50",
+      "courseName": "Windows System Administration",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180dd2",
+      "start": "Friday 11:00",
+      "end": "Friday 11:50",
+      "courseName": "Computer Architecture",
+      "location": "IEC-302",
+      "isOnline": false,
+      "teacher": "Yarulin Didar",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dd3",
+      "start": "Friday 10:00",
+      "end": "Friday 10:50",
+      "courseName": "Computer Networks Security",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Ibraheem Shayea",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180dd4",
+      "start": "Friday 19:00",
+      "end": "Friday 19:50",
+      "courseName": "Media Law and Ethics",
+      "location": "C1.3.248",
+      "isOnline": false,
+      "teacher": "Vacancy 2 - SCI",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dd5",
+      "start": "Friday 20:00",
+      "end": "Friday 20:50",
+      "courseName": "Motion Picture Design",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/ \"Approved by\" Vice-Rector of Academic Affairs of \"Astana IT University\" LLP ______________G. S. Akybayeva \"__\"__________________2025. Group SE-2301 Director Of Academic Affairs Department ___________ Day of the weekTime Discipline Classroom Type Lecturer Monday",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180dd6",
+      "start": "Tuesday 13:05",
+      "end": "Tuesday 13:55",
+      "courseName": "Data Journalism",
+      "location": "C1.3.232P",
+      "isOnline": false,
+      "teacher": "Vacancy 4 - SCI",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dd7",
+      "start": "Tuesday 14:00",
+      "end": "Tuesday 14:50",
+      "courseName": "Academic Writing",
+      "location": "C1.1.142",
+      "isOnline": false,
+      "teacher": "Seidin Ariya",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180dd8",
+      "start": "Tuesday 16:00",
+      "end": "Tuesday 16:50",
+      "courseName": "Machine Learning Algorithms",
+      "location": "IEC-304",
+      "isOnline": false,
+      "teacher": "Kalzhan Bakhtiyar",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dd9",
+      "start": "Tuesday 17:00",
+      "end": "Tuesday 17:50",
+      "courseName": "Machine Learning Algorithms",
+      "location": "IEC-304",
+      "isOnline": false,
+      "teacher": "Kalzhan Bakhtiyar",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180dda",
+      "start": "Tuesday 18:00",
+      "end": "Tuesday 18:50",
+      "courseName": "Introduction to SOC Analytics",
+      "location": "C1.2.240K",
+      "isOnline": false,
+      "teacher": "Sailaukhanov Eldos",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180ddb",
+      "start": "Tuesday 15:00",
+      "end": "Tuesday 15:50",
+      "courseName": "Academic Writing",
+      "location": "C1.1.142",
+      "isOnline": false,
+      "teacher": "Seidin Ariya",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180ddc",
+      "start": "Tuesday 12:00",
+      "end": "Tuesday 12:50",
+      "courseName": "Mobile Journalism",
+      "location": "C1.3.321",
+      "isOnline": false,
+      "teacher": "Anastasia Yemtsova",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180ddd",
+      "start": "Tuesday 08:00",
+      "end": "Tuesday 08:50",
+      "courseName": "Machine Learning Algorithms",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "https:\/\/learn.astanait.edu.kz\/",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180dde",
+      "start": "Tuesday 09:00",
+      "end": "Tuesday 09:50",
+      "courseName": "Computer Networks Security",
+      "location": "online",
+      "isOnline": true,
+      "teacher": "Ibraheem Shayea",
+      "type": "lecture"
+    },
+    {
+      "id": "67ed948180ddf",
+      "start": "Tuesday 10:00",
+      "end": "Tuesday 10:50",
+      "courseName": "Mobile Journalism",
+      "location": "C1.3.321",
+      "isOnline": false,
+      "teacher": "Anastasia Yemtsova",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180de0",
+      "start": "Tuesday 11:00",
+      "end": "Tuesday 11:50",
+      "courseName": "Mobile Journalism",
+      "location": "C1.3.321",
+      "isOnline": false,
+      "teacher": "Anastasia Yemtsova",
+      "type": "practice"
+    },
+    {
+      "id": "67ed948180de1",
+      "start": "Tuesday 19:00",
+      "end": "Tuesday 19:50",
+      "courseName": "Introduction to SOC Analytics",
+      "location": "C1.2.240K",
+      "isOnline": false,
+      "teacher": "Sailaukhanov Eldos",
+      "type": "practice"
+    }
+  ]
 }
