@@ -25,7 +25,7 @@ export const useAppStore = defineStore("app", () => {
     return storedTheme.value;
   });
 
-  const group = useLocalStorage(getStorageKey("group"), "SE-2203");
+  const group = useLocalStorage(getStorageKey("group"), "");
 
   const filters = useLocalStorage<Record<string, ScheduleFilter>>(
     getStorageKey("scheduleFilters"),
