@@ -1,6 +1,5 @@
 import { computed } from "vue";
 import type { CalendarEvent } from "@schedule-x/calendar";
-import type { RemovableRef } from "@vueuse/core";
 import type { Schedule, ScheduleFilter } from "@/lib/types";
 import { dayjs } from "@/lib/dayjs";
 
@@ -59,6 +58,10 @@ export function useSchedule(
 
     const userGroupFilters = currentFilters.value?.[currentGroup.value];
     const groupSchedule = schedule[currentGroup.value];
+
+    if (!groupSchedule) {
+      return [];
+    }
 
     const filteredSchedule = groupSchedule.filter((item) => {
       if (!userGroupFilters) {
