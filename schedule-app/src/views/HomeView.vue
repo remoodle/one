@@ -47,7 +47,7 @@ watchEffect(() => {
         <div class="flex gap-2">
           <ThemeSwitcher class="flex-none" />
           <Dialog>
-            <DialogTrigger>
+            <DialogTrigger as-child>
               <Button variant="default" class="cursor-pointer">Filters</Button>
             </DialogTrigger>
             <DialogContent class="rounded-2xl max-w-80 md:max-w-sm">
