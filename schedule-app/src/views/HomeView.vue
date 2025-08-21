@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { storeToRefs } from "pinia";
-import { computed } from "vue";
+import { computed, watchEffect } from "vue";
 import { useSchedule } from "@/composables/use-schedule";
 import { useAppStore } from "@/stores/app";
 import Calendar from "@/components/Calendar.vue";
@@ -31,6 +31,12 @@ const { groupSchedule, allGroups, groupCourses } = useSchedule(
   () => unwrappedFilters.value,
   parsedSchedule,
 );
+
+watchEffect(() => {
+  if (!allGroups.value.includes(group.value)) {
+    group.value = "";
+  }
+});
 </script>
 
 <template>
