@@ -18,9 +18,10 @@ import { Badge } from "@/components/ui/badge";
 import type { ScheduleFilter } from "@/lib/types";
 import { dayjs, type Dayjs } from "@/lib/dayjs";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import type { RemovableRef } from "@vueuse/core";
 
 const props = defineProps<{
-  group: string;
+  group: RemovableRef<string>;
   filters: ScheduleFilter;
   events: CalendarEvent[];
 }>();

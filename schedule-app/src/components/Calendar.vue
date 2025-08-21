@@ -3,11 +3,14 @@ import { watchEffect } from "vue";
 import "@schedule-x/theme-default/dist/index.css";
 import type { CalendarEvent } from "@schedule-x/calendar";
 import { ScheduleXCalendar } from "@schedule-x/vue";
+import { ZoomInPlugin } from "@starredev/schedule-x-plugins";
 import { createEventRecurrencePlugin } from "@schedule-x/event-recurrence";
 import { createEventModalPlugin } from "@schedule-x/event-modal";
 import { createEventsServicePlugin } from "@schedule-x/event-recurrence";
 import { createCurrentTimePlugin } from "@schedule-x/current-time";
-import { createCalendar, createViewDay, createViewWeek } from "@schedule-x/calendar";
+import { createCalendarControlsPlugin } from "@schedule-x/calendar-controls";
+
+import { createCalendar, createViewWeek, createViewMonthAgenda } from "@schedule-x/calendar";
 import { dayjs } from "@/lib/dayjs";
 
 const props = defineProps<{
@@ -15,33 +18,24 @@ const props = defineProps<{
   theme: "light" | "dark";
 }>();
 
-const minDate = dayjs()
-  .weekday(0)
-  .hour(0)
-  .minute(0)
-  .second(0)
-  .millisecond(0)
-  .format("YYYY-MM-DD")
-  .toString();
+const minDate = dayjs().weekday(1).startOf("day").format("YYYY-MM-DD").toString();
 
-const maxDate = dayjs()
-  .weekday(6)
-  .hour(23)
-  .minute(59)
-  .second(59)
-  .millisecond(999)
-  .format("YYYY-MM-DD")
-  .toString();
+const maxDate = dayjs().weekday(7).endOf("day").format("YYYY-MM-DD").toString();
 
 const eventsServicePlugin = createEventsServicePlugin();
+const calendarControlsPlugin = createCalendarControlsPlugin();
 
 const calendarApp = createCalendar({
-  views: [createViewWeek(), createViewDay()],
+  views: [createViewWeek(), createViewMonthAgenda()],
   plugins: [
     createEventRecurrencePlugin(),
     createEventModalPlugin(),
     createCurrentTimePlugin(),
     eventsServicePlugin,
+    calendarControlsPlugin,
+    new ZoomInPlugin(calendarControlsPlugin, {
+      zoomStep: 0.03,
+    }),
   ],
   calendars: {
     online: {

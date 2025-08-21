@@ -1,5 +1,6 @@
 import { computed } from "vue";
 import type { CalendarEvent } from "@schedule-x/calendar";
+import type { RemovableRef } from "@vueuse/core";
 import type { Schedule, ScheduleFilter } from "@/lib/types";
 import { dayjs } from "@/lib/dayjs";
 
