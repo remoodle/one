@@ -1,12 +1,22 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from "vue";
 import { cn } from "@/lib/utils";
 
-const props = defineProps<{ class?: HTMLAttributes["class"] }>();
+interface DialogFooterProps {
+  class?: string;
+}
+
+const props = defineProps<DialogFooterProps>();
 </script>
 
 <template>
-  <div :class="cn('flex flex-col-reverse sm:flex-row sm:justify-end sm:gap-x-2', props.class)">
+  <div
+    :class="
+      cn(
+        'mt-1.5 flex flex-col space-y-2 sm:flex-row sm:justify-end sm:space-y-0 sm:space-x-2',
+        props.class,
+      )
+    "
+  >
     <slot />
   </div>
 </template>

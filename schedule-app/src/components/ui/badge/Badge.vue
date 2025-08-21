@@ -1,16 +1,18 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue'
-import { cn } from '@/lib/utils'
-import { type BadgeVariants, badgeVariants } from '.'
+import type { VariantProps } from "class-variance-authority";
+import { badgeVariants } from ".";
+import { cn } from "@/lib/utils";
 
-const props = defineProps<{
-  variant?: BadgeVariants['variant']
-  class?: HTMLAttributes['class']
-}>()
+interface BadgeVariantProps extends VariantProps<typeof badgeVariants> {}
+
+interface Props {
+  variant?: BadgeVariantProps["variant"];
+}
+defineProps<Props>();
 </script>
 
 <template>
-  <div :class="cn(badgeVariants({ variant }), props.class)">
+  <div :class="cn(badgeVariants({ variant }), $attrs.class ?? '')">
     <slot />
   </div>
 </template>
