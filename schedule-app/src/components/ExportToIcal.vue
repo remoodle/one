@@ -25,7 +25,7 @@ const props = defineProps<{
   events: CalendarEvent[];
 }>();
 
-const value = ref(today(getLocalTimeZone())) as Ref<DateValue>;
+const value = ref(today(getLocalTimeZone()).add({ days: 14 })) as Ref<DateValue>;
 
 const open = ref<boolean>(false);
 
@@ -110,24 +110,24 @@ const getICalFile = (): void => {
     <DialogTrigger as-child>
       <Button>Export to .ical file</Button>
     </DialogTrigger>
-    <DialogContent class="sm:max-w-[425px]">
+    <DialogContent class="max-w-114 md:max-w-md">
       <DialogHeader>
-        <DialogTitle>Create iCalendar file</DialogTitle>
-        <DialogDescription>
-          Make changes to your calendar using filter and choose time frame of events.
+        <DialogTitle class="text-2xl font-bold text-left">Create iCalendar file</DialogTitle>
+        <DialogDescription class="text-left text-ms">
+          Make changes to your calendar using <strong>filters</strong> and choose
+          <strong>end date</strong> for events. <strong>Start date</strong> is set for today.
         </DialogDescription>
       </DialogHeader>
 
       <div class="mt-2">
-        <h1 class="">
-          Selected group
-          <Badge variant="outline">{{ group }}</Badge>
+        <h1 class="flex items-center font-bold">
+          {{ group }}
         </h1>
       </div>
 
       <div class="rounded-xl border p-4">
         <div class="">
-          <div class="">Event types:</div>
+          <div class="">Event Types</div>
           <div class="my-2 flex select-none gap-1">
             <span v-for="(enabled, type) in filters?.eventTypes" :key="type">
               <Badge :variant="enabled ? 'default' : 'destructive'">
@@ -140,7 +140,7 @@ const getICalFile = (): void => {
         <hr class="my-2" />
 
         <div class="">
-          <div class="">Event formats:</div>
+          <div class="">Event Formats:</div>
           <div class="my-2 flex select-none gap-1">
             <span v-for="(enabled, format) in filters?.eventFormats" :key="format">
               <Badge :variant="enabled ? 'default' : 'destructive'">
@@ -154,7 +154,7 @@ const getICalFile = (): void => {
           <hr class="my-2" />
 
           <div class="">
-            <div class="">Excluded courses:</div>
+            <div class="">Excluded Courses:</div>
             <div class="my-2 flex select-none flex-wrap gap-1">
               <span v-for="course in filters?.excludedCourses" :key="course">
                 <Badge variant="destructive">
@@ -167,7 +167,6 @@ const getICalFile = (): void => {
       </div>
 
       <div class="">
-        <div class="mb-2">Select end date</div>
         <div class="flex gap-2">
           <Popover>
             <PopoverTrigger as-child>
@@ -184,7 +183,7 @@ const getICalFile = (): void => {
       </div>
 
       <DialogFooter>
-        <Button @click="getICalFile" type="submit"> Get file </Button>
+        <Button @click="getICalFile" type="submit"> Download </Button>
       </DialogFooter>
     </DialogContent>
   </Dialog>

@@ -13,7 +13,7 @@ const filters = defineModel<ScheduleFilter>({ required: true });
 <template>
   <div class="flex flex-col space-y-3">
     <section class="flex flex-col space-y-2">
-      <span>Toggle event types</span>
+      <span>Toggle Event Types</span>
 
       <div class="flex flex-wrap gap-2">
         <Badge
@@ -21,27 +21,27 @@ const filters = defineModel<ScheduleFilter>({ required: true });
           class="cursor-pointer"
           @click="filters.eventTypes.lecture = !filters.eventTypes.lecture"
         >
-          Lecture
+          lecture
         </Badge>
         <Badge
           :variant="filters.eventTypes.practice ? 'default' : 'destructive'"
           class="cursor-pointer"
           @click="filters.eventTypes.practice = !filters.eventTypes.practice"
         >
-          Practice
+          practice
         </Badge>
         <Badge
           :variant="filters.eventTypes.learn ? 'default' : 'destructive'"
           class="cursor-pointer"
           @click="filters.eventTypes.learn = !filters.eventTypes.learn"
         >
-          Learn
+          learn
         </Badge>
       </div>
     </section>
 
     <section class="flex flex-col space-y-2">
-      <span>Toggle event formats</span>
+      <span>Toggle Event Formats</span>
 
       <div class="flex flex-wrap gap-2">
         <Badge
@@ -49,20 +49,20 @@ const filters = defineModel<ScheduleFilter>({ required: true });
           class="cursor-pointer"
           @click="filters.eventFormats.online = !filters.eventFormats.online"
         >
-          Online
+          online
         </Badge>
         <Badge
           :variant="filters.eventFormats.offline ? 'default' : 'destructive'"
           class="cursor-pointer"
           @click="filters.eventFormats.offline = !filters.eventFormats.offline"
         >
-          Offline
+          offline
         </Badge>
       </div>
     </section>
 
     <section class="flex flex-col space-y-2">
-      <span>Toggle courses</span>
+      <span>Toggle Courses</span>
 
       <div class="flex flex-wrap gap-2">
         <Badge

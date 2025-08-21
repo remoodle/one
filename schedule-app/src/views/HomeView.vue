@@ -50,12 +50,13 @@ watchEffect(() => {
             <DialogTrigger>
               <Button variant="default" class="cursor-pointer">Filters</Button>
             </DialogTrigger>
-            <DialogContent>
+            <DialogContent class="max-w-80 md:max-w-sm">
               <DialogHeader>
-                <DialogTitle>Change filters for group {{ group }}</DialogTitle>
-                <DialogDescription>
-                  You can make changes to your schedule here. Click on any option to change its
-                  value.
+                <DialogTitle class="text-xl font-bold text-left"
+                  >Filters for {{ group }}</DialogTitle
+                >
+                <DialogDescription class="text-left">
+                  Click on any option to change its value.
                 </DialogDescription>
               </DialogHeader>
               <template v-if="group && unwrappedFilters && unwrappedFilters[group]">
