@@ -50,7 +50,7 @@ watchEffect(() => {
             <DialogTrigger>
               <Button variant="default" class="cursor-pointer">Filters</Button>
             </DialogTrigger>
-            <DialogContent class="max-w-80 md:max-w-sm">
+            <DialogContent class="rounded-2xl max-w-80 md:max-w-sm">
               <DialogHeader>
                 <DialogTitle class="text-xl font-bold text-left"
                   >Filters for {{ group }}</DialogTitle

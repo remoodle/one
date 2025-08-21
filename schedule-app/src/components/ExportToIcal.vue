@@ -110,7 +110,7 @@ const getICalFile = (): void => {
     <DialogTrigger as-child>
       <Button>Export to .ical file</Button>
     </DialogTrigger>
-    <DialogContent class="max-w-114 md:max-w-md">
+    <DialogContent class="rounded-2xl max-w-80 md:max-w-sm">
       <DialogHeader>
         <DialogTitle class="text-2xl font-bold text-left">Create iCalendar file</DialogTitle>
         <DialogDescription class="text-left text-ms">
