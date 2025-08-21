@@ -61,7 +61,7 @@ watchEffect(() => {
               <template v-if="group && unwrappedFilters && unwrappedFilters[group]">
                 <ScheduleSettings
                   class="max-w-xs"
-                  v-model="filters[group]"
+                  v-model="unwrappedFilters[group]"
                   :group="group"
                   :courses="groupCourses"
                 />
@@ -69,7 +69,11 @@ watchEffect(() => {
             </DialogContent>
           </Dialog>
           <template v-if="group && unwrappedFilters && unwrappedFilters[group]">
-            <ExportToIcal :events="groupSchedule" :group="group" :filters="filters[group]" />
+            <ExportToIcal
+              :events="groupSchedule"
+              :group="group"
+              :filters="unwrappedFilters[group]"
+            />
           </template>
         </div>
       </div>

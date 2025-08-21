@@ -18,11 +18,10 @@ import { Badge } from "@/components/ui/badge";
 import type { ScheduleFilter } from "@/lib/types";
 import { dayjs, type Dayjs } from "@/lib/dayjs";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import type { RemovableRef } from "@vueuse/core";
 
 const props = defineProps<{
-  group: RemovableRef<string>;
-  filters: ScheduleFilter;
+  group: string;
+  filters: ScheduleFilter | undefined;
   events: CalendarEvent[];
 }>();
 
@@ -44,8 +43,14 @@ const escapeText = (text: string) => {
 
 const parseDate = (dateString: string) => {
   const [datePart, timePart] = dateString.split(" ");
-  const [year, month, day] = datePart.split("-").map(Number);
-  const [hour, minute] = timePart.split(":").map(Number);
+
+  const [year, month, day] = datePart?.split("-").map(Number) ?? [];
+  const [hour, minute] = timePart?.split(":").map(Number) ?? [];
+
+  if (!year || !month || !day || !hour || !minute) {
+    return new Date();
+  }
+
   return new Date(year, month - 1, day, hour, minute);
 };
 
@@ -124,7 +129,7 @@ const getICalFile = (): void => {
         <div class="">
           <div class="">Event types:</div>
           <div class="my-2 flex select-none gap-1">
-            <span v-for="(enabled, type) in filters.eventTypes" :key="type">
+            <span v-for="(enabled, type) in filters?.eventTypes" :key="type">
               <Badge :variant="enabled ? 'default' : 'destructive'">
                 {{ type }}
               </Badge>
@@ -137,7 +142,7 @@ const getICalFile = (): void => {
         <div class="">
           <div class="">Event formats:</div>
           <div class="my-2 flex select-none gap-1">
-            <span v-for="(enabled, format) in filters.eventFormats" :key="format">
+            <span v-for="(enabled, format) in filters?.eventFormats" :key="format">
               <Badge :variant="enabled ? 'default' : 'destructive'">
                 {{ format }}
               </Badge>
@@ -145,13 +150,13 @@ const getICalFile = (): void => {
           </div>
         </div>
 
-        <div v-if="filters.excludedCourses.length > 0">
+        <div v-if="filters?.excludedCourses?.length && filters?.excludedCourses.length > 0">
           <hr class="my-2" />
 
           <div class="">
             <div class="">Excluded courses:</div>
             <div class="my-2 flex select-none flex-wrap gap-1">
-              <span v-for="course in filters.excludedCourses" :key="course">
+              <span v-for="course in filters?.excludedCourses" :key="course">
                 <Badge variant="destructive">
                   {{ course }}
                 </Badge>
