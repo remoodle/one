@@ -19,7 +19,6 @@ import Footer from "@/components/Footer.vue";
 import ExportToIcal from "@/components/ExportToIcal.vue";
 import parsedSchedule from "@/assets/3_2.json";
 import type { ScheduleFilter } from "@/lib/types";
-import { ThemeSwitcher } from "@/components/ui/theme-switcher";
 
 const appStore = useAppStore();
 
