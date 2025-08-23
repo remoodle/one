@@ -42,9 +42,9 @@ watchEffect(() => {
 <template>
   <div class="flex justify-center">
     <div class="flex flex-col p-4">
-      <div class="flex justify-between items-start gap-4 mb-4 px-1">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-4 px-1">
         <GroupSelect v-model="group" :all-groups />
-        <div class="flex gap-2">
+        <div class="flex flex-col md:flex-row gap-2">
           <Dialog>
             <DialogTrigger as-child>
               <Button variant="default" class="cursor-pointer">Filters</Button>
