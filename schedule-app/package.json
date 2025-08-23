@@ -15,6 +15,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@iconify/vue": "^5.0.0",
     "@internationalized/date": "^3.8.2",
     "@schedule-x/calendar": "^2.36.0",
     "@schedule-x/calendar-controls": "^2.36.0",

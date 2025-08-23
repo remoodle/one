@@ -108,7 +108,7 @@ const getICalFile = (): void => {
 <template>
   <Dialog v-model:open="open" @update:open="open = $event">
     <DialogTrigger as-child>
-      <Button>Export to .ical file</Button>
+      <Button>Export to .ics file</Button>
     </DialogTrigger>
     <DialogContent class="rounded-2xl max-w-80 md:max-w-sm">
       <DialogHeader>
