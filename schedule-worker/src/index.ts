@@ -17,27 +17,19 @@ const app = new Hono<{ Bindings: CloudflareBindings }>();
 
 app.get("/groups", async (c) => {
     const schedule = await c.env.SCHEDULE_BUCKET.get("main.json");
+    const group = c.req.query("group");
 
     if (!schedule) {
         return c.json({ error: "Schedule not found" }, 404);
     }
 
     const scheduleData: ScheduleData = await schedule.json();
+
+    if (group) {
+        return c.json(scheduleData[group] ?? []);
+    }
 
     return c.json(Object.keys(scheduleData));
-});
-
-app.get("/schedule/:group", async (c) => {
-    const group = c.req.param("group");
-    const schedule = await c.env.SCHEDULE_BUCKET.get("main.json");
-
-    if (!schedule) {
-        return c.json({ error: "Schedule not found" }, 404);
-    }
-
-    const scheduleData: ScheduleData = await schedule.json();
-
-    return c.json(scheduleData[group] ?? []);
 });
 
 export default app;
