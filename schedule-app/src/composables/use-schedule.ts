@@ -1,4 +1,4 @@
-import { computed, ref, watchEffect } from "vue";
+import { computed } from "vue";
 import type { CalendarEvent } from "@schedule-x/calendar";
 import type { ScheduleFilter, ScheduleItem } from "@/lib/types";
 import { dayjs } from "@/lib/dayjs";
@@ -8,25 +8,17 @@ import { getGroups, getGroupSchedule } from "@/lib/api";
 export function useSchedule(group: () => string, filters: () => Record<string, ScheduleFilter>) {
   const currentGroup = computed(() => group());
   const currentFilters = computed(() => filters());
+  const isEnabled = computed(() => !!currentGroup.value);
 
   const { data: allGroups } = useQuery({
     queryKey: ["groups"],
     queryFn: getGroups,
   });
 
-  const schedule = ref<ScheduleItem[]>([]);
-
-  watchEffect(async () => {
-    if (currentGroup.value) {
-      try {
-        schedule.value = await getGroupSchedule(currentGroup.value);
-      } catch (error) {
-        console.error("Failed to fetch schedule:", error);
-        schedule.value = [];
-      }
-    } else {
-      schedule.value = [];
-    }
+  const { data: schedule } = useQuery({
+    queryKey: ["schedule", currentGroup],
+    queryFn: () => getGroupSchedule(currentGroup.value),
+    enabled: isEnabled,
   });
 
   const getTargetDateByDay = (day: string): Date => {
