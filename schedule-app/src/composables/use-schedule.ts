@@ -1,17 +1,23 @@
 import { computed } from "vue";
 import type { CalendarEvent } from "@schedule-x/calendar";
-import type { Schedule, ScheduleFilter } from "@/lib/types";
+import type { ScheduleFilter, ScheduleItem } from "@/lib/types";
 import { dayjs } from "@/lib/dayjs";
+import { useQuery } from "@tanstack/vue-query";
+import { getGroups, getGroupSchedule } from "@/lib/api";
 
-export function useSchedule(
-  group: () => string,
-  filters: () => Record<string, ScheduleFilter>,
-  schedule: Schedule,
-) {
+export function useSchedule(group: () => string, filters: () => Record<string, ScheduleFilter>) {
   const currentGroup = computed(() => group());
   const currentFilters = computed(() => filters());
 
-  const allGroups = computed(() => Object.keys(schedule).sort().reverse());
+  const { data: allGroups } = useQuery({
+    queryKey: ["groups"],
+    queryFn: getGroups,
+  });
+
+  const { data: schedule } = useQuery({
+    queryKey: ["schedule", currentGroup.value],
+    queryFn: () => getGroupSchedule(currentGroup.value),
+  });
 
   const getTargetDateByDay = (day: string): Date => {
     const [dayName, time] = day.split(" ");
@@ -65,18 +71,18 @@ export function useSchedule(
   };
 
   const groupSchedule = computed((): CalendarEvent[] => {
-    if (!currentGroup.value) {
+    if (!currentGroup.value || !schedule.value) {
       return [];
     }
 
     const userGroupFilters = currentFilters.value?.[currentGroup.value];
-    const groupSchedule = schedule[currentGroup.value];
+    const currentGroupSchedule: ScheduleItem[] = schedule.value || [];
 
-    if (!groupSchedule) {
+    if (!currentGroupSchedule || currentGroupSchedule.length === 0) {
       return [];
     }
 
-    const filteredSchedule = groupSchedule.filter((item) => {
+    const filteredSchedule = currentGroupSchedule.filter((item: ScheduleItem) => {
       if (!userGroupFilters) {
         return true;
       }
@@ -181,7 +187,7 @@ export function useSchedule(
       return [];
     }
 
-    const groupSchedule = schedule[currentGroup.value];
+    const groupSchedule = schedule.value;
 
     if (!groupSchedule) {
       return [];

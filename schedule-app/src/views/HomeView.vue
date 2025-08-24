@@ -17,7 +17,6 @@ import GroupSelect from "@/components/GroupSelect.vue";
 import ScheduleSettings from "@/components/ScheduleSettings.vue";
 import Footer from "@/components/Footer.vue";
 import ExportToIcal from "@/components/ExportToIcal.vue";
-import parsedSchedule from "@/assets/3_2.json";
 import type { ScheduleFilter } from "@/lib/types";
 
 const appStore = useAppStore();
@@ -29,11 +28,10 @@ const unwrappedFilters = computed<Record<string, ScheduleFilter>>(() => filters.
 const { groupSchedule, allGroups, groupCourses } = useSchedule(
   () => group.value,
   () => unwrappedFilters.value,
-  parsedSchedule,
 );
 
 watchEffect(() => {
-  if (!allGroups.value.includes(group.value)) {
+  if (allGroups.value && !allGroups.value.includes(group.value)) {
     group.value = "";
   }
 });
@@ -43,7 +41,7 @@ watchEffect(() => {
   <div class="flex justify-center">
     <div class="flex flex-col p-4">
       <div class="flex flex-col md:flex-row justify-between items-start gap-4 mb-4 px-1">
-        <GroupSelect v-model="group" :all-groups />
+        <GroupSelect v-model="group" :all-groups="allGroups || []" />
         <div class="flex flex-col md:flex-row gap-2">
           <Dialog>
             <DialogTrigger as-child>
