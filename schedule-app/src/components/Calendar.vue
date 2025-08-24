@@ -18,8 +18,12 @@ const props = defineProps<{
   theme: "light" | "dark";
 }>();
 
-const minDate = dayjs().weekday(1).startOf("day").format("YYYY-MM-DD").toString();
+const defaultDate =
+  new Date().getDay() === 0
+    ? dayjs().add(1, "day").format("YYYY-MM-DD").toString()
+    : dayjs().format("YYYY-MM-DD").toString();
 
+const minDate = dayjs().weekday(1).startOf("day").format("YYYY-MM-DD").toString();
 const maxDate = dayjs().weekday(7).endOf("day").format("YYYY-MM-DD").toString();
 
 const eventsServicePlugin = createEventsServicePlugin();
@@ -83,6 +87,7 @@ const calendarApp = createCalendar({
   },
   events: props.events,
   locale: "en-GB",
+  selectedDate: defaultDate,
   minDate: minDate,
   maxDate: maxDate,
   isResponsive: true,
