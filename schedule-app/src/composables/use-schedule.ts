@@ -26,11 +26,24 @@ export function useSchedule(
       Saturday: 6,
     };
 
+    if (!time || !dayName) {
+      return new Date();
+    }
+
     const now = dayjs();
     const targetWeekday = daysMap[dayName];
+
+    if (!targetWeekday) {
+      return new Date();
+    }
+
     const targetDate = now.weekday(targetWeekday);
 
     const [hours, minutes] = time.split(":").map(Number);
+
+    if (!hours || !minutes || hours < 0) {
+      return new Date();
+    }
 
     return targetDate.hour(hours).minute(minutes).second(0).millisecond(0).toDate();
   };
@@ -169,6 +182,10 @@ export function useSchedule(
     }
 
     const groupSchedule = schedule[currentGroup.value];
+
+    if (!groupSchedule) {
+      return [];
+    }
 
     const uniqueCourses = new Set(groupSchedule.map((item) => item.courseName));
 
