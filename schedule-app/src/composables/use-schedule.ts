@@ -1,4 +1,4 @@
-import { computed } from "vue";
+import { computed, ref, watchEffect } from "vue";
 import type { CalendarEvent } from "@schedule-x/calendar";
 import type { ScheduleFilter, ScheduleItem } from "@/lib/types";
 import { dayjs } from "@/lib/dayjs";
@@ -14,9 +14,19 @@ export function useSchedule(group: () => string, filters: () => Record<string, S
     queryFn: getGroups,
   });
 
-  const { data: schedule } = useQuery({
-    queryKey: ["schedule", currentGroup.value],
-    queryFn: () => getGroupSchedule(currentGroup.value),
+  const schedule = ref<ScheduleItem[]>([]);
+
+  watchEffect(async () => {
+    if (currentGroup.value) {
+      try {
+        schedule.value = await getGroupSchedule(currentGroup.value);
+      } catch (error) {
+        console.error("Failed to fetch schedule:", error);
+        schedule.value = [];
+      }
+    } else {
+      schedule.value = [];
+    }
   });
 
   const getTargetDateByDay = (day: string): Date => {
@@ -45,13 +55,14 @@ export function useSchedule(group: () => string, filters: () => Record<string, S
 
     const targetDate = now.weekday(targetWeekday);
 
-    const [hours, minutes] = time.split(":").map(Number);
+    const [hours, minutes] = time.split(":");
 
-    if (!hours || !minutes || hours < 0) {
+    if (!hours || !minutes) {
+      console.error("Invalid time", hours, minutes);
       return new Date();
     }
 
-    return targetDate.hour(hours).minute(minutes).second(0).millisecond(0).toDate();
+    return targetDate.hour(Number(hours)).minute(Number(minutes)).second(0).millisecond(0).toDate();
   };
 
   const convertToDateTime = (date: Date): string => {

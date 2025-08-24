@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { storeToRefs } from "pinia";
-import { computed, watchEffect } from "vue";
+import { ref, watchEffect } from "vue";
 import { useSchedule } from "@/composables/use-schedule";
 import { useAppStore } from "@/stores/app";
 import Calendar from "@/components/Calendar.vue";
@@ -23,7 +23,7 @@ const appStore = useAppStore();
 
 const { group, filters } = storeToRefs(appStore);
 
-const unwrappedFilters = computed<Record<string, ScheduleFilter>>(() => filters.value);
+const unwrappedFilters = ref<Record<string, ScheduleFilter>>(filters.value);
 
 const { groupSchedule, allGroups, groupCourses } = useSchedule(
   () => group.value,
