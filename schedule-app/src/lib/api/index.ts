@@ -1,4 +1,4 @@
-import type { Schedule, ScheduleItem } from "@/lib/types";
+import type { ScheduleItem } from "@/lib/types";
 import { API_URL } from "@/config";
 
 export const getGroups = async (): Promise<string[]> => {

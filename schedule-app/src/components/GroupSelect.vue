@@ -28,7 +28,7 @@ const open = ref(false);
         variant="outline"
         role="combobox"
         :aria-expanded="open"
-        class="w-[200px] justify-between"
+        class="min-w-full sm:min-w-48 justify-between"
       >
         {{ allGroups.includes(group) ? group : "Select group" }}
         <ChevronsUpDown class="ml-2 h-4 w-4 shrink-0 opacity-50" />
@@ -36,7 +36,7 @@ const open = ref(false);
     </PopoverTrigger>
     <PopoverContent class="w-[200px] p-0">
       <Command v-model="group">
-        <CommandInput placeholder="Search framework..." />
+        <CommandInput placeholder="Search group..." />
         <CommandEmpty>Group not found.</CommandEmpty>
         <CommandList>
           <CommandGroup>

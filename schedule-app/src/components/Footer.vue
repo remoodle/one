@@ -4,7 +4,7 @@ import { Icon } from "@iconify/vue";
 </script>
 
 <template>
-  <div class="container py-6">
+  <div class="py-6">
     <div class="w-fit">
       <div class="flex flex-col gap-4">
         <div class="flex justify-between gap-12">

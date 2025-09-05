@@ -18,7 +18,7 @@ const props = defineProps<{
   theme: "light" | "dark";
 }>();
 
-const defaultDate =
+const selectedDate =
   new Date().getDay() === 0
     ? dayjs().add(1, "day").format("YYYY-MM-DD").toString()
     : dayjs().format("YYYY-MM-DD").toString();
@@ -87,7 +87,7 @@ const calendarApp = createCalendar({
   },
   events: props.events,
   locale: "en-GB",
-  selectedDate: defaultDate,
+  selectedDate,
   minDate: minDate,
   maxDate: maxDate,
   isResponsive: true,
