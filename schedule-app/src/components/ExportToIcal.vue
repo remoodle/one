@@ -42,12 +42,17 @@ const escapeText = (text: string) => {
 };
 
 const parseDate = (dateString: string) => {
+  // e.g. 2025-09-04 21:00
   const [datePart, timePart] = dateString.split(" ");
 
-  const [year, month, day] = datePart?.split("-").map(Number) ?? [];
-  const [hour, minute] = timePart?.split(":").map(Number) ?? [];
+  if (!datePart || !timePart) {
+    return new Date();
+  }
 
-  if (!year || !month || !day || !hour || !minute) {
+  const [year, month, day] = datePart.split("-").map(Number);
+  const [hour, minute] = timePart.split(":").map(Number);
+
+  if (!year || !month || !day || hour === undefined || minute === undefined) {
     return new Date();
   }
 
