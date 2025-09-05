@@ -69,8 +69,8 @@ watchEffect(() => {
         </div>
       </div>
 
-      <Schedule class="h-[90vh] w-[90vw]" :events="groupSchedule" :theme="appStore.theme" />
-      <Footer />
+      <Schedule class="h-[89vh] w-[90vw]" :events="groupSchedule" :theme="appStore.theme" />
+      <!-- <Footer /> -->
     </div>
   </div>
 </template>
