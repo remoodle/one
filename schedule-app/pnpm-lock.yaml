@@ -38,6 +38,9 @@ importers:
       '@schedule-x/theme-default':
         specifier: ^2.36.0
         version: 2.36.0
+      '@schedule-x/theme-shadcn':
+        specifier: ^3.1.0
+        version: 3.1.0
       '@schedule-x/vue':
         specifier: ^2.34.0
         version: 2.34.0(@schedule-x/calendar@2.36.0(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4))(@schedule-x/date-picker@2.16.1(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4))(vue@3.5.19(typescript@5.9.2))
@@ -810,6 +813,9 @@ packages:
 
   '@schedule-x/theme-default@2.36.0':
     resolution: {integrity: sha512-jkN9/srYS54dO2h12iCvNMMrLEiod6BAoUc47KbOgGE66zyUU+kmQwUOYQ3A2LrKyIWjwtCp3Ewdd4h/HHvG9A==}
+
+  '@schedule-x/theme-shadcn@3.1.0':
+    resolution: {integrity: sha512-dV1q9VAFEyh85CT52/8zj2gDbKDzIgwrXt4RBoXSTqkJGmHoBgVdhvYXsvsnO12isQ6rqdZobBC6WwDGINX3MQ==}
 
   '@schedule-x/vue@2.34.0':
     resolution: {integrity: sha512-E+imTtvDQsOld8jcyGH0rndCzMECuafb8v0DU+zXftlxEaGdFtFDuN84uAJs/PcEB1lIj/FXCm7Kqd8euEswSg==}
@@ -2895,6 +2901,8 @@ snapshots:
       ical.js: 2.1.0
 
   '@schedule-x/theme-default@2.36.0': {}
+
+  '@schedule-x/theme-shadcn@3.1.0': {}
 
   '@schedule-x/vue@2.34.0(@schedule-x/calendar@2.36.0(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4))(@schedule-x/date-picker@2.16.1(@preact/signals@1.3.2(preact@10.25.4))(preact@10.25.4))(vue@3.5.19(typescript@5.9.2))':
     dependencies:

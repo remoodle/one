@@ -25,6 +25,7 @@
     "@schedule-x/events-service": "^2.36.0",
     "@schedule-x/ical": "^2.36.0",
     "@schedule-x/theme-default": "^2.36.0",
+    "@schedule-x/theme-shadcn": "^3.1.0",
     "@schedule-x/vue": "^2.34.0",
     "@starredev/schedule-x-plugins": "^1.6.3",
     "@tailwindcss/vite": "^4.1.12",

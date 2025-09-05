@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { watchEffect } from "vue";
-import "@schedule-x/theme-default/dist/index.css";
+import "@schedule-x/theme-shadcn/dist/index.css";
 import type { CalendarEvent } from "@schedule-x/calendar";
 import { ScheduleXCalendar } from "@schedule-x/vue";
 import { ZoomInPlugin } from "@starredev/schedule-x-plugins";
@@ -9,7 +9,6 @@ import { createEventModalPlugin } from "@schedule-x/event-modal";
 import { createEventsServicePlugin } from "@schedule-x/event-recurrence";
 import { createCurrentTimePlugin } from "@schedule-x/current-time";
 import { createCalendarControlsPlugin } from "@schedule-x/calendar-controls";
-
 import { createCalendar, createViewWeek, createViewMonthAgenda } from "@schedule-x/calendar";
 import { dayjs } from "@/lib/dayjs";
 
@@ -38,7 +37,7 @@ const calendarApp = createCalendar({
     eventsServicePlugin,
     calendarControlsPlugin,
     new ZoomInPlugin(calendarControlsPlugin, {
-      zoomStep: 0.03,
+      zoomStep: 0.01,
     }),
   ],
   calendars: {
@@ -99,6 +98,7 @@ const calendarApp = createCalendar({
     gridHeight: 1050,
     nDays: 6,
   },
+  theme: "shadcn",
 });
 
 watchEffect(() => {
