@@ -1,5 +1,5 @@
 > [!NOTE]  
-> Copy from https://github.com/Yuujiso/aitumap
+> Based on https://github.com/Yuujiso/aitumap
 
 ## Installation
 
