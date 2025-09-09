@@ -7,12 +7,18 @@ import PyPDF2
 from datetime import datetime
 from PyPDF2 import PdfMerger
 
-input_folder = "./input"
-output_folder = "./output"
+# Get input and output directories from environment variables (for workflow)
+# or use default values (for manual usage)
+input_folder = os.environ.get('SCHEDULE_INPUT_DIR', './input')
+output_folder = os.environ.get('SCHEDULE_OUTPUT_DIR', './output')
+
+print(f"📁 Input folder: {input_folder}")
+print(f"📁 Output folder: {output_folder}")
 
 # Create output folder if it doesn't exist
 if not os.path.exists(output_folder):
     os.makedirs(output_folder)
+    print(f"✅ Created output directory: {output_folder}")
 
 def merge_pdfs_to_single_file(pdf_files, output_path):
     """Merge multiple PDF files into a single PDF"""
@@ -53,7 +59,7 @@ def extract_text_from_pdf(pdf_path):
             
             return full_text
     except Exception as e:
-        print(f"Error reading PDF with PyPDF2: {e}")
+        print(f"❌ Error reading PDF with PyPDF2: {e}")
         return None
 
 def extract_group_name_from_full_text(full_text):
