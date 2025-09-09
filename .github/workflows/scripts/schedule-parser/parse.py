@@ -394,7 +394,7 @@ for file in pdf_files:
 
 if all_schedules:
     main_format = create_main_json_format(all_schedules)
-    output_file_main = os.path.join(output_folder, "all_schedules_combined_main_format.json")
+    output_file_main = os.path.join(output_folder, "main.json")
     with open(output_file_main, 'w', encoding='utf-8') as f:
         json.dump(main_format, f, indent=2, ensure_ascii=False)
     
