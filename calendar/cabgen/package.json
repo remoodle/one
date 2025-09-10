@@ -1,0 +1,27 @@
+{
+  "name": "lighthouse",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:screenshots": "playwright test cabinet-screenshots.spec.js --config=playwright-screenshots.config.js",
+    "test:screenshots-advanced": "playwright test cabinet-screenshots-advanced.spec.js --config=playwright-screenshots.config.js",
+    "test:screenshots-dark": "playwright test cabinet-screenshots-advanced.spec.js --config=playwright-dark-theme.config.js",
+    "test:debug": "playwright test cabinet-screenshots.spec.js --debug",
+    "test:headed": "playwright test cabinet-screenshots.spec.js --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "bot": "node telegram-bot.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.1"
+  },
+  "dependencies": {
+    "grammy": "^1.21.1"
+  }
+}
