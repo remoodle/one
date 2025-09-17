@@ -13,7 +13,9 @@ export const env = cleanEnv(process.env, {
   }),
 
   TELEGRAM_BOT_TOKEN: str(),
-  REDIS_URI: str({ default: "redis://localhost:6379" }),
+
+  REDIS_URI: str({ default: "redis://localhost:6379/1" }),
+  MONGO_URI: str({ default: "mongodb://localhost:27017/remoodle-calendar" }),
 });
 
 export const config = {
@@ -23,5 +25,8 @@ export const config = {
   },
   redis: {
     uri: env.REDIS_URI,
+  },
+  mongo: {
+    uri: env.MONGO_URI,
   },
 };

@@ -20,6 +20,9 @@ importers:
       callback-data:
         specifier: ^1.1.1
         version: 1.1.1
+      dayjs:
+        specifier: ^1.11.18
+        version: 1.11.18
       dotenv:
         specifier: ^17.2.2
         version: 17.2.2
@@ -29,6 +32,12 @@ importers:
       grammy:
         specifier: ^1.38.2
         version: 1.38.2
+      ical.js:
+        specifier: ^2.2.1
+        version: 2.2.1
+      ioredis:
+        specifier: ^5.7.0
+        version: 5.7.0
       mongoose:
         specifier: ^8.18.1
         version: 8.18.1
@@ -41,6 +50,12 @@ importers:
       prettier:
         specifier: ^3.6.2
         version: 3.6.2
+      ts-ics:
+        specifier: ^2.2.0
+        version: 2.2.0
+      uuid:
+        specifier: ^13.0.0
+        version: 13.0.0
     devDependencies:
       '@eslint/js':
         specifier: ^9.34.0
@@ -474,6 +489,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@standard-schema/spec@1.0.0':
+    resolution: {integrity: sha512-m2bOd0f2RT9k8QJx1JN85cZYyH1RqFBdlwtkSlf4tBDYLCiiZnv1fIIwacK6cqwXavOydf0NPToMQgpKq+dVlA==}
+
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
@@ -674,6 +692,9 @@ packages:
 
   dateformat@4.6.3:
     resolution: {integrity: sha512-2P0p0pFGzHS5EMnhdxQi7aJN+iMheud0UhG4dlE1DLAlvL8JHjJJTX/CSm4JXwV0Ka5nGk3zC5mcb5bUQUxxMA==}
+
+  dayjs@1.11.18:
+    resolution: {integrity: sha512-zFBQ7WFRvVRhKcWoUh+ZA1g2HVgUbsZm9sbddh8EC5iv93sui8DVVz1Npvz+r6meo9VKfa8NyLWBsQK1VvIKPA==}
 
   debug@4.4.1:
     resolution: {integrity: sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==}
@@ -894,6 +915,9 @@ packages:
 
   help-me@5.0.0:
     resolution: {integrity: sha512-7xgomUX6ADmcYzFik0HzAxh/73YlKR9bmFzf51CZwR+b6YtzU2m0u49hQCqV6SvlqIqsaxovfwdvbnsw3b/zpg==}
+
+  ical.js@2.2.1:
+    resolution: {integrity: sha512-yK/UlPbEs316igb/tjRgbFA8ZV75rCsBJp/hWOatpyaPNlgw0dGDmU+FoicOcwX4xXkeXOkYiOmCqNPFpNPkQg==}
 
   ignore@5.3.2:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
@@ -1382,6 +1406,9 @@ packages:
     peerDependencies:
       typescript: '>=4.8.4'
 
+  ts-ics@2.2.0:
+    resolution: {integrity: sha512-m8oA9vOpQW3lG85YJiARtStjT/ef/XT7FQ6l1gkX+65mFj1P9Ws8cwdn+FJ9P89K1P5xbrHIFtu7lOFRUgzd/g==}
+
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
 
@@ -1470,6 +1497,10 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+
+  uuid@13.0.0:
+    resolution: {integrity: sha512-XQegIaBTVUjSHliKqcnFqYypAd4S+WCYt5NIeRs6w/UAry7z8Y9j5ZwRRL4kzq9U3sD6v+85er9FvkEaBpji2w==}
+    hasBin: true
 
   uuid@9.0.1:
     resolution: {integrity: sha512-b+1eJOlsR9K8HJpow9Ok3fiWOWSIcIzXodvv0rQjVoOVNpWMpxf1wZNpt4y9h10odCNrqnYp1OBzRktckBe3sA==}
@@ -1788,6 +1819,8 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.50.1':
     optional: true
 
+  '@standard-schema/spec@1.0.0': {}
+
   '@types/estree@1.0.8': {}
 
   '@types/json-schema@7.0.15': {}
@@ -2006,6 +2039,8 @@ snapshots:
       which: 2.0.2
 
   dateformat@4.6.3: {}
+
+  dayjs@1.11.18: {}
 
   debug@4.4.1:
     dependencies:
@@ -2254,6 +2289,8 @@ snapshots:
   has-flag@4.0.0: {}
 
   help-me@5.0.0: {}
+
+  ical.js@2.2.1: {}
 
   ignore@5.3.2: {}
 
@@ -2723,6 +2760,10 @@ snapshots:
     dependencies:
       typescript: 5.9.2
 
+  ts-ics@2.2.0:
+    dependencies:
+      '@standard-schema/spec': 1.0.0
+
   ts-interface-checker@0.1.13: {}
 
   tslib@2.8.1: {}
@@ -2812,6 +2853,8 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  uuid@13.0.0: {}
 
   uuid@9.0.1: {}
 
