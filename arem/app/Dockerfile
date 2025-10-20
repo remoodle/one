@@ -2,7 +2,11 @@ FROM node:24-alpine
 
 # Install dependencies
 RUN apk add --no-cache libc6-compat
+RUN apk add --no-cache tzdata \
+  && cp /usr/share/zoneinfo/Asia/Almaty /etc/localtime \
+  && echo "Asia/Almaty" > /etc/timezone
 RUN apk update
+
 
 # Set working directory
 WORKDIR /app
