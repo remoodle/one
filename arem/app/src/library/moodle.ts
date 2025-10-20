@@ -17,7 +17,6 @@ interface Options {
 }
 
 interface MoodleAuthCookie {
-  // TODO: move to shared types
   name: string;
   value: string;
 }
@@ -28,8 +27,24 @@ function validateForwardedHttpResponseStatus(status: number) {
 
 interface MoodleStudentInfo {
   fullname: string;
-  username: string; // email
+  username: string;  // email
   userId: number;
+}
+
+interface MoodleAPIMultiSessionsErrorAccount {
+  id: string;
+  name: string;
+  email: string;
+}
+
+export class MoodleAPIMultiSessionsError extends MoodleAPIError<{ accounts: MoodleAPIMultiSessionsErrorAccount[] }> {
+  constructor(accounts: MoodleAPIMultiSessionsErrorAccount[]) {
+    super(
+      "Multiple active sessions found on MSOnline page",
+      "multisessions",
+      { accounts },
+    );
+  }
 }
 
 const ignoreGradeNames = new Set([
@@ -80,6 +95,10 @@ const msOnlineProxyFixedUrl = config.moodle.msOnlineProxyUrl
   ? new URL(config.moodle.msOnlineProxyUrl).toString()
   : null;
 
+function _isHttpResponseRedirected(resp: AxiosResponse): boolean {
+  return resp.status >= 300 && resp.status < 400 && !!resp.headers.location;
+}
+
 export class Moodle {
   protected httpClient?: AxiosInstance;
   protected moodleClient?: MoodleClient;
@@ -122,95 +141,116 @@ export class Moodle {
     return { httpClient, jar };
   }
 
-  private async _getFormAndData(url: string) {
-    const { httpClient } = this._createHttpSession();
-
-    const respSrc = await httpClient.get(url);
-    if (
-      !(
-        respSrc.status >= 300 &&
-        respSrc.status < 400 &&
-        respSrc.headers.location
-      )
-    ) {
-      throw new Error(`Expected redirect from ${url}, got ${respSrc.status}`);
-    }
-
-    const redirectUrl = new URL(
-      respSrc.headers.location,
-      respSrc.config.url ?? url,
-    );
+  private async _proxyMSOnlineRequest(httpClient: AxiosInstance, sourceUrl: URL): Promise<AxiosResponse> {
     const cookieHeader = this.moodleAuthCookies!.map(
       (c) => `${encodeURIComponent(c.name)}=${encodeURIComponent(c.value)}`,
     ).join("; ");
 
     let msOnlineUrl: URL;
-    let resp: AxiosResponse;
 
     if (msOnlineProxyFixedUrl) {
       msOnlineUrl = new URL(msOnlineProxyFixedUrl);
-      msOnlineUrl.pathname = redirectUrl.pathname;
-      msOnlineUrl.search = redirectUrl.search;
+      msOnlineUrl.pathname = sourceUrl.pathname;
+      msOnlineUrl.search = sourceUrl.search;
+      console.log(`Proxying MSOnline request via fixed URL: ${msOnlineUrl.toString()}`);
 
-      resp = await httpClient.get(msOnlineUrl.toString(), {
+      return await httpClient.get(msOnlineUrl.toString(), {
         headers: {
-          Host: redirectUrl.host,
+          Host: sourceUrl.host,
           Cookie: cookieHeader,
         },
       });
+    }
+
+    msOnlineUrl = sourceUrl;
+    console.log(`Direct MSOnline request to URL: ${msOnlineUrl.toString()}`);
+
+    return await httpClient.get(msOnlineUrl.toString(), {
+      headers: {
+        Cookie: cookieHeader,
+      },
+    });
+  }
+
+  private _parseMSOnlinePageConfigFromHtml(html: string | CheerioAPI): any {
+    const $ = typeof html === "string" ? loadHtml(html) : html;
+
+    const scriptTag = $("script").first();
+
+    if (!scriptTag) {
+      throw new Error('No (script) tag on MSOnline page');
+    }
+
+    const scriptText = $(scriptTag).text();
+
+    if (!scriptText.includes('$Config={')) {
+      throw new Error('No $Config found in MSOnline script text');
+    }
+
+    return JSON.parse(scriptText.replace("//<![CDATA[", "").replace("//]]>", "").replace("$Config=", "").trim().slice(0, -1));
+  }
+
+  private _getMoodlePostDataFromRedirect(resp: AxiosResponse) {
+    return Object.fromEntries(new URLSearchParams(resp.headers.location.split("#", 2)[1]));
+  }
+
+  private async _getFormAndData(oidcUrl: string, msAccountId?: string) {
+    const { httpClient } = this._createHttpSession();
+
+    const respSrc = await httpClient.get(oidcUrl);
+    if (!_isHttpResponseRedirected(respSrc)) {
+      throw new Error(`Expected redirect from ${oidcUrl}, got ${respSrc.status}`);
+    }
+
+    const redirectUrl = new URL(respSrc.headers.location, oidcUrl);
+    redirectUrl.searchParams.set("response_mode", "fragment");
+    redirectUrl.searchParams.set("prompt", "select_account");
+
+    const resp = await this._proxyMSOnlineRequest(httpClient, redirectUrl);
+    console.log(`GET ${redirectUrl.toString()} -> ${resp.status}`);
+
+    let moodlePostData: Record<string, string>;
+
+    if (_isHttpResponseRedirected(resp)) {
+      moodlePostData = this._getMoodlePostDataFromRedirect(resp);
     } else {
-      msOnlineUrl = redirectUrl;
+      const msOnlinePageConfig = this._parseMSOnlinePageConfigFromHtml(loadHtml(resp.data));
+      console.log(`Parsed ${msOnlinePageConfig?.arrSessions?.length} MSOnline configs: ${JSON.stringify(msOnlinePageConfig?.arrSessions)}`);
+      const msOnlinePageSessions = (msOnlinePageConfig?.arrSessions || []).filter((s: any) => s?.isSignedIn && s?.id);
+      console.log(`Found ${msOnlinePageSessions.length} active MSOnline sessions`, JSON.stringify(msOnlinePageSessions));
 
-      resp = await httpClient.get(msOnlineUrl.toString(), {
-        headers: {
-          Cookie: cookieHeader,
-        },
-      });
-    }
-
-    console.log(`GET ${msOnlineUrl.toString()} -> ${resp.status}`);
-
-    const $ = loadHtml(resp.data);
-    const $form = $("form").first();
-    if ($form.length === 0) {
-      throw new Error("No (form) found on page");
-    }
-
-    const actionAttr = $form.attr("action") ?? "";
-    const baseUrl = resp.config.url ?? url;
-    const moodlePostUrl = new URL(actionAttr || ".", baseUrl).toString();
-
-    const moodlePostData: Record<string, string> = {};
-
-    $form.find("input[name]").each((_: any, el: any) => {
-      const name = $(el).attr("name")!;
-      const value = $(el).attr("value") ?? "";
-      const type = ($(el).attr("type") || "").toLowerCase();
-      const checked = $(el).is(":checked");
-      if (type === "checkbox" || type === "radio") {
-        if (checked) {
-          moodlePostData[name] = value;
-        }
-      } else {
-        moodlePostData[name] = value;
+      if (!msOnlinePageSessions || msOnlinePageSessions.length === 0) {
+        throw new Error("No sessions found on MSOnline page");
       }
-    });
 
-    $form.find("select[name]").each((_: any, el: any) => {
-      const name = $(el).attr("name")!;
-      const $options = $(el).find("option");
-      const $selected = $options.filter("[selected]").first();
-      moodlePostData[name] = $selected.length
-        ? ($selected.attr("value") ?? "")
-        : ($options.first().attr("value") ?? "");
-    });
+      if (msOnlinePageSessions.length > 1 && !msAccountId) {
+        throw new MoodleAPIMultiSessionsError(
+          msOnlinePageSessions.map((s: any) => ({
+            id: s.id,
+            name: s.fullName,
+            email: s.name,
+          })),
+        );
+      }
 
-    $form.find("textarea[name]").each((_: any, el: any) => {
-      const name = $(el).attr("name")!;
-      moodlePostData[name] = $(el).text() ?? "";
-    });
+      const msOnlinePageSession = msAccountId ? msOnlinePageSessions.find((s: any) => s.id === msAccountId) : msOnlinePageSessions[0];
 
-    return { httpClient, moodlePostUrl, moodlePostData };
+      if (!msOnlinePageSession) {
+        throw new Error("Provided msAccountId is invalid");
+      }
+
+      const msOnlineLoginURL = new URL(msOnlinePageConfig.urlLogin);
+      msOnlineLoginURL.searchParams.set("sessionid", msOnlinePageSession.id);
+
+      const resp2 = await this._proxyMSOnlineRequest(httpClient, msOnlineLoginURL);
+      if (!_isHttpResponseRedirected(resp2)) {
+        throw new Error(`Expected redirect from ${msOnlineLoginURL}, got ${resp2.status}`);
+      }
+
+      moodlePostData = Object.fromEntries(new URLSearchParams(resp2.headers.location.split("#", 2)[1]));
+    }
+
+    return { httpClient, oidcUrl, moodlePostData };
   }
 
   private _parseMoodlePageConfigFromHtml(html: string | CheerioAPI): any {
@@ -239,13 +279,13 @@ export class Moodle {
     return JSON.parse(scriptText.slice(start, end));
   }
 
-  async authByCookies() {
+  async authByCookies(msAccountId?: string) {
     if (!this.moodleAuthCookies) {
       throw new Error("No auth cookies provided");
     }
 
-    const { httpClient, moodlePostUrl, moodlePostData } =
-      await this._getFormAndData(`${config.moodle.url}/auth/oidc/`);
+    const { httpClient, oidcUrl: moodlePostUrl, moodlePostData } =
+      await this._getFormAndData(`${config.moodle.url}/auth/oidc/`, msAccountId);
 
     this.httpClient = httpClient;
 
@@ -257,8 +297,6 @@ export class Moodle {
       new URLSearchParams(moodlePostData),
       {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        maxRedirects: 0,
-        validateStatus: validateForwardedHttpResponseStatus,
       },
     );
 
@@ -271,10 +309,7 @@ export class Moodle {
       throw new Error("Unexpected response during cookie auth");
     }
 
-    const resp2 = await httpClient.get(
-      new URL(resp.headers.location, moodlePostUrl).toString(),
-      { maxRedirects: 0 },
-    );
+    const resp2 = await httpClient.get(new URL(resp.headers.location, moodlePostUrl).toString());
 
     const pageJsonData = this._parseMoodlePageConfigFromHtml(resp2.data);
 

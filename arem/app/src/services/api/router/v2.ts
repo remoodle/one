@@ -12,7 +12,7 @@ import type {
 
 import { config } from "../../../config";
 import { db, wrapper } from "../../../library/db";
-import { Moodle } from "../../../library/moodle";
+import { Moodle, MoodleAPIMultiSessionsError } from "../../../library/moodle";
 import { logger } from "../../../library/logger";
 import {
   hashPassword,
@@ -25,6 +25,7 @@ import { createAlert } from "../helpers/alerts";
 import { increaseUserCounter, decreaseUserCounter } from "../helpers/metrics";
 import { syncUserData } from "../helpers/tasks";
 import { defaultRules, rateLimiter } from "../middleware/ratelimit";
+import { JSONHTTPException } from "../middleware/error";
 import { authMiddleware } from "../middleware/auth";
 import { errorHandler } from "../middleware/error";
 
@@ -60,10 +61,11 @@ const authRoutes = new Hono<{
             { message: "Duplicate cookie names are not allowed" },
           ),
         telegramOtp: z.string(),
+        msAccountId: z.string().optional(),
       }),
     ),
     async (ctx) => {
-      const { moodleAuthCookies, telegramOtp } = ctx.req.valid("json");
+      const { moodleAuthCookies, telegramOtp, msAccountId } = ctx.req.valid("json");
 
       const telegramId = await db.telegramToken.get(telegramOtp);
 
@@ -72,11 +74,21 @@ const authRoutes = new Hono<{
       }
 
       const moodleClient = new Moodle({ moodleAuthCookies });
-      const {
-        userId: moodleUserId,
-        moodleSessionCookie,
-        moodleSessionKey,
-      } = await moodleClient.authByCookies();
+      let moodleUserId: number, moodleSessionCookie: string, moodleSessionKey: string;
+
+      try {
+        ({
+          userId: moodleUserId,
+          moodleSessionCookie,
+          moodleSessionKey,
+        } = await moodleClient.authByCookies(msAccountId));
+      } catch (error: MoodleAPIMultiSessionsError | any) {
+        if (error instanceof MoodleAPIMultiSessionsError) {
+          throw new JSONHTTPException(409, error.message, error.extra);
+        }
+
+        throw error;
+      }
 
       await db.telegramToken.remove(telegramOtp);
 

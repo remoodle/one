@@ -12,15 +12,19 @@ const rpc = (type, payload={}) => new Promise(res => chrome.runtime.sendMessage(
 rpc('GET_CONFIG').then(r => {
   if (!r.ok || !r.data) {
     alert('Не удалось получить конфиг из bg.js');
+
     return;
   }
+
   const config = r.data;
+
   document.querySelector('.config div:nth-child(2) span').innerText += ` ${config.MSONLINE_DOMAIN}`;
-  document.querySelector('.config div:nth-child(3) span').innerText += ` ${config.FIXED_COOKIE_NAMES.join(', ')}`;
+  document.querySelector('.config div:nth-child(3) span').innerText += ` ${config.COOKIE_KEYS.join(', ')}`;
 })
 
 async function readIntercepted() {
   const { intercepted = [] } = await chrome.storage.local.get(['intercepted']);
+
   return intercepted;
 }
 
@@ -33,12 +37,16 @@ async function clearIntercepted() {
   await chrome.storage.local.remove('intercepted');
   print([]);
 }
+
 async function sendToBackend() {
   const r = await rpc('SEND_TO_BACKEND');
+
   if (!r.ok) {
     alert(r.error || 'Не удалось отправить');
+
     return;
   }
+
   alert(r.message);
 }
 
