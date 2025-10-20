@@ -150,7 +150,7 @@ export const aitu: UniversityConfig = {
   additionalInfo,
 
   deadlinesDaysLimit: {
-    default: 21,
+    default: 10,
     short: 2,
   },
 
