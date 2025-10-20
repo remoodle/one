@@ -87,8 +87,10 @@ export const syncEvents = async (userId: string) => {
     throw new Error(`Failed to get events: ${error.message}`);
   }
 
+  const IGNORED_COMPONENTS = ["mod_attendance", "mod_quiz"];
+
   const filteredEvents = response.events.filter(
-    (event) => event.component !== "mod_attendance",
+    (event) => !IGNORED_COMPONENTS.includes(event.component ?? ""),
   );
 
   for (const event of filteredEvents) {
