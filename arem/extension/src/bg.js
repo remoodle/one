@@ -210,7 +210,7 @@ async function sendToBackend(msAccountId, opts={}) {
     throw new Error(`Ошибка отправки: ${resp.status} ${text || ''}`.trim());
   }
 
-  if (!json || !json?.extra) {
+  if (!json) {
     throw new Error(`Ошибка отправки: ${resp.status} ${text || ''}`.trim());
   }
 

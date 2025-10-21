@@ -2,10 +2,14 @@ import { FlowProducer } from "bullmq";
 import { QueueName, JobName, queues } from "../../../core/queues";
 import { db } from "../../../library/db";
 
-export const syncUserData = async (userId: string) => {
-  const flowProducer = new FlowProducer({
+function _getFlowProducer() {
+  return new FlowProducer({
     connection: db.redisConnection,
   });
+}
+
+export const syncUserData = async (userId: string) => {
+  const flowProducer = _getFlowProducer();
 
   await flowProducer.add({
     name: JobName.GRADES_SCHEDULE_SYNC,
@@ -30,5 +34,24 @@ export const syncUserData = async (userId: string) => {
     JobName.EVENTS_UPDATE,
     { userId },
     { lifo: true },
+  );
+};
+
+export const notifyUserAddedAccount = async (userId: string, userMoodleName: string) => {
+  const message = `🎉 ${userMoodleName}, our account has been successfully linked to your Moodle account! You will now start receiving updates about your grades, course changes, and event reminders. Stay tuned for more updates! 📚✨`;
+
+  await queues[QueueName.TELEGRAM].add(
+    JobName.TELEGRAM_SEND_MESSAGE,
+    { userId, message },
+    {
+      attempts: 3,
+      backoff: {
+        type: "exponential",
+        delay: 2000,
+      },
+      deduplication: {
+        id: `${userId}::${message}`,
+      },
+    },
   );
 };

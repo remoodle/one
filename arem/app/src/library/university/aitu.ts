@@ -57,12 +57,10 @@ const calculateTotalGrades = (grades: MoodleGrade[]): GradeBlock[] => {
   const getGrade = (name: string) =>
     grades.find((grade) => grade.itemname === name);
 
-  // const getGradeByIdNumber = (idnumber: string) =>
-  //   grades.find((grade) => grade?.idnumber === idnumber);
+  const getGradeByIdNumber = (idnumber: string) =>
+    grades.find((grade) => grade?.idnumber === idnumber);
 
-  // TODO
-  // const total = getGradeByIdNumber("register");
-  const total: MoodleGrade | null = null;
+  const total = getGradeByIdNumber("register");
 
   const regMid = getGrade("Register Midterm");
   const regEnd = getGrade("Register Endterm");

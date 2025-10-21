@@ -23,7 +23,7 @@ import { zValidator } from "../helpers/zv";
 import { issueTokens } from "../helpers/jwt";
 import { createAlert } from "../helpers/alerts";
 import { increaseUserCounter, decreaseUserCounter } from "../helpers/metrics";
-import { syncUserData } from "../helpers/tasks";
+import { syncUserData, notifyUserAddedAccount } from "../helpers/tasks";
 import { defaultRules, rateLimiter } from "../middleware/ratelimit";
 import { JSONHTTPException } from "../middleware/error";
 import { authMiddleware } from "../middleware/auth";
@@ -114,6 +114,7 @@ const authRoutes = new Hono<{
               moodleAuthCookies,
               moodleSessionCookie,
               moodleSessionKey,
+              msAccountId,
               telegramId,
               health: 7,
             },
@@ -148,6 +149,7 @@ const authRoutes = new Hono<{
             moodleAuthCookies,
             moodleSessionCookie,
             moodleSessionKey,
+            msAccountId,
             ...(telegramId && { telegramId }),
           })) as IUser;
 
@@ -174,6 +176,8 @@ const authRoutes = new Hono<{
       }
 
       if (shouldSync && syncedUserId) {
+        await notifyUserAddedAccount(syncedUserId, student.fullname);
+
         try {
           await syncUserData(syncedUserId);
         } catch (error: any) {
@@ -380,6 +384,7 @@ const userRoutes = new Hono<{
           moodleAuthCookies: user.moodleAuthCookies,
           moodleSessionCookie: user.moodleSessionCookie,
           moodleSessionKey: user.moodleSessionKey,
+          msAccountId: user.msAccountId,
         });
 
         const [response, error] = await client.call(
@@ -441,6 +446,7 @@ const userRoutes = new Hono<{
           moodleAuthCookies: user.moodleAuthCookies,
           moodleSessionCookie: user.moodleSessionCookie,
           moodleSessionKey: user.moodleSessionKey,
+          msAccountId: user.msAccountId,
         });
 
         const [response, error] = await client.call(
@@ -536,6 +542,7 @@ const userRoutes = new Hono<{
           moodleAuthCookies: user.moodleAuthCookies,
           moodleSessionCookie: user.moodleSessionCookie,
           moodleSessionKey: user.moodleSessionKey,
+          msAccountId: user.msAccountId,
         });
         const [data, error] = await client.call("core_course_get_contents", {
           courseid: parseInt(courseId),
@@ -571,6 +578,7 @@ const userRoutes = new Hono<{
       moodleAuthCookies: user.moodleAuthCookies,
       moodleSessionCookie: user.moodleSessionCookie,
       moodleSessionKey: user.moodleSessionKey,
+      msAccountId: user.msAccountId,
     });
 
     let response: MoodleAssignment[];
@@ -607,6 +615,7 @@ const userRoutes = new Hono<{
         moodleAuthCookies: user.moodleAuthCookies,
         moodleSessionCookie: user.moodleSessionCookie,
         moodleSessionKey: user.moodleSessionKey,
+        msAccountId: user.msAccountId,
       });
 
       let response: MoodleGrade[];

@@ -65,6 +65,7 @@ export type IUser = {
   moodleAuthCookies: IUserMoodleAuthCookie[];
   moodleSessionCookie: string;
   moodleSessionKey: string;
+  msAccountId?: string;
   health: number;
   email?: string;
   telegramId?: number;

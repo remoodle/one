@@ -14,6 +14,7 @@ interface Options {
   moodleAuthCookies?: MoodleAuthCookie[];
   moodleSessionCookie?: string;
   moodleSessionKey?: string;
+  msAccountId?: string;
 }
 
 interface MoodleAuthCookie {
@@ -49,10 +50,10 @@ export class MoodleAPIMultiSessionsError extends MoodleAPIError<{ accounts: Mood
 
 const ignoreGradeNames = new Set([
   "Register(not to edit)",
-  "Register(not to edit) total",
 ]);
 
 interface GradeBaseData {
+  name?: string;
   itemtype: string;
   itemmodule: string | null;
   idnumber?: string;
@@ -79,7 +80,13 @@ const gradeNamesToBaseData: Record<string, GradeBaseData> = {
     itemmodule: null,
     idnumber: "register_final",
   },
-  Attendance: {
+  "Register(not to edit) total": {
+    name: "Register Total",
+    itemtype: "category",
+    itemmodule: null,
+    idnumber: "register",
+  },
+  "Attendance": {
     itemtype: "mod",
     itemmodule: "attendance",
     idnumber: "register_attendance",
@@ -106,12 +113,14 @@ export class Moodle {
   protected moodleAuthCookies?: MoodleAuthCookie[];
   protected moodleSessionCookie?: string;
   protected moodleSessionKey?: string;
+  protected msAccountId?: string;
 
   constructor(options: Options = {}) {
     this.moodleUserId = options.moodleUserId;
     this.moodleAuthCookies = options.moodleAuthCookies;
     this.moodleSessionCookie = options.moodleSessionCookie;
     this.moodleSessionKey = options.moodleSessionKey;
+    this.msAccountId = options.msAccountId;
   }
 
   static zCourseType = z.enum(["inprogress", "past", "future"]);
@@ -247,7 +256,7 @@ export class Moodle {
         throw new Error(`Expected redirect from ${msOnlineLoginURL}, got ${resp2.status}`);
       }
 
-      moodlePostData = Object.fromEntries(new URLSearchParams(resp2.headers.location.split("#", 2)[1]));
+      moodlePostData = this._getMoodlePostDataFromRedirect(resp2);
     }
 
     return { httpClient, oidcUrl, moodlePostData };
@@ -404,7 +413,6 @@ export class Moodle {
         .toArray()
         .slice(1)
         .slice(0, -1)
-        .slice(0, -1),
     );
 
     const grades: MoodleGrade[] = $gradeEls
@@ -424,7 +432,7 @@ export class Moodle {
         }
 
         const gradeId = parseInt(
-          $("th.item", $gradeEl).first().attr("id")!.split("_", 3)[1],
+          $("th.column-itemname", $gradeEl).first().attr("id")!.split("_", 3)[1],
         );
         const gradeAssignmentId =
           parseInt($nameAndIdEl.attr("href")?.split("id=", 2)?.[1] || "") ??
@@ -452,10 +460,11 @@ export class Moodle {
 
         return {
           id: gradeId,
-          itemname: name,
+          itemname: gradeBaseData.name ?? name,
           itemtype: gradeBaseData.itemtype,
           itemmodule: gradeBaseData.itemmodule ?? undefined,
           iteminstance: gradeAssignmentId,
+          idnumber: gradeBaseData.idnumber,
           graderaw: gradeValueRaw,
           gradeformatted: gradeValueFormatted,
           grademin: gradeValueMin,
@@ -616,11 +625,11 @@ export class Moodle {
         null,
       ];
     } catch (err: MoodleAPIError | any) {
-      if (err?.code === "servicerequireslogin") {
+      if (err instanceof MoodleAPIError && err.code === "servicerequireslogin") {
         // attempting reauth using Moodle OIDC and authCookies
         // TODO: use user.health
         try {
-          await this.authByCookies();
+          await this.authByCookies(this.msAccountId);
         } catch (reauthErr: any) {
           return [null, { message: (reauthErr as Error).message, code: null }];
         }

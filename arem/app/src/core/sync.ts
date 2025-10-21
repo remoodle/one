@@ -30,6 +30,7 @@ export const syncCookies = async (userId: string) => {
     moodleAuthCookies: user.moodleAuthCookies,
     moodleSessionCookie: user.moodleSessionCookie,
     moodleSessionKey: user.moodleSessionKey,
+    msAccountId: user.msAccountId,
   });
 
   const [response, error] = await client.call("core_session_touch", {});
@@ -73,6 +74,7 @@ export const syncEvents = async (userId: string) => {
     moodleAuthCookies: user.moodleAuthCookies,
     moodleSessionCookie: user.moodleSessionCookie,
     moodleSessionKey: user.moodleSessionKey,
+    msAccountId: user.msAccountId,
   });
 
   const [response, error] = await client.call(
@@ -128,6 +130,7 @@ export const syncCourses = async (
     moodleAuthCookies: user.moodleAuthCookies,
     moodleSessionCookie: user.moodleSessionCookie,
     moodleSessionKey: user.moodleSessionKey,
+    msAccountId: user.msAccountId,
   });
 
   // Get existing courses before sync for change tracking
@@ -217,6 +220,7 @@ export const syncCourseGrades = async (
     moodleAuthCookies: user.moodleAuthCookies,
     moodleSessionCookie: user.moodleSessionCookie,
     moodleSessionKey: user.moodleSessionKey,
+    msAccountId: user.msAccountId,
   });
 
   let response: MoodleGrade[];

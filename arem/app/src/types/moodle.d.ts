@@ -210,7 +210,7 @@ export type MoodleGrade = {
   itemmodule?: string;
   iteminstance?: number;
   // itemnumber?: number;
-  // idnumber: string;
+  idnumber?: string;
   // categoryid?: number;
   // outcomeid: any;
   // scaleid: any;
