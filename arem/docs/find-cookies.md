@@ -8,7 +8,7 @@
 
 ![Step 3](https://i.ibb.co.com/1GtWj6Mg/Screenshot-2025-10-20-at-19-29-08.png)
 
-### 4. Авторизуемся в [Moodle LMS](https://lms.moodle.astanait.edu.kz)
+### 4. Авторизуемся в [Moodle LMS](https://lms.astanait.edu.kz)
 
 ### 5. Заходим в расширение и нажимаем "Отправить на бэкенд"
 
