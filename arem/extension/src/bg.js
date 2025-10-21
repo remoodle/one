@@ -229,7 +229,7 @@ chrome.runtime.onMessage.addListener((msg, _sender, sendResponse) => {
         case 'SEND_TO_BACKEND': {
           let { code, json: resp } = await sendToBackend();
 
-          if (Array.isArray(resp.extra.accounts) && resp.extra.accounts.length > 1) {
+          if (resp?.extra && Array.isArray(resp.extra.accounts) && resp.extra.accounts.length > 1) {
             const accounts = resp.extra.accounts;
 
             let tabId = null;
