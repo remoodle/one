@@ -15,6 +15,7 @@ import {
   syncCourses,
   syncCourseGrades,
 } from "../../core/sync";
+import { bullOtel } from "../../core/telemetry";
 import { queues, QueueName, JobName } from "../../core/queues";
 import {
   formatGradeChanges,
@@ -37,6 +38,11 @@ export type Processor = {
   jobName: JobName;
   process(job: Job): Promise<any>;
 };
+
+const flowProducer = new FlowProducer({
+  connection: db.redisConnection,
+  telemetry: bullOtel,
+});
 
 export const processors: Record<QueueName, Processor> = {
   [QueueName.COOKIES_SYNC]: {
@@ -94,10 +100,6 @@ export const processors: Record<QueueName, Processor> = {
         { userId },
         `scheduling events sync for ${users.length} users`,
       );
-
-      const flowProducer = new FlowProducer({
-        connection: db.redisConnection,
-      });
 
       const flows = users.map((user) => ({
         queueName: QueueName.REMINDERS,
@@ -258,10 +260,6 @@ export const processors: Record<QueueName, Processor> = {
         .lean();
 
       const grouppedCourses = partition(courses, (course) => course.userId);
-
-      const flowProducer = new FlowProducer({
-        connection: db.redisConnection,
-      });
 
       const flows: FlowJob[] = Object.entries(grouppedCourses)
         .map(([userId, courses]) => {
