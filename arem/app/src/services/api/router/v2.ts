@@ -65,7 +65,8 @@ const authRoutes = new Hono<{
       }),
     ),
     async (ctx) => {
-      const { moodleAuthCookies, telegramOtp, msAccountId } = ctx.req.valid("json");
+      const { moodleAuthCookies, telegramOtp, msAccountId } =
+        ctx.req.valid("json");
 
       const telegramId = await db.telegramToken.get(telegramOtp);
 
@@ -74,7 +75,9 @@ const authRoutes = new Hono<{
       }
 
       const moodleClient = new Moodle({ moodleAuthCookies });
-      let moodleUserId: number, moodleSessionCookie: string, moodleSessionKey: string;
+      let moodleUserId: number,
+        moodleSessionCookie: string,
+        moodleSessionKey: string;
 
       try {
         ({
