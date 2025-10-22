@@ -40,7 +40,7 @@ const authRoutes = new Hono<{
     rateLimiter({
       ...defaultRules,
       windowMs: 1 * 60 * 60 * 1000, // 1 hour
-      limit: 10,
+      limit: 100,
     }),
     zValidator(
       "json",
