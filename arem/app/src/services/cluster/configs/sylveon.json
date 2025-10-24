@@ -20,7 +20,7 @@
   {
     "name": "grades::schedule-sync",
     "repeat": {
-      "every": 1800000
+      "every": 300000
     }
   },
   {
