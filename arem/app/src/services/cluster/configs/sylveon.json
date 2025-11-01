@@ -38,13 +38,13 @@
   {
     "name": "events::update",
     "opts": {
-      "concurrency": 10
+      "concurrency": 20
     }
   },
   {
     "name": "grades::update-by-course",
     "opts": {
-      "concurrency": 10
+      "concurrency": 30
     }
   },
   {
