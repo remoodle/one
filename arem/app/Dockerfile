@@ -1,30 +1,25 @@
-FROM node:24-alpine
+FROM oven/bun:1-alpine
 
 # Install dependencies
-RUN apk add --no-cache libc6-compat
 RUN apk add --no-cache tzdata \
   && cp /usr/share/zoneinfo/Asia/Almaty /etc/localtime \
   && echo "Asia/Almaty" > /etc/timezone
 RUN apk update
 
-
 # Set working directory
 WORKDIR /app
 
-# Enable corepack for pnpm
-RUN corepack enable
-
 # Copy package files
-COPY package.json pnpm-lock.yaml ./
+COPY package.json bun.lockb* ./
 
-# Install dependencies
-RUN pnpm install --frozen-lockfile
+# Install dependencies (including dev dependencies)
+RUN bun install --frozen-lockfile
 
 # Copy source code
 COPY . .
 
 # Build the application
-RUN pnpm run build
+RUN bun run build
 
 # Set timezone
 RUN export TZ="Asia/Almaty" \
@@ -35,4 +30,4 @@ ARG VERSION_TAG
 ENV VERSION_TAG=$VERSION_TAG
 
 # Run the service
-CMD node ./dist/services/$SERVICE_NAME/index.cjs
+CMD bun ./dist/services/$SERVICE_NAME/index.cjs
