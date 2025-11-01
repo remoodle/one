@@ -8,6 +8,7 @@ import { config } from "../config";
 import type { MoodleAssignment, MoodleGrade } from "../types";
 import { MoodleClient, MoodleAPIError } from "./moodleClient";
 import { db } from "./db";
+import { logger } from "./logger";
 
 interface Options {
   moodleUserId?: number;
@@ -162,7 +163,7 @@ export class Moodle {
       msOnlineUrl = new URL(msOnlineProxyFixedUrl);
       msOnlineUrl.pathname = sourceUrl.pathname;
       msOnlineUrl.search = sourceUrl.search;
-      console.log(
+      logger.debug(
         `Proxying MSOnline request via fixed URL: ${msOnlineUrl.toString()}`,
       );
 
@@ -175,7 +176,7 @@ export class Moodle {
     }
 
     msOnlineUrl = sourceUrl;
-    console.log(`Direct MSOnline request to URL: ${msOnlineUrl.toString()}`);
+    logger.debug(`Direct MSOnline request to URL: ${msOnlineUrl.toString()}`);
 
     return await httpClient.get(msOnlineUrl.toString(), {
       headers: {
@@ -230,7 +231,7 @@ export class Moodle {
     redirectUrl.searchParams.set("prompt", "select_account");
 
     const resp = await this._proxyMSOnlineRequest(httpClient, redirectUrl);
-    console.log(`GET ${redirectUrl.toString()} -> ${resp.status}`);
+    logger.debug(`GET ${redirectUrl.toString()} -> ${resp.status}`);
 
     let moodlePostData: Record<string, string>;
 
@@ -240,15 +241,15 @@ export class Moodle {
       const msOnlinePageConfig = this._parseMSOnlinePageConfigFromHtml(
         loadHtml(resp.data),
       );
-      console.log(
+      logger.debug(
         `Parsed ${msOnlinePageConfig?.arrSessions?.length} MSOnline configs: ${JSON.stringify(msOnlinePageConfig?.arrSessions)}`,
       );
       const msOnlinePageSessions = (
         msOnlinePageConfig?.arrSessions || []
       ).filter((s: any) => s?.isSignedIn && s?.id);
-      console.log(
+      logger.debug(
+        msOnlinePageSessions,
         `Found ${msOnlinePageSessions.length} active MSOnline sessions`,
-        JSON.stringify(msOnlinePageSessions),
       );
 
       if (!msOnlinePageSessions || msOnlinePageSessions.length === 0) {
@@ -334,7 +335,7 @@ export class Moodle {
 
     this.httpClient = httpClient;
 
-    console.log(
+    logger.debug(
       `Posting to ${moodlePostUrl} with data: ${JSON.stringify(moodlePostData)}`,
     );
     const resp = await httpClient.post(
@@ -382,7 +383,7 @@ export class Moodle {
 
     const moodleSessionCookie = moodleSessionCookieRaw.split("=")[1];
 
-    console.log(
+    logger.debug(
       `Authenticated as userId=${userId}, sesskey=${moodleSessionKey}, MoodleSession=${moodleSessionCookie}`,
     );
     this.moodleUserId = userId;
@@ -579,7 +580,7 @@ export class Moodle {
         const name = $nameAndIdEl.attr("data-mdl-overview-value")!.trim();
 
         if (!assignmentId) {
-          console.log("Skipping assignment with invalid ID");
+          logger.debug("Skipping assignment with invalid ID");
           return null;
         }
 

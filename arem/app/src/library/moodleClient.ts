@@ -1,5 +1,6 @@
 import { MoodleClient as _MoodleClient } from "moodle-api";
 import type { FunctionDefinition } from "moodle-api";
+import { logger } from "./logger";
 
 export class MoodleAPIError<T extends object = object> extends Error {
   code: string;
@@ -47,7 +48,7 @@ export class MoodleClient extends _MoodleClient {
         args: params ? params[0] : {},
       },
     ]);
-    console.log(`Moodle API Call: ${func} with body: ${body}`);
+    logger.debug(`Moodle API Call: ${func} with body: ${body}`);
 
     const response = await fetch(url.toString(), {
       method: "POST",

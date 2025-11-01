@@ -431,7 +431,7 @@ const userRoutes = new Hono<{
         userId,
         ...(status && { classification: status }),
       });
-      console.log(
+      logger.api.debug(
         `User ${userId} has ${courses.length} courses in DB with status ${status}`,
       );
 

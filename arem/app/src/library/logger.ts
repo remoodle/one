@@ -13,6 +13,7 @@ const pinoOptions: pino.LoggerOptions = {
 export const pinoLogger = pino(pinoOptions);
 
 export const logger = {
+  ...pinoLogger,
   api: pinoLogger.child({ module: "api" }),
   cluster: pinoLogger.child({ module: "cluster" }),
   bot: pinoLogger.child({ module: "bot" }),

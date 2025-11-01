@@ -48,7 +48,6 @@ export const processors: Record<QueueName, Processor> = {
   [QueueName.COOKIES_SYNC]: {
     jobName: JobName.COOKIES_SCHEDULE_SYNC,
     process: async (job) => {
-      console.log(`Processing job ${job.id} of type ${job.name}`);
       const { userId } = job.data;
 
       const users = userId ? [{ userId }] : await wrapper.getActiveUsers();
@@ -81,7 +80,6 @@ export const processors: Record<QueueName, Processor> = {
   [QueueName.COOKIES]: {
     jobName: JobName.COOKIES_UPDATE,
     process: async (job) => {
-      console.log(`Processing job ${job.id} of type ${job.name}`);
       const { userId } = job.data;
 
       logger.cluster.info({ userId }, `syncing users cookies`);

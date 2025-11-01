@@ -6,6 +6,7 @@ import type {
 } from "../types";
 import { Moodle } from "../library/moodle";
 import { db, wrapper } from "../library/db";
+import { logger } from "../library/logger";
 
 // TODO: rewrite handleTokenError to a more generic middleware-like function, that will be used in Moodle instance
 const handleTokenError = async (error: { message: string }, user: IUser) => {
@@ -18,7 +19,8 @@ const handleTokenError = async (error: { message: string }, user: IUser) => {
 };
 
 export const syncCookies = async (userId: string) => {
-  console.log(`Syncing cookies for user ${userId}`);
+  logger.debug(`Syncing cookies for user ${userId}`);
+
   const user = await db.user.findById(userId);
 
   if (!user) {

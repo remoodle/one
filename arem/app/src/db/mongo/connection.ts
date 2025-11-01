@@ -8,8 +8,6 @@ export const createMongoDBConnection = async (uri: string) => {
     connection = await mongoose.connect(uri, {
       autoIndex: true,
     });
-
-    console.log(`MongoDB Connected: ${connection.connection.host}`);
   } catch (err: any) {
     console.error(`Error: ${err.message}`);
     process.exit(1);
