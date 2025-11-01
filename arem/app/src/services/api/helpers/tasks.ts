@@ -37,7 +37,10 @@ export const syncUserData = async (userId: string) => {
   );
 };
 
-export const notifyUserAddedAccount = async (userId: string, userMoodleName: string) => {
+export const notifyUserAddedAccount = async (
+  userId: string,
+  userMoodleName: string,
+) => {
   const message = `🎉 ${userMoodleName}, our account has been successfully linked to your Moodle account! You will now start receiving updates about your grades, course changes, and event reminders. Stay tuned for more updates! 📚✨`;
 
   await queues[QueueName.TELEGRAM].add(

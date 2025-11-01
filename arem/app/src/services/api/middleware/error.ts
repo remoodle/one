@@ -3,18 +3,18 @@ import { HTTPException } from "hono/http-exception";
 import { env } from "../../../config";
 
 export class JSONHTTPException extends HTTPException {
-  public payload?: Record<string, unknown>
+  public payload?: Record<string, unknown>;
 
   constructor(
     status: number,
     message: string,
-    payload?: Record<string, unknown>
+    payload?: Record<string, unknown>,
   ) {
     // @ts-expect-error: can't import ContentfulStatusCode from hono
     super(status, { message });
 
     this.payload = payload;
-    this.name = 'JSONHTTPException';
+    this.name = "JSONHTTPException";
   }
 }
 
@@ -24,11 +24,15 @@ export const errorHandler: ErrorHandler = (err, c) => {
   const base = {
     error: {
       status,
-      message: err instanceof HTTPException ? err.message : 'Internal Server Error',
+      message:
+        err instanceof HTTPException ? err.message : "Internal Server Error",
     },
-  }
+  };
 
-  const extra = (err instanceof JSONHTTPException && err.payload) ? { extra: err.payload } : undefined;
+  const extra =
+    err instanceof JSONHTTPException && err.payload
+      ? { extra: err.payload }
+      : undefined;
 
   return c.json(
     {

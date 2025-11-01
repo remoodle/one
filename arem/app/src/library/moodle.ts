@@ -28,7 +28,7 @@ function validateForwardedHttpResponseStatus(status: number) {
 
 interface MoodleStudentInfo {
   fullname: string;
-  username: string;  // email
+  username: string; // email
   userId: number;
 }
 
@@ -38,19 +38,17 @@ interface MoodleAPIMultiSessionsErrorAccount {
   email: string;
 }
 
-export class MoodleAPIMultiSessionsError extends MoodleAPIError<{ accounts: MoodleAPIMultiSessionsErrorAccount[] }> {
+export class MoodleAPIMultiSessionsError extends MoodleAPIError<{
+  accounts: MoodleAPIMultiSessionsErrorAccount[];
+}> {
   constructor(accounts: MoodleAPIMultiSessionsErrorAccount[]) {
-    super(
-      "Multiple active sessions found on MSOnline page",
-      "multisessions",
-      { accounts },
-    );
+    super("Multiple active sessions found on MSOnline page", "multisessions", {
+      accounts,
+    });
   }
 }
 
-const ignoreGradeNames = new Set([
-  "Register(not to edit)",
-]);
+const ignoreGradeNames = new Set(["Register(not to edit)"]);
 
 interface GradeBaseData {
   name?: string;
@@ -86,7 +84,7 @@ const gradeNamesToBaseData: Record<string, GradeBaseData> = {
     itemmodule: null,
     idnumber: "register",
   },
-  "Attendance": {
+  Attendance: {
     itemtype: "mod",
     itemmodule: "attendance",
     idnumber: "register_attendance",
@@ -150,7 +148,10 @@ export class Moodle {
     return { httpClient, jar };
   }
 
-  private async _proxyMSOnlineRequest(httpClient: AxiosInstance, sourceUrl: URL): Promise<AxiosResponse> {
+  private async _proxyMSOnlineRequest(
+    httpClient: AxiosInstance,
+    sourceUrl: URL,
+  ): Promise<AxiosResponse> {
     const cookieHeader = this.moodleAuthCookies!.map(
       (c) => `${encodeURIComponent(c.name)}=${encodeURIComponent(c.value)}`,
     ).join("; ");
@@ -161,7 +162,9 @@ export class Moodle {
       msOnlineUrl = new URL(msOnlineProxyFixedUrl);
       msOnlineUrl.pathname = sourceUrl.pathname;
       msOnlineUrl.search = sourceUrl.search;
-      console.log(`Proxying MSOnline request via fixed URL: ${msOnlineUrl.toString()}`);
+      console.log(
+        `Proxying MSOnline request via fixed URL: ${msOnlineUrl.toString()}`,
+      );
 
       return await httpClient.get(msOnlineUrl.toString(), {
         headers: {
@@ -187,20 +190,29 @@ export class Moodle {
     const scriptTag = $("script").first();
 
     if (!scriptTag) {
-      throw new Error('No (script) tag on MSOnline page');
+      throw new Error("No (script) tag on MSOnline page");
     }
 
     const scriptText = $(scriptTag).text();
 
-    if (!scriptText.includes('$Config={')) {
-      throw new Error('No $Config found in MSOnline script text');
+    if (!scriptText.includes("$Config={")) {
+      throw new Error("No $Config found in MSOnline script text");
     }
 
-    return JSON.parse(scriptText.replace("//<![CDATA[", "").replace("//]]>", "").replace("$Config=", "").trim().slice(0, -1));
+    return JSON.parse(
+      scriptText
+        .replace("//<![CDATA[", "")
+        .replace("//]]>", "")
+        .replace("$Config=", "")
+        .trim()
+        .slice(0, -1),
+    );
   }
 
   private _getMoodlePostDataFromRedirect(resp: AxiosResponse) {
-    return Object.fromEntries(new URLSearchParams(resp.headers.location.split("#", 2)[1]));
+    return Object.fromEntries(
+      new URLSearchParams(resp.headers.location.split("#", 2)[1]),
+    );
   }
 
   private async _getFormAndData(oidcUrl: string, msAccountId?: string) {
@@ -208,7 +220,9 @@ export class Moodle {
 
     const respSrc = await httpClient.get(oidcUrl);
     if (!_isHttpResponseRedirected(respSrc)) {
-      throw new Error(`Expected redirect from ${oidcUrl}, got ${respSrc.status}`);
+      throw new Error(
+        `Expected redirect from ${oidcUrl}, got ${respSrc.status}`,
+      );
     }
 
     const redirectUrl = new URL(respSrc.headers.location, oidcUrl);
@@ -223,10 +237,19 @@ export class Moodle {
     if (_isHttpResponseRedirected(resp)) {
       moodlePostData = this._getMoodlePostDataFromRedirect(resp);
     } else {
-      const msOnlinePageConfig = this._parseMSOnlinePageConfigFromHtml(loadHtml(resp.data));
-      console.log(`Parsed ${msOnlinePageConfig?.arrSessions?.length} MSOnline configs: ${JSON.stringify(msOnlinePageConfig?.arrSessions)}`);
-      const msOnlinePageSessions = (msOnlinePageConfig?.arrSessions || []).filter((s: any) => s?.isSignedIn && s?.id);
-      console.log(`Found ${msOnlinePageSessions.length} active MSOnline sessions`, JSON.stringify(msOnlinePageSessions));
+      const msOnlinePageConfig = this._parseMSOnlinePageConfigFromHtml(
+        loadHtml(resp.data),
+      );
+      console.log(
+        `Parsed ${msOnlinePageConfig?.arrSessions?.length} MSOnline configs: ${JSON.stringify(msOnlinePageConfig?.arrSessions)}`,
+      );
+      const msOnlinePageSessions = (
+        msOnlinePageConfig?.arrSessions || []
+      ).filter((s: any) => s?.isSignedIn && s?.id);
+      console.log(
+        `Found ${msOnlinePageSessions.length} active MSOnline sessions`,
+        JSON.stringify(msOnlinePageSessions),
+      );
 
       if (!msOnlinePageSessions || msOnlinePageSessions.length === 0) {
         throw new Error("No sessions found on MSOnline page");
@@ -242,7 +265,9 @@ export class Moodle {
         );
       }
 
-      const msOnlinePageSession = msAccountId ? msOnlinePageSessions.find((s: any) => s.id === msAccountId) : msOnlinePageSessions[0];
+      const msOnlinePageSession = msAccountId
+        ? msOnlinePageSessions.find((s: any) => s.id === msAccountId)
+        : msOnlinePageSessions[0];
 
       if (!msOnlinePageSession) {
         throw new Error("Provided msAccountId is invalid");
@@ -251,9 +276,14 @@ export class Moodle {
       const msOnlineLoginURL = new URL(msOnlinePageConfig.urlLogin);
       msOnlineLoginURL.searchParams.set("sessionid", msOnlinePageSession.id);
 
-      const resp2 = await this._proxyMSOnlineRequest(httpClient, msOnlineLoginURL);
+      const resp2 = await this._proxyMSOnlineRequest(
+        httpClient,
+        msOnlineLoginURL,
+      );
       if (!_isHttpResponseRedirected(resp2)) {
-        throw new Error(`Expected redirect from ${msOnlineLoginURL}, got ${resp2.status}`);
+        throw new Error(
+          `Expected redirect from ${msOnlineLoginURL}, got ${resp2.status}`,
+        );
       }
 
       moodlePostData = this._getMoodlePostDataFromRedirect(resp2);
@@ -293,8 +323,14 @@ export class Moodle {
       throw new Error("No auth cookies provided");
     }
 
-    const { httpClient, oidcUrl: moodlePostUrl, moodlePostData } =
-      await this._getFormAndData(`${config.moodle.url}/auth/oidc/`, msAccountId);
+    const {
+      httpClient,
+      oidcUrl: moodlePostUrl,
+      moodlePostData,
+    } = await this._getFormAndData(
+      `${config.moodle.url}/auth/oidc/`,
+      msAccountId,
+    );
 
     this.httpClient = httpClient;
 
@@ -318,7 +354,9 @@ export class Moodle {
       throw new Error("Unexpected response during cookie auth");
     }
 
-    const resp2 = await httpClient.get(new URL(resp.headers.location, moodlePostUrl).toString());
+    const resp2 = await httpClient.get(
+      new URL(resp.headers.location, moodlePostUrl).toString(),
+    );
 
     const pageJsonData = this._parseMoodlePageConfigFromHtml(resp2.data);
 
@@ -412,7 +450,7 @@ export class Moodle {
       $("table.generaltable tr[data-hidden='false']")
         .toArray()
         .slice(1)
-        .slice(0, -1)
+        .slice(0, -1),
     );
 
     const grades: MoodleGrade[] = $gradeEls
@@ -432,7 +470,10 @@ export class Moodle {
         }
 
         const gradeId = parseInt(
-          $("th.column-itemname", $gradeEl).first().attr("id")!.split("_", 3)[1],
+          $("th.column-itemname", $gradeEl)
+            .first()
+            .attr("id")!
+            .split("_", 3)[1],
         );
         const gradeAssignmentId =
           parseInt($nameAndIdEl.attr("href")?.split("id=", 2)?.[1] || "") ??
@@ -625,7 +666,10 @@ export class Moodle {
         null,
       ];
     } catch (err: MoodleAPIError | any) {
-      if (err instanceof MoodleAPIError && err.code === "servicerequireslogin") {
+      if (
+        err instanceof MoodleAPIError &&
+        err.code === "servicerequireslogin"
+      ) {
         // attempting reauth using Moodle OIDC and authCookies
         // TODO: use user.health
         try {
