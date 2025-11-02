@@ -1,6 +1,4 @@
 import { InlineKeyboard } from "grammy";
-import { config } from "../../../config";
-import { getMiniAppUrl } from "../helpers/get-mini-app-url";
 import {
   deadlinesCallback,
   coursesListCallback,
@@ -10,8 +8,6 @@ import {
 } from "../callback-data";
 
 export const createMenuKeyboard = async (userId: number, userName: string) => {
-  const url = await getMiniAppUrl(userId, config.frontend.url);
-
   const keyboard = new InlineKeyboard()
     .text("Deadlines", deadlinesCallback.pack({ type: "menu" }))
     .row()
@@ -20,7 +16,7 @@ export const createMenuKeyboard = async (userId: number, userName: string) => {
     .text("⚙️", settingsCallback.pack({}))
     .text("About", aboutCallback.pack({}))
     .row()
-    .webApp("🌐 Website", url);
+    .webApp("🌐 Calendar", "https://calendar.remoodle.app");
 
   return {
     text: `👋 ${userName}`,
