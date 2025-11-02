@@ -16,3 +16,12 @@ export const changeNotificationCallback = createCallbackData(
     value: Number,
   },
 );
+
+export const deadlineThresholdsCallback = createCallbackData(
+  "deadline_thresholds",
+  {},
+);
+
+export const toggleThresholdCallback = createCallbackData("toggle_threshold", {
+  threshold: String,
+});

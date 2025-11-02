@@ -1,10 +1,8 @@
 import { Composer, InlineKeyboard } from "grammy";
 import type { NotificationSettings } from "../../../types";
-import { config } from "../../../config";
 import { request, getAuthHeaders, requestUnwrap } from "../helpers/hc";
 import type { Context } from "../context";
 import { logHandle } from "../helpers/logging";
-import { getMiniAppUrl } from "../helpers/get-mini-app-url";
 import {
   changeNotificationCallback,
   settingsCallback,
@@ -13,7 +11,10 @@ import {
   deleteProfileCallback,
   deleteProfileYesCallback,
   backToMenuCallback,
+  deadlineThresholdsCallback,
+  toggleThresholdCallback,
 } from "../callback-data";
+import { humanizeDuration, durationToMs } from "../../../library/utils/dates";
 
 const composer = new Composer<Context>();
 
@@ -128,6 +129,17 @@ const NOTIFICATION_SETTING_STATE = {
   mandatory: 2,
 } as const;
 
+const AVAILABLE_THRESHOLDS = [
+  "PT1H", // 1 hour
+  "PT3H", // 3 hours
+  "PT6H", // 6 hours
+  "PT12H", // 12 hours
+  "P1D", // 1 day
+  "P2D", // 2 days
+  "P3D", // 3 days
+  "P4D", // 4 days
+] as const;
+
 type ChangeNotificationData = {
   type: string;
   value: 0 | 1 | 2;
@@ -147,21 +159,10 @@ const getTelegramNotificationKeys = () => {
   );
 };
 
-async function getNotificationsURL(userId: number) {
-  const url = await getMiniAppUrl(
-    userId,
-    config.frontend.url,
-    "/account/notifications",
-  );
-
-  return url;
-}
-
 const boolToEmoji = (value: boolean) => (value ? "🔔" : "🔕");
 
 const getNotificationsKeyboard = (
   notificationSettings: NotificationSettings,
-  websiteUrl: string | false = false,
 ) => {
   const keyboard = new InlineKeyboard();
 
@@ -211,9 +212,9 @@ const getNotificationsKeyboard = (
     });
   }
 
-  if (websiteUrl) {
-    keyboard.row().webApp("Advanced settings", websiteUrl);
-  }
+  keyboard
+    .row()
+    .text("🔔 Deadline Thresholds", deadlineThresholdsCallback.pack({}));
 
   keyboard.row().text("Back ←", settingsCallback.pack({}));
 
@@ -230,13 +231,8 @@ feature.callbackQuery(
       client.v2.user.settings.$get({}, { headers: getAuthHeaders(userId) }),
     );
 
-    const url = await getNotificationsURL(userId);
-
     await ctx.editMessageText("Notifications", {
-      reply_markup: getNotificationsKeyboard(
-        settings.settings.notifications,
-        url,
-      ),
+      reply_markup: getNotificationsKeyboard(settings.settings.notifications),
     });
   },
 );
@@ -304,14 +300,178 @@ feature.callbackQuery(
       return;
     }
 
-    const url = await getNotificationsURL(userId);
-
     await ctx.editMessageText("Notifications", {
-      reply_markup: getNotificationsKeyboard(
-        settings.settings.notifications,
-        url,
-      ),
+      reply_markup: getNotificationsKeyboard(settings.settings.notifications),
     });
+  },
+);
+
+const getThresholdsKeyboard = (activeThresholds: string[]) => {
+  const keyboard = new InlineKeyboard();
+
+  // Create rows with 2 thresholds per row
+  const thresholdsPerRow = 2;
+  for (let i = 0; i < AVAILABLE_THRESHOLDS.length; i += thresholdsPerRow) {
+    const row = AVAILABLE_THRESHOLDS.slice(i, i + thresholdsPerRow);
+    const keyboardRow = keyboard.row();
+
+    row.forEach((threshold) => {
+      const isActive = activeThresholds.includes(threshold);
+      const emoji = isActive ? "✅" : "☐";
+      const label = humanizeDuration(threshold);
+
+      keyboardRow.text(
+        `${emoji} ${label}`,
+        toggleThresholdCallback.pack({ threshold }),
+      );
+    });
+  }
+
+  keyboard.row().text("Back ←", notificationsCallback.pack({}));
+
+  return keyboard;
+};
+
+const formatThresholdsMessage = (
+  activeThresholds: string[],
+  isDeadlinesEnabled: boolean,
+) => {
+  let message = "*Deadline Reminder Thresholds*\n\n";
+
+  if (!isDeadlinesEnabled) {
+    message +=
+      "⚠️ _Deadline reminders are currently disabled._\n" +
+      "_Enable them in Notifications to receive reminders._\n\n";
+  }
+
+  if (activeThresholds.length === 0) {
+    message += "No thresholds configured.\n";
+  } else {
+    message += "Active thresholds:\n";
+    activeThresholds
+      .sort((a, b) => durationToMs(a) - durationToMs(b))
+      .forEach((threshold) => {
+        message += `• ${humanizeDuration(threshold)}\n`;
+      });
+  }
+
+  message += "\nSelect thresholds to toggle them:";
+
+  return message;
+};
+
+feature.callbackQuery(
+  deadlineThresholdsCallback.filter(),
+  logHandle("deadline_thresholds"),
+  async (ctx) => {
+    const userId = ctx.from.id;
+
+    const settings = await requestUnwrap((client) =>
+      client.v2.user.settings.$get({}, { headers: getAuthHeaders(userId) }),
+    );
+
+    const isDeadlinesEnabled =
+      settings.settings.notifications["deadlineReminders::telegram"] ===
+      NOTIFICATION_SETTING_STATE.enabled;
+
+    const message = formatThresholdsMessage(
+      settings.settings.deadlineReminders.thresholds,
+      isDeadlinesEnabled,
+    );
+
+    await ctx.editMessageText(message, {
+      reply_markup: getThresholdsKeyboard(
+        settings.settings.deadlineReminders.thresholds,
+      ),
+      parse_mode: "Markdown",
+    });
+  },
+);
+
+feature.callbackQuery(
+  toggleThresholdCallback.filter(),
+  logHandle("toggle_threshold"),
+  async (ctx) => {
+    const userId = ctx.from.id;
+
+    const [account, error] = await request((client) =>
+      client.v2.user.settings.$get({}, { headers: getAuthHeaders(userId) }),
+    );
+
+    if (error) {
+      await ctx.editMessageText("An error occurred. Try again later.", {
+        reply_markup: new InlineKeyboard().text(
+          "Back ←",
+          notificationsCallback.pack({}),
+        ),
+      });
+      return;
+    }
+
+    const data = toggleThresholdCallback.unpack(ctx.callbackQuery.data);
+    const { threshold } = data as { threshold: string };
+
+    const currentThresholds = account.settings.deadlineReminders.thresholds;
+    const isActive = currentThresholds.includes(threshold);
+
+    let newThresholds: string[];
+    if (isActive) {
+      // Remove threshold
+      newThresholds = currentThresholds.filter((t) => t !== threshold);
+    } else {
+      // Add threshold (max 10 from config)
+      if (currentThresholds.length >= 10) {
+        await ctx.answerCallbackQuery({
+          text: "Maximum 10 thresholds allowed",
+          show_alert: true,
+        });
+        return;
+      }
+      newThresholds = [...currentThresholds, threshold];
+    }
+
+    account.settings.deadlineReminders.thresholds = newThresholds;
+
+    const [_, settingsUpdateError] = await request((client) =>
+      client.v2.user.settings.$post(
+        { json: { settings: account.settings } },
+        { headers: getAuthHeaders(userId) },
+      ),
+    );
+
+    if (settingsUpdateError) {
+      await ctx.answerCallbackQuery({
+        text: "Could not update settings. Try again later.",
+        show_alert: true,
+      });
+      return;
+    }
+
+    const [settings, settingsError] = await request((client) =>
+      client.v2.user.settings.$get({}, { headers: getAuthHeaders(userId) }),
+    );
+
+    if (settingsError) {
+      return;
+    }
+
+    const isDeadlinesEnabled =
+      settings.settings.notifications["deadlineReminders::telegram"] ===
+      NOTIFICATION_SETTING_STATE.enabled;
+
+    const message = formatThresholdsMessage(
+      settings.settings.deadlineReminders.thresholds,
+      isDeadlinesEnabled,
+    );
+
+    await ctx.editMessageText(message, {
+      reply_markup: getThresholdsKeyboard(
+        settings.settings.deadlineReminders.thresholds,
+      ),
+      parse_mode: "Markdown",
+    });
+
+    await ctx.answerCallbackQuery();
   },
 );
 
