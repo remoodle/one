@@ -50,8 +50,6 @@ export const env = cleanEnv(process.env, {
     choices: ["aitu"],
   }),
 
-  FRONTEND_URL: str({ default: "https://remoodle.app" }),
-
   VERSION_TAG: str({ default: "~" }),
 });
 
@@ -61,9 +59,6 @@ export const config = {
     port: env.SERVER_PORT,
     secret: env.SERVER_SECRET,
     url: env.SERVER_URL,
-  },
-  frontend: {
-    url: env.FRONTEND_URL,
   },
   admin: {
     username: env.ADMIN_USERNAME,
