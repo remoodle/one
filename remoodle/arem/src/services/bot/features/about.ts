@@ -10,7 +10,7 @@ const composer = new Composer<Context>();
 
 const feature = composer.chatType("private");
 
-const REPO = "https://github.com/remoodle/remoodle";
+const REPO = "https://github.com/remoodle/heresy";
 
 const ABOUT_MESSAGE = `
 <b>Bot Adapter:</b> ${uni.name}
