@@ -1,10 +1,10 @@
-name: "[arem] Publish Docker image"
+name: "[remoodle/arem] Publish Docker image"
 
 on:
   push:
     branches: [main]
     paths:
-      - "arem/app/**"
+      - "remoodle/arem/**"
     tags:
       - "remoodle/arem-*"
   workflow_dispatch:
@@ -43,7 +43,7 @@ jobs:
           echo GITHUB_REF=$GITHUB_REF
           echo IMAGE_TAG=$IMAGE_TAG
 
-          cd arem/app
+          cd remoodle/arem
 
           docker pull $IMAGE_ID:latest
           docker build . --file Dockerfile --tag $IMAGE_ID:$IMAGE_TAG --cache-from $IMAGE_ID:latest --build-arg VERSION_TAG=$VERSION_TAG

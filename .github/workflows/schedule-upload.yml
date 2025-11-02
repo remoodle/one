@@ -10,7 +10,7 @@ on:
     branches: [main]
     paths:
       - "external/schedule/**"
-      - ".github/workflows/scripts/schedule-parser/**"
+      - ".github/scripts/schedule-parser/**"
 
   # Allow manual trigger
   workflow_dispatch:
@@ -31,7 +31,7 @@ jobs:
 
       - name: Install Python dependencies
         run: |
-          cd .github/workflows/scripts/schedule-parser
+          cd .github/scripts/schedule-parser
           pip install -r requirements-minimal.txt
 
       - name: Create output directory
@@ -39,7 +39,7 @@ jobs:
 
       - name: Parse schedule files
         run: |
-          cd .github/workflows/scripts/schedule-parser
+          cd .github/scripts/schedule-parser
           python parse.py
         env:
           SCHEDULE_INPUT_DIR: ${{ github.workspace }}/external/schedule
