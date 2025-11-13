@@ -296,6 +296,8 @@ export class Moodle {
   private _parseMoodlePageConfigFromHtml(html: string | CheerioAPI): any {
     const $ = typeof html === "string" ? loadHtml(html) : html;
 
+    console.log({ html: html, html_page: $.html() });
+
     const scriptTag = $("script")
       .toArray()
       .find((el) => $(el).text().includes('"wwwroot"'));
@@ -358,6 +360,8 @@ export class Moodle {
     const resp2 = await httpClient.get(
       new URL(resp.headers.location, moodlePostUrl).toString(),
     );
+
+    console.log({ resp2: resp2.data });
 
     const pageJsonData = this._parseMoodlePageConfigFromHtml(resp2.data);
 
