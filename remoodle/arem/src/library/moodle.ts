@@ -357,11 +357,22 @@ export class Moodle {
       throw new Error("Unexpected response during cookie auth");
     }
 
-    const resp2 = await httpClient.get(
+    let resp2 = await httpClient.get(
       new URL(resp.headers.location, moodlePostUrl).toString(),
     );
 
-    console.log({ resp2: resp2.data });
+    console.log({ resp2: resp2.headers.location });
+
+    if (
+      validateForwardedHttpResponseStatus(resp2.status) &&
+      resp2.headers.location
+    ) {
+      resp2 = await httpClient.get(
+        new URL(resp2.headers.location, moodlePostUrl).toString(),
+      );
+    }
+
+    console.log({ resp2_1: resp2.headers?.location });
 
     const pageJsonData = this._parseMoodlePageConfigFromHtml(resp2.data);
 
